@@ -1,0 +1,66 @@
+site_name: Aplicaciones Ofimáticas · 1.º SMR
+site_description: Proyecto CAOS, S.L. · Curso 2026–2027
+site_author: Departamento de Informática
+
+theme:
+  name: material
+  language: es
+
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Cambiar a modo oscuro
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Cambiar a modo claro
+
+nav:
+  - Inicio: index.md
+
+  - Guía del alumnado:
+      - Cómo funciona el curso: guia_alumnado.md
+
+  - Temas:
+      - "Tema 1 · SOS: supervivencia digital": 01_sos_supervivencia_digital.md
+      - "Tema 2 · Documento_FINAL_definitivo_ahora_si.docx": 02_documento_final.md
+      - "Tema 3 · Documentos que trabajan solos": 03_documentos_que_trabajan_solos.md
+      - "Tema 4 · #¡VALOR!: las cuentas no cuadran": 04_valor_cuentas_no_cuadran.md
+      - "Tema 5 · Tenemos datos, pero nadie sabe qué significan": 05_datos_sin_significado.md
+      - "Tema 6 · Tenemos 847 clientes y cuatro se llaman igual": 06_847_clientes.md
+      - "Tema 7 · Marketing ha vuelto a hacerlo": 07_marketing_ha_vuelto.md
+      - "Tema 8 · Necesitamos un vídeo para ayer": 08_video_para_ayer.md
+      - "Tema 9 · Mañana viene dirección": 09_manana_viene_direccion.md
+      - "Tema 10 · 243 correos sin leer": 10_243_correos.md
+      - "Tema 11 · INCIDENTE CRÍTICO": 11_incidente_critico.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - search
