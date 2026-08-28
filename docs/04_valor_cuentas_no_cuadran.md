@@ -1,8 +1,8 @@
 # Tema 4 · `#¡VALOR!`: las cuentas no cuadran
 
 !!! info "CAOS, S.L." 
-> Formas parte del equipo de rescate digital de una empresa cuya gestión ofimática es un desastre.  
-> Todo lo que arregles en este tema quedará incorporado a la empresa y podrá volver a utilizarse en temas posteriores.
+    Formas parte del equipo de rescate digital de una empresa cuya gestión ofimática es un desastre.  
+    Todo lo que arregles en este tema quedará incorporado a la empresa y podrá volver a utilizarse en temas posteriores.
 
 ## Estructura del tema
 
@@ -14,9 +14,8 @@
 6. 🔒 **Ticket cerrado** — caso evaluable individual.
 
 !!! warning "Importante" 
-    en los casos evaluables los datos, archivos o condiciones pueden cambiar entre alumnos. No se evalúa reproducir unos pasos de memoria, sino resolver correctamente la incidencia y poder explicar las decisiones tomadas.
-
-
+    En los casos evaluables los datos, archivos o condiciones pueden cambiar entre alumnos. No se evalúa reproducir unos pasos de memoria, sino resolver correctamente la incidencia y poder explicar las decisiones tomadas.
+    
 ## Objetivos del rescate
 
 Construir hojas de cálculo fiables utilizando tipos de datos, fórmulas, referencias y funciones básicas, de texto, lógicas, estadísticas y de fecha/hora.

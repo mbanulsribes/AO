@@ -1,8 +1,8 @@
 # Tema 2 · `Documento_FINAL_definitivo_ahora_si.docx`
 
 !!! info "CAOS, S.L." 
-> Formas parte del equipo de rescate digital de una empresa cuya gestión ofimática es un desastre.  
-> Todo lo que arregles en este tema quedará incorporado a la empresa y podrá volver a utilizarse en temas posteriores.
+    Formas parte del equipo de rescate digital de una empresa cuya gestión ofimática es un desastre.  
+    Todo lo que arregles en este tema quedará incorporado a la empresa y podrá volver a utilizarse en temas posteriores.
 
 ## Estructura del tema
 
@@ -14,8 +14,7 @@
 6. 🔒 **Ticket cerrado** — caso evaluable individual.
 
 !!! warning "Importante" 
-    en los casos evaluables los datos, archivos o condiciones pueden cambiar entre alumnos. No se evalúa reproducir unos pasos de memoria, sino resolver correctamente la incidencia y poder explicar las decisiones tomadas.
-
+    En los casos evaluables los datos, archivos o condiciones pueden cambiar entre alumnos. No se evalúa reproducir unos pasos de memoria, sino resolver correctamente la incidencia y poder explicar las decisiones tomadas.
 
 ## Objetivos del rescate
 
