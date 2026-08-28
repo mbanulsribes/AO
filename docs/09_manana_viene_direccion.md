@@ -1,161 +1,204 @@
 # Tema 9 · Mañana viene dirección
 
-!!! info "CAOS, S.L." 
-    Formas parte del equipo de rescate digital de una empresa cuya gestión ofimática es un desastre.  
-    Todo lo que arregles en este tema quedará incorporado a la empresa y podrá volver a utilizarse en temas posteriores.
+!!! info "CAOS, S.L."
+    La presentación tiene 73 diapositivas llenas de texto y nadie sabe cuál es el mensaje principal.
 
-## Estructura del tema
+## 🚨 1. Incidencia inicial
 
-1. 🚨 **Incidencia inicial** — qué problema tiene hoy CAOS, S.L.
-2. 🛠️ **Rescate guiado** — resolvemos un caso completo mientras aprendemos.
-3. 📚 **Lo que necesitas saber** — teoría y procedimientos de consulta.
-4. 🏋️ **Ahora tú** — ejercicio individual de consolidación.
-5. 🔥 **Nueva incidencia** — reto menos guiado.
-6. 🔒 **Ticket cerrado** — caso evaluable individual.
+**Objetivo:** comunicar resultados de forma clara y visual.
 
-!!! warning "Importante" 
-    En los casos evaluables los datos, archivos o condiciones pueden cambiar entre alumnos. No se evalúa reproducir unos pasos de memoria, sino resolver correctamente la incidencia y poder explicar las decisiones tomadas.
+## 🎯 2. Qué aprenderás
 
+- definir objetivo y audiencia;
+- estructurar una presentación;
+- aplicar jerarquía visual;
+- usar tipografía y color con criterio;
+- incorporar imágenes y gráficos;
+- trabajar con plantillas/patrones;
+- utilizar animaciones de forma moderada;
+- preparar notas del orador.
 
-## Objetivos del rescate
+## 🛠️ 3. Rescate guiado · Resultados del rescate
 
-Diseñar y realizar una presentación multimedia clara, visualmente coherente y basada en información real de la empresa.
-
-## 🚨 Incidencia inicial · «Hemos metido todo el informe en 73 diapositivas»
-
-Dirección debe presentar mañana los resultados del rescate digital.
-
-El borrador actual tiene:
-
-- párrafos completos;
-- letra diminuta;
-- seis colores;
-- animaciones distintas;
-- gráficos ilegibles;
-- imágenes deformadas;
-- ninguna conclusión.
-
-**Misión:** convertir información en una presentación que pueda entenderse.
-
-## 🛠️ Rescate guiado · Presentación de resultados
-
-### 1. Objetivo y audiencia
-
-Antes de abrir el programa:
-
-- ¿quién escucha?;
-- ¿qué necesita saber?;
-- ¿qué queremos que recuerde?;
-- ¿qué decisión esperamos?
-
-### 2. Estructura
+### Paso 1. Objetivo
 
 Ejemplo:
 
-1. problema;
-2. datos;
-3. análisis;
-4. solución;
-5. resultados;
-6. siguiente paso.
+> Dirección debe decidir si mantiene el nuevo sistema de gestión.
 
-### 3. Diapositiva
+### Paso 2. Estructura
 
-Una diapositiva no debe ser una página de Word proyectada.
+```text
+1. Problema
+2. Evidencias
+3. Solución
+4. Resultados
+5. Recomendación
+```
 
-Trabajaremos:
+### Paso 3. Diseño
 
-- jerarquía visual;
-- espacio;
 - alineación;
+- espacio;
+- jerarquía;
 - consistencia.
 
-### 4. Tipografía
+### Paso 4. Tipografía
 
-- tamaño legible;
+- legible;
+- coherente;
+- suficientemente grande.
+
+### Paso 5. Color
+
+Pocos colores y con función.
+
+### Paso 6. Imágenes
+
+Usa recursos tratados previamente.
+
+### Paso 7. Gráficos
+
+Reutiliza datos de la hoja de cálculo cuando ayuden a comunicar el mensaje.
+
+### Paso 8. Plantilla/patrón
+
+Mantén una estructura visual coherente.
+
+### Paso 9. Animaciones
+
+Solo cuando ayuden a comprender.
+
+### Paso 10. Notas
+
+Prepara el discurso sin llenar las diapositivas de texto.
+
+## 📚 4. Lo que necesitas saber
+
+### 4.1 Objetivo y audiencia
+
+Antes de diseñar una diapositiva responde:
+
+- ¿quién escucha?;
+- ¿qué necesita saber?;
+- ¿qué debe recordar?;
+- ¿qué decisión esperamos?
+
+La misma información no se presenta igual a Dirección que a un equipo técnico.
+
+### 4.2 Una diapositiva, una idea principal
+
+No es una regla matemática, pero ayuda a evitar saturación.
+
+Una diapositiva puede contener varios elementos siempre que todos apoyen el mismo mensaje.
+
+### 4.3 Jerarquía visual
+
+La jerarquía indica qué debe mirar primero el público.
+
+Se crea mediante:
+
+- tamaño;
+- posición;
+- peso tipográfico;
+- espacio;
+- contraste.
+
+### 4.4 Alineación y espacio
+
+Los elementos alineados parecen pertenecer a una estructura común.
+
+El espacio en blanco evita saturación y ayuda a separar grupos.
+
+### 4.5 Tipografía
+
+Buenas prácticas:
+
 - pocas familias;
+- tamaño suficiente;
 - contraste;
-- jerarquía.
+- jerarquía clara;
+- evitar párrafos largos.
 
-### 5. Color
+### 4.6 Color
 
-El color debe ayudar a:
+El color debe servir para:
 
 - agrupar;
 - destacar;
-- crear identidad.
+- identificar categorías;
+- reforzar identidad.
 
-### 6. Imágenes
+Evita usar muchos colores sin significado.
 
-Reutilizaremos recursos tratados en el tema de imagen.
+### 4.7 Imágenes
 
-### 7. Gráficos y tablas
+Una imagen debe:
 
-Importaremos o vincularemos información procedente de la hoja de cálculo cuando sea adecuado.
+- aportar información o contexto;
+- conservar proporción;
+- tener calidad suficiente;
+- no ser decorativa si distrae.
 
-### 8. Diagramas
+### 4.8 Gráficos
 
-Usaremos representaciones visuales para procesos o relaciones.
+Un gráfico debe facilitar una conclusión.
 
-### 9. Patrones y plantillas
+Antes de insertarlo pregunta:
 
-Permiten mantener coherencia entre diapositivas.
+> ¿Qué quiero que el público descubra?
 
-### 10. Multimedia
+### 4.9 Plantilla o patrón
 
-- audio;
-- vídeo;
-- vínculos.
+Permite mantener:
 
-### 11. Transiciones y animaciones
+- posiciones;
+- tipografías;
+- colores;
+- elementos repetidos.
 
-Se utilizarán con moderación y finalidad.
+### 4.10 Animaciones
 
-### 12. Notas del orador y exposición
+Úsalas cuando:
+
+- revelan información progresivamente;
+- explican una secuencia;
+- ayudan a dirigir la atención.
+
+Evita animar cada objeto por rutina.
+
+### 4.11 Notas del orador
 
 La diapositiva apoya al ponente; no lo sustituye.
 
-### 13. Exportación
+Las notas pueden contener detalles que no deben aparecer proyectados.
 
-- formato editable;
-- PDF;
-- vídeo u otros formatos cuando proceda.
+## 🏋️ 5. Practica
 
-## 📚 Lo que necesitas saber
+1. Rediseña una diapositiva saturada.
+2. Convierte una tabla en un gráfico útil.
+3. Crea una presentación de cinco diapositivas.
 
-### Una diapositiva = una idea principal
+## 🔥 6. Nueva incidencia
 
-No es una regla matemática, pero es una buena referencia para evitar saturación.
+Reduce una presentación de 12 minutos a 5 sin perder el mensaje.
 
-### Datos no es lo mismo que mensaje
+## 🔒 7. Ticket cerrado · Evaluable
 
-Un gráfico con 20 series puede contener muchos datos y comunicar muy poco.
-
-## 🏋️ Ahora tú · «Resultados trimestrales»
-
-Crearás una mini presentación utilizando datos y gráficos ya trabajados.
-
-## 🔥 Nueva incidencia · «Cinco minutos, no quince»
-
-Debes reducir una presentación larga manteniendo el mensaje esencial.
-
-## 🔒 Ticket cerrado · Evaluable
-
-Cada alumno recibirá una combinación distinta de:
+Las condiciones pueden variar:
 
 - audiencia;
 - objetivo;
 - datos;
-- tiempo disponible.
+- tiempo.
 
-Deberá diseñar y realizar una presentación breve.
-
-## ✅ Checklist
+## ✅ 8. Comprueba que sabes...
 
 - [ ] Sé definir objetivo y audiencia.
 - [ ] Sé estructurar una presentación.
-- [ ] Sé aplicar jerarquía visual.
-- [ ] Sé usar imágenes y gráficos con criterio.
-- [ ] Sé mantener coherencia mediante patrones/plantillas.
-- [ ] Sé utilizar multimedia y animaciones de forma razonable.
-- [ ] Sé presentar oralmente apoyándome en las diapositivas.
+- [ ] Sé crear jerarquía visual.
+- [ ] Sé usar tipografía y color con criterio.
+- [ ] Sé elegir imágenes y gráficos útiles.
+- [ ] Sé mantener coherencia con un patrón.
+- [ ] Sé utilizar animaciones con moderación.
+- [ ] Sé preparar una exposición apoyada por diapositivas.

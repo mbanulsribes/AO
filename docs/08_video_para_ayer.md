@@ -1,168 +1,219 @@
 # Tema 8 · Necesitamos un vídeo para ayer
 
-!!! info "CAOS, S.L." 
-    Formas parte del equipo de rescate digital de una empresa cuya gestión ofimática es un desastre.  
-    Todo lo que arregles en este tema quedará incorporado a la empresa y podrá volver a utilizarse en temas posteriores.
+!!! info "CAOS, S.L."
+    Hay 63 clips, varios audios, imágenes repetidas y ningún orden.
 
-## Estructura del tema
+## 🚨 1. Incidencia inicial
 
-1. 🚨 **Incidencia inicial** — qué problema tiene hoy CAOS, S.L.
-2. 🛠️ **Rescate guiado** — resolvemos un caso completo mientras aprendemos.
-3. 📚 **Lo que necesitas saber** — teoría y procedimientos de consulta.
-4. 🏋️ **Ahora tú** — ejercicio individual de consolidación.
-5. 🔥 **Nueva incidencia** — reto menos guiado.
-6. 🔒 **Ticket cerrado** — caso evaluable individual.
+**Objetivo:** montar y exportar un vídeo coherente.
 
-!!! warning "Importante" 
-    En los casos evaluables los datos, archivos o condiciones pueden cambiar entre alumnos. No se evalúa reproducir unos pasos de memoria, sino resolver correctamente la incidencia y poder explicar las decisiones tomadas.
+## 🎯 2. Qué aprenderás
 
+- comprender resolución, relación de aspecto, FPS, códec y contenedor;
+- organizar un proyecto audiovisual;
+- trabajar con línea de tiempo;
+- realizar cortes;
+- ajustar audio;
+- insertar títulos;
+- usar transiciones y efectos con criterio;
+- exportar y comprobar el resultado.
 
-## Objetivos del rescate
+## 🛠️ 3. Rescate guiado · Videotutorial
 
-Crear y exportar un proyecto audiovisual utilizando vídeo, audio, imágenes, títulos, transiciones y efectos con un flujo de trabajo ordenado.
+### Paso 1. Conceptos
 
-## 🚨 Incidencia inicial · «Hay 63 clips y nadie sabe cuál es el bueno»
-
-Dirección quiere un vídeo.
-
-Marketing entrega una carpeta con:
-
-- vídeos verticales y horizontales;
-- clips repetidos;
-- audios sin nombre;
-- imágenes de resoluciones diferentes;
-- tres versiones de una música;
-- ningún guion.
-
-**Misión:** convertir recursos desordenados en una producción coherente.
-
-## 🛠️ Rescate guiado · Videotutorial interno
-
-### 1. Vídeo digital
-
-Conceptos:
-
-- fotograma;
 - resolución;
 - relación de aspecto;
 - FPS;
-- formato/contenedor;
 - códec;
+- contenedor;
 - compresión.
 
-### 2. Proyecto audiovisual
+### Paso 2. Organización
 
-Antes de editar:
+```text
+PROYECTO_VIDEO/
+├── video/
+├── audio/
+├── imagen/
+├── exportaciones/
+└── proyecto/
+```
 
-1. definir objetivo;
-2. organizar recursos;
-3. decidir formato;
-4. crear estructura de carpetas;
-5. guardar correctamente el proyecto.
+### Paso 3. Proyecto
 
-### 3. Interfaz del editor
+Configura resolución y FPS adecuados antes de empezar.
 
-Identificaremos:
+### Paso 4. Importación
 
-- recursos;
-- monitor/previsualización;
-- línea de tiempo;
+Añade recursos.
+
+### Paso 5. Línea de tiempo
+
 - pistas;
-- herramientas;
-- efectos.
+- clips;
+- cortes;
+- desplazamientos.
 
-### 4. Importación
+### Paso 6. Montaje básico
 
-Añadiremos:
+Primero se construye la historia.
 
-- vídeo;
-- audio;
-- imágenes.
+### Paso 7. Audio
 
-### 5. Montaje básico
-
-Primero construimos la historia:
-
-- seleccionar fragmentos;
-- cortar;
-- dividir;
-- mover;
-- ordenar;
-- ajustar duración.
-
-### 6. Audio
-
-- volumen;
-- entrada/salida;
+- niveles;
 - música;
 - voz;
-- sincronización básica.
+- sincronización.
 
-### 7. Títulos y textos
+### Paso 8. Títulos
 
 - título inicial;
 - rótulos;
-- subtítulos cuando proceda;
 - créditos.
 
-### 8. Transiciones
+### Paso 9. Transiciones
 
-Las utilizaremos con intención, no entre todos los clips de forma automática.
+Úsalas con intención, no entre todos los clips.
 
-### 9. Efectos
+### Paso 10. Efectos
 
-Aplicaremos solo efectos que tengan una función narrativa o correctiva.
+Solo cuando tienen una función narrativa o correctiva.
 
-### 10. Animación y transformación
+### Paso 11. Exportación
 
-- posición;
-- escala;
-- opacidad;
-- fotogramas clave cuando proceda.
+Comprueba:
 
-### 11. Exportación/renderizado
-
-Elegiremos:
-
-- resolución;
 - formato;
+- resolución;
 - calidad;
-- nombre;
-- ubicación.
+- peso;
+- reproducción final.
 
-Comprobaremos siempre el archivo final.
+## 📚 4. Lo que necesitas saber
 
-## 📚 Lo que necesitas saber
+### 4.1 Resolución
 
-### Montaje básico antes que efectos
+La resolución del vídeo se expresa normalmente como ancho × alto.
 
-Si la historia no funciona sin efectos, añadir más efectos no soluciona el problema.
+Ejemplos:
 
-### Proyecto no es vídeo final
+```text
+1280 × 720
+1920 × 1080
+```
 
-El archivo del proyecto guarda decisiones de edición y referencias a recursos.  
-El vídeo final debe exportarse/renderizarse.
+La elección depende del destino y del material original.
 
-## 🏋️ Ahora tú · «Tutorial de 60–90 segundos»
+### 4.2 Relación de aspecto
 
-Crearás un pequeño tutorial interno de CAOS, S.L. con recursos proporcionados.
+Describe la proporción entre ancho y alto.
 
-## 🔥 Nueva incidencia · «El vídeo exportado pesa demasiado»
+Ejemplos habituales:
 
-Debes encontrar una configuración adecuada manteniendo una calidad razonable para el destino indicado.
+- 16:9;
+- 9:16;
+- 1:1.
 
-## 🔒 Ticket cerrado · Evaluable
+Mezclar vídeos verticales y horizontales requiere decidir cómo se adaptarán al proyecto.
 
-Cada alumno recibirá un conjunto diferente de recursos.
+### 4.3 FPS
 
-Debe producir un vídeo que cumpla una especificación concreta e incluir una breve ficha técnica.
+FPS significa fotogramas por segundo.
 
-## ✅ Checklist
+Un proyecto debe mantener una configuración coherente con el material y el destino.
 
-- [ ] Entiendo resolución, FPS, formato y códec.
+### 4.4 Contenedor y códec
+
+El **contenedor** es el archivo que agrupa vídeo, audio y otros datos.
+
+Ejemplo: `.mp4`.
+
+El **códec** es el método con el que se codifica y comprime el vídeo o audio.
+
+No son lo mismo.
+
+### 4.5 Proyecto frente a vídeo exportado
+
+El proyecto guarda:
+
+- decisiones de edición;
+- referencias a archivos;
+- cortes;
+- efectos;
+- títulos.
+
+El vídeo final debe renderizarse/exportarse.
+
+### 4.6 Flujo de trabajo
+
+1. preproducción;
+2. montaje básico;
+3. ajustes;
+4. efectos/transiciones;
+5. títulos/audio;
+6. exportación.
+
+### 4.7 Audio
+
+Un vídeo puede verse aceptable y ser difícil de seguir si el audio está mal.
+
+Comprueba:
+
+- nivel de voz;
+- música demasiado alta;
+- silencios;
+- sincronización.
+
+### 4.8 Transiciones y efectos
+
+Más efectos no significa mejor vídeo.
+
+Una transición debe ayudar a entender un cambio.
+
+Un efecto debe tener una función, no utilizarse solo porque está disponible.
+
+### 4.9 Exportación
+
+Compara siempre:
+
+- calidad;
+- peso;
+- compatibilidad;
+- destino.
+
+## 🏋️ 5. Practica
+
+1. Montaje de 30 segundos sin efectos.
+2. Añade títulos y créditos.
+3. Añade audio y ajusta niveles.
+4. Exporta a dos configuraciones y compara peso/calidad.
+
+## 🔥 6. Nueva incidencia
+
+Reduce el tamaño del vídeo sin que la pérdida resulte inaceptable para el destino indicado.
+
+## 🔒 7. Ticket cerrado · Evaluable
+
+Recursos diferentes por alumno.
+
+Se valora:
+
+- narrativa;
+- duración;
+- audio;
+- títulos;
+- continuidad;
+- formato de salida;
+- especificaciones.
+
+## ✅ 8. Comprueba que sabes...
+
+- [ ] Entiendo resolución y relación de aspecto.
+- [ ] Entiendo FPS.
+- [ ] Distingo códec y contenedor.
 - [ ] Sé organizar un proyecto.
-- [ ] Sé realizar montaje básico.
-- [ ] Sé trabajar con audio.
-- [ ] Sé añadir títulos.
-- [ ] Sé aplicar transiciones y efectos con criterio.
-- [ ] Sé exportar el resultado.
+- [ ] Sé montar clips en una línea de tiempo.
+- [ ] Sé ajustar audio y títulos.
+- [ ] Sé usar transiciones y efectos con criterio.
+- [ ] Sé exportar y comprobar un vídeo.

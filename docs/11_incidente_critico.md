@@ -1,68 +1,59 @@
 # Tema 11 · INCIDENTE CRÍTICO
 
-!!! info "CAOS, S.L." 
-    Formas parte del equipo de rescate digital de una empresa cuya gestión ofimática es un desastre.  
-    Todo lo que arregles en este tema quedará incorporado a la empresa y podrá volver a utilizarse en temas posteriores.
+!!! info "CAOS, S.L."
+    Este tema no introduce una aplicación nueva. Tendrás que decidir qué herramienta utilizar y en qué orden actuar.
 
-## Estructura del tema
+## 🚨 1. Situación
 
-1. 🚨 **Incidencia inicial** — qué problema tiene hoy CAOS, S.L.
-2. 🛠️ **Rescate guiado** — resolvemos un caso completo mientras aprendemos.
-3. 📚 **Lo que necesitas saber** — teoría y procedimientos de consulta.
-4. 🏋️ **Ahora tú** — ejercicio individual de consolidación.
-5. 🔥 **Nueva incidencia** — reto menos guiado.
-6. 🔒 **Ticket cerrado** — caso evaluable individual.
+Son las 08:15. A las 12:00 hay reunión de dirección.
 
-!!! warning "Importante" 
-    En los casos evaluables los datos, archivos o condiciones pueden cambiar entre alumnos. No se evalúa reproducir unos pasos de memoria, sino resolver correctamente la incidencia y poder explicar las decisiones tomadas.
+Llegan simultáneamente:
 
-## Objetivo
+- cifras erróneas;
+- clientes duplicados;
+- informe pendiente;
+- imagen defectuosa;
+- presentación;
+- usuario que necesita ayuda;
+- comunicación urgente.
 
-Integrar las herramientas trabajadas durante el curso para resolver problemas sin que se indique de antemano qué aplicación debe utilizarse.
+No se indica qué programa debe utilizarse.
 
-En este tema no aparece una aplicación nueva.
+## 🎯 2. Qué debes demostrar
 
-## 🚨 Incidente crítico · «Todo a la vez»
+- comprender una petición;
+- priorizar;
+- elegir herramientas;
+- resolver;
+- verificar;
+- documentar;
+- comunicar.
 
-Son las 08:15.
+## 🛠️ 3. Método de resolución
 
-A las 12:00 hay una reunión de dirección.
+### 3.1 Comprender
 
-Durante la mañana llegan varias incidencias:
-
-- el informe de ventas contiene cifras sospechosas;
-- hay clientes duplicados;
-- dirección necesita un documento final;
-- marketing envía una imagen incorrecta;
-- hay que preparar una presentación;
-- un usuario no sabe completar un procedimiento;
-- debe comunicarse un cambio a clientes afectados.
-
-No recibirás una lista del tipo:
-
-> «Abre Excel y utiliza BUSCAR…»
-
-Tendrás que decidir qué hacer.
-
-## 🛠️ Método de resolución
-
-### 1. Entender la petición
-
-Antes de tocar los archivos:
+Preguntas:
 
 - ¿qué ocurre?;
-- ¿qué resultado se necesita?;
 - ¿quién lo necesita?;
-- ¿cuándo?;
-- ¿qué información falta?
+- ¿para cuándo?;
+- ¿qué resultado se espera?;
+- ¿qué datos faltan?
 
-### 2. Priorizar
+### 3.2 Priorizar
 
-No todas las incidencias tienen la misma urgencia ni impacto.
+Evalúa:
 
-### 3. Elegir la herramienta
+- urgencia;
+- impacto;
+- dependencia.
 
-Puedes necesitar:
+Una tarea urgente no siempre es la más importante. También debes comprobar si otras tareas dependen de ella.
+
+### 3.3 Elegir herramienta
+
+Posibles:
 
 - procesador de textos;
 - hoja de cálculo;
@@ -72,129 +63,181 @@ Puedes necesitar:
 - presentaciones;
 - correo/calendario.
 
-También puedes necesitar varias.
+Puedes necesitar varias.
 
-### 4. Resolver
+### 3.4 Resolver
 
-Aplica procedimientos conocidos.
+Aplica procedimientos conocidos y registra las decisiones importantes.
 
-### 5. Verificar
+### 3.5 Verificar
 
-No entregues algo que no has comprobado.
+Comprueba:
 
-Revisa:
-
-- cálculos;
 - datos;
+- cálculos;
 - formato;
-- vínculos;
-- archivos exportados;
-- nombres;
+- archivos;
 - destinatarios.
 
-### 6. Documentar
+### 3.6 Documentar
 
 Registra:
 
-- problema;
-- diagnóstico;
-- acciones;
+- síntoma;
+- causa;
 - solución;
 - evidencias.
 
-### 7. Comunicar
+### 3.7 Comunicar
 
-La solución técnica no está completa si el usuario no sabe:
+Explica al usuario:
 
 - qué ha ocurrido;
+- qué se ha hecho;
 - qué debe hacer;
-- si necesita realizar alguna acción adicional.
+- si queda alguna acción pendiente.
 
-## 📚 Lo que necesitas saber · Soporte ofimático
+## 📚 4. Lo que necesitas saber
 
-### Diagnóstico
+### 4.1 Síntoma, causa y solución
 
-Un buen diagnóstico distingue entre:
+**Síntoma:** lo que observamos.
 
-- síntoma;
-- causa;
-- solución.
+**Causa:** el origen del problema.
 
-### Reproducibilidad
+**Solución:** la acción que corrige o mitiga la causa.
 
-Siempre que sea posible, intenta describir qué pasos provocan el problema.
+Ejemplo:
 
-### Documentación para usuarios
+- síntoma: total incorrecto;
+- causa: referencia relativa donde debía usarse absoluta;
+- solución: corregir la referencia y verificar el resto de fórmulas.
 
-Puede adoptar distintos formatos:
+### 4.2 Prioridad
 
-- guía rápida;
-- manual;
-- FAQ;
-- captura anotada;
-- videotutorial;
-- correo de instrucciones.
+Puedes valorar:
 
-El formato se elige según el problema y el usuario.
+- número de usuarios afectados;
+- impacto económico;
+- bloqueo de otras tareas;
+- plazo;
+- riesgo.
 
-## 🏋️ Simulación previa · «Viernes complicado»
+### 4.3 Reproducibilidad
 
-En equipos resolveréis un conjunto de incidencias encadenadas.
+Siempre que sea posible, documenta los pasos que provocan el problema.
 
-Después compararemos:
+Esto ayuda a:
 
-- decisiones;
-- herramientas;
-- errores;
-- formas de documentar.
+- comprobar la corrección;
+- repetir el diagnóstico;
+- comunicar la incidencia.
 
-## 🔥 Ensayo individual
+### 4.4 Evidencias
+
+Una evidencia puede ser:
+
+- captura;
+- PDF;
+- resultado de consulta;
+- fórmula;
+- archivo exportado;
+- registro del error.
+
+Debe demostrar algo concreto.
+
+### 4.5 Comunicación
+
+Una solución técnica no está completa si la persona afectada no sabe qué ha ocurrido o qué debe hacer a continuación.
+
+## 🏋️ 5. Ejercicio integrador · «Viernes complicado»
+
+Se entrega:
+
+- un informe DOCX;
+- ventas XLSX;
+- clientes CSV;
+- imagen;
+- correo;
+- petición de presentación.
+
+Tareas posibles:
+
+1. detectar error de cálculo;
+2. identificar clientes afectados;
+3. corregir documento;
+4. preparar gráfico;
+5. insertar gráfico;
+6. generar PDF;
+7. preparar mensaje;
+8. registrar incidencia.
+
+## 🔥 6. Ensayo individual
 
 Resolverás una incidencia corta sin indicaciones sobre la herramienta.
 
-La profesora podrá introducir un cambio durante la actividad.
+La profesora puede introducir un cambio durante la actividad.
 
-## 🔒 CASO FINAL · CAOS CONTROLADO
+## 🔒 7. Caso final · CAOS CONTROLADO
 
-Cada alumno recibirá una variante individual del incidente.
+Cada alumno recibe una variante.
 
-### El caso podrá contener
+### Entregables
 
-- documentos;
-- datos;
-- registros;
-- imágenes;
-- mensajes;
-- requisitos;
-- errores deliberados.
+- archivos corregidos;
+- productos finales;
+- ticket;
+- evidencias;
+- comunicación;
+- justificación.
 
-### Debes entregar
+### Comprobación oral breve
 
-1. soluciones funcionales;
-2. archivos finales;
-3. ticket/registro de acciones;
-4. evidencias;
-5. comunicación al usuario o dirección;
-6. justificación breve de las principales decisiones.
+La profesora puede pedir:
 
-### Comprobación individual
+- explicar una fórmula;
+- cambiar un criterio;
+- ejecutar una consulta;
+- modificar una imagen;
+- corregir una diapositiva;
+- explicar por qué se eligió un formato.
 
-La profesora podrá seleccionar una parte de tu solución y pedirte que:
+## 📎 Anexo A · Plantilla de ticket de incidencia
 
-- expliques qué hiciste;
-- cambies una condición;
-- corrijas un dato;
-- reproduzcas una operación.
+```text
+ID:
+Fecha/hora:
+Usuario:
+Departamento:
+Equipo/aplicación:
+Archivo afectado:
 
-## ✅ Checklist final
+Descripción:
+Qué estaba intentando hacer:
+Qué ocurrió:
+Mensaje de error:
 
-- [ ] Sé decidir qué herramienta necesito.
-- [ ] Sé trabajar con documentos profesionales.
-- [ ] Sé calcular y analizar datos.
-- [ ] Sé gestionar información relacionada.
-- [ ] Sé preparar recursos gráficos.
-- [ ] Sé producir contenido audiovisual.
-- [ ] Sé diseñar presentaciones.
-- [ ] Sé gestionar correo y agenda.
-- [ ] Sé registrar y comunicar incidencias.
-- [ ] Puedo explicar las decisiones tomadas.
+Pasos ya probados:
+1.
+2.
+3.
+
+Evidencias adjuntas:
+
+Diagnóstico:
+Solución aplicada:
+
+Estado:
+Observaciones:
+```
+
+## ✅ 8. Comprueba que sabes...
+
+- [ ] Sé identificar qué se necesita realmente.
+- [ ] Sé priorizar incidencias.
+- [ ] Sé elegir la herramienta adecuada.
+- [ ] Sé verificar el resultado.
+- [ ] Distingo síntoma, causa y solución.
+- [ ] Sé registrar evidencias.
+- [ ] Sé comunicar una solución a un usuario.
+- [ ] Puedo explicar y modificar una parte de mi solución.

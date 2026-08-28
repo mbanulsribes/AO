@@ -1,190 +1,179 @@
 # Tema 7 · Marketing ha vuelto a hacerlo
 
-!!! info "CAOS, S.L." 
-    Formas parte del equipo de rescate digital de una empresa cuya gestión ofimática es un desastre.  
-    Todo lo que arregles en este tema quedará incorporado a la empresa y podrá volver a utilizarse en temas posteriores.
+!!! info "CAOS, S.L."
+    Marketing entrega logos con fondo, imágenes deformadas y banners enormes.
 
-## Estructura del tema
+## 🚨 1. Incidencia inicial
 
-1. 🚨 **Incidencia inicial** — qué problema tiene hoy CAOS, S.L.
-2. 🛠️ **Rescate guiado** — resolvemos un caso completo mientras aprendemos.
-3. 📚 **Lo que necesitas saber** — teoría y procedimientos de consulta.
-4. 🏋️ **Ahora tú** — ejercicio individual de consolidación.
-5. 🔥 **Nueva incidencia** — reto menos guiado.
-6. 🔒 **Ticket cerrado** — caso evaluable individual.
+**Objetivo:** preparar imágenes correctas para cada destino.
 
+## 🎯 2. Qué aprenderás
 
-!!! warning "Importante" 
-    En los casos evaluables los datos, archivos o condiciones pueden cambiar entre alumnos. No se evalúa reproducir unos pasos de memoria, sino resolver correctamente la incidencia y poder explicar las decisiones tomadas.
+- distinguir mapa de bits y vectorial;
+- comprender dimensiones y resolución;
+- elegir formatos;
+- recortar y redimensionar;
+- conservar proporción;
+- realizar ajustes básicos;
+- trabajar con capas;
+- usar transparencia;
+- exportar según destino.
 
-## Objetivos del rescate
+## 🛠️ 3. Rescate guiado · Kit gráfico
 
-Comprender las características de una imagen digital y editar recursos gráficos para diferentes destinos respetando tamaño, calidad, formato y transparencia.
+### Paso 1. Mapa de bits vs vectorial
 
-## 🚨 Incidencia inicial · «El logo pesa 28 MB y se ve borroso»
+**Mapa de bits:** construido con píxeles.
 
-Marketing ha enviado:
+**Vectorial:** construido con formas matemáticas escalables.
 
-- un logo fotografiado con el móvil;
-- una imagen deformada;
-- un banner de 12.000 píxeles;
-- un JPEG con fondo blanco cuando necesitaban transparencia;
-- una captura como «foto oficial».
+### Paso 2. Dimensiones
 
-**Misión:** crear recursos adecuados para documentos, presentaciones y publicaciones.
-
-## 🛠️ Rescate guiado · Kit gráfico de CAOS, S.L.
-
-### 1. Mapa de bits y vectorial
-
-**Mapa de bits:** construido con píxeles.  
-Adecuado para fotografías.
-
-**Vectorial:** construido mediante formas matemáticas.  
-Puede escalarse sin la misma pérdida de calidad que un mapa de bits.
-
-### 2. Píxel y dimensiones
-
-Las dimensiones se expresan habitualmente como:
-
-```text
-ancho × alto
-```
-
-por ejemplo:
+Ejemplo:
 
 ```text
 1920 × 1080 px
 ```
 
-### 3. Resolución y destino
+### Paso 3. Formatos
 
-No necesita la misma preparación una imagen para:
+- JPG: fotografía y compresión con pérdida;
+- PNG: transparencia y gráficos;
+- SVG: vectorial cuando sea compatible.
 
-- pantalla;
-- web;
-- presentación;
-- impresión.
+### Paso 4. Recorte
 
-### 4. Formatos
+Eliminar partes de la imagen.
 
-Trabajaremos con los formatos más habituales y escogeremos según:
+### Paso 5. Redimensionado
 
-- fotografía;
-- transparencia;
-- compatibilidad;
-- calidad;
-- peso.
+Cambiar dimensiones manteniendo la proporción cuando corresponda.
 
-### 5. Compresión
-
-Distinguiremos de forma práctica entre formatos/procesos con y sin pérdida.
-
-### 6. Recorte y redimensionado
-
-No es lo mismo:
-
-- recortar contenido;
-- cambiar dimensiones;
-- deformar la imagen.
-
-Mantendremos la proporción cuando corresponda.
-
-### 7. Transformaciones
-
-- rotación;
-- volteo;
-- escala;
-- perspectiva o herramientas equivalentes según editor.
-
-### 8. Ajustes
+### Paso 6. Ajustes
 
 - brillo;
 - contraste;
-- color;
 - saturación;
-- niveles/herramientas equivalentes.
+- color.
 
-### 9. Selecciones y capas
+### Paso 7. Capas
 
-Las capas permiten trabajar con elementos independientes.
+Permiten editar elementos por separado.
 
-Practicaremos:
+### Paso 8. Transparencia
 
-- seleccionar;
+Útil para logos y composiciones.
+
+### Paso 9. Exportación
+
+Preparamos:
+
+- versión para documento;
+- versión para presentación;
+- versión digital.
+
+## 📚 4. Lo que necesitas saber
+
+### 4.1 Mapa de bits
+
+Una imagen de mapa de bits está formada por píxeles.
+
+Es adecuada para:
+
+- fotografías;
+- capturas;
+- texturas.
+
+Si se amplía demasiado puede perder nitidez.
+
+### 4.2 Imagen vectorial
+
+Se describe mediante formas y curvas.
+
+Es especialmente útil para:
+
+- logos;
+- iconos;
+- ilustraciones simples.
+
+Puede escalarse sin la misma pérdida de calidad que una imagen de mapa de bits.
+
+### 4.3 Dimensiones y resolución
+
+**Dimensiones** indican ancho y alto en píxeles.
+
+Más píxeles no siempre significa mejor resultado: depende del destino.
+
+Una imagen para una web puede no necesitar el mismo tamaño que una para impresión.
+
+### 4.4 Recortar, redimensionar y deformar
+
+- **recortar**: eliminar partes;
+- **redimensionar**: cambiar tamaño;
+- **deformar**: cambiar ancho y alto sin conservar proporción.
+
+Evita deformar salvo que sea intencionado.
+
+### 4.5 Formatos
+
+**JPG**
+- muy usado en fotografía;
+- compresión con pérdida;
+- no conserva transparencia.
+
+**PNG**
+- conserva transparencia;
+- adecuado para gráficos y capturas;
+- puede pesar más que JPG.
+
+**SVG**
+- vectorial;
+- ideal para muchos logos e iconos;
+- requiere compatibilidad del destino.
+
+### 4.6 Compresión y peso
+
+Reducir peso puede implicar pérdida de calidad.
+
+El objetivo no es obtener el archivo más pequeño posible, sino un equilibrio adecuado al destino.
+
+### 4.7 Capas
+
+Las capas permiten trabajar con elementos de forma independiente:
+
 - mover;
 - ocultar;
 - ordenar;
-- combinar cuando sea necesario.
+- editar.
 
-### 10. Transparencia y fondos
+### 4.8 Archivo editable y exportado
 
-Prepararemos recursos con fondo transparente cuando el destino lo requiera.
+Conviene conservar:
 
-### 11. Texto
+- archivo editable del proyecto;
+- versión exportada para uso final.
 
-Añadiremos texto respetando:
+## 🏋️ 5. Practica
 
-- legibilidad;
-- contraste;
-- jerarquía;
-- márgenes.
+1. Compara JPG, PNG y SVG.
+2. Crea tres tamaños del mismo recurso.
+3. Elimina un fondo y exporta con transparencia.
+4. Prepara una cabecera para documento y otra para presentación.
 
-### 12. Exportación
+## 🔥 6. Nueva incidencia
 
-El archivo editable y el archivo final no siempre son lo mismo.
+Un logo debe funcionar sobre fondo blanco, oscuro y fotografía.
 
-Conservaremos una versión de trabajo cuando sea necesario y exportaremos al formato adecuado.
+## 🔒 7. Ticket cerrado · Evaluable
 
-## 📚 Lo que necesitas saber
+Recursos diferentes y destinos diferentes por alumno.
 
-### Más grande no siempre significa mejor
+## ✅ 8. Comprueba que sabes...
 
-Una imagen enorme:
-
-- ocupa más;
-- tarda más en transferirse;
-- puede ralentizar documentos;
-- no mejora si el destino solo necesita una dimensión pequeña.
-
-### Nunca estires una imagen sin conservar la proporción
-
-Si cambias ancho y alto independientemente, el contenido se deforma.
-
-## 🏋️ Ahora tú · «Campaña de producto»
-
-Crearás tres versiones de un mismo recurso:
-
-- documento;
-- presentación;
-- publicación digital.
-
-Cada una tendrá requisitos diferentes.
-
-## 🔥 Nueva incidencia · «Necesitamos el logo sobre cualquier fondo»
-
-Debes preparar una solución que mantenga calidad y transparencia.
-
-## 🔒 Ticket cerrado · Evaluable
-
-Cada alumno recibirá imágenes distintas y destinos diferentes.
-
-Se evaluará:
-
-- formato;
-- dimensiones;
-- calidad;
-- edición;
-- capas/transparencia;
-- exportación;
-- justificación de decisiones.
-
-## ✅ Checklist
-
-- [ ] Distingo imagen vectorial y mapa de bits.
-- [ ] Entiendo dimensiones, resolución y peso.
-- [ ] Sé elegir un formato adecuado.
-- [ ] Sé recortar y redimensionar sin deformar.
-- [ ] Sé trabajar con selecciones y capas.
-- [ ] Sé preparar transparencia.
+- [ ] Distingo mapa de bits y vectorial.
+- [ ] Sé interpretar dimensiones.
+- [ ] Sé elegir entre JPG, PNG y SVG.
+- [ ] Sé recortar y redimensionar.
+- [ ] Sé mantener proporción.
+- [ ] Entiendo transparencia y capas.
 - [ ] Sé exportar según el destino.

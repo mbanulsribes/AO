@@ -1,162 +1,204 @@
 # Tema 10 · 243 correos sin leer
 
-!!! info "CAOS, S.L." 
-    Formas parte del equipo de rescate digital de una empresa cuya gestión ofimática es un desastre.  
-    Todo lo que arregles en este tema quedará incorporado a la empresa y podrá volver a utilizarse en temas posteriores.
+!!! info "CAOS, S.L."
+    La bandeja de Administración está fuera de control.
 
-## Estructura del tema
+## 🚨 1. Incidencia inicial
 
-1. 🚨 **Incidencia inicial** — qué problema tiene hoy CAOS, S.L.
-2. 🛠️ **Rescate guiado** — resolvemos un caso completo mientras aprendemos.
-3. 📚 **Lo que necesitas saber** — teoría y procedimientos de consulta.
-4. 🏋️ **Ahora tú** — ejercicio individual de consolidación.
-5. 🔥 **Nueva incidencia** — reto menos guiado.
-6. 🔒 **Ticket cerrado** — caso evaluable individual.
+Hay:
 
-!!! warning "Importante" 
-    En los casos evaluables los datos, archivos o condiciones pueden cambiar entre alumnos. No se evalúa reproducir unos pasos de memoria, sino resolver correctamente la incidencia y poder explicar las decisiones tomadas.
+- 243 mensajes;
+- asuntos vacíos;
+- respuestas duplicadas;
+- reuniones gestionadas por cadenas;
+- contactos desorganizados.
 
+**Objetivo:** trabajar profesionalmente con correo, contactos y agenda.
 
-## Objetivos del rescate
+## 🎯 2. Qué aprenderás
 
-Gestionar correo, contactos y agenda de forma eficiente, segura y profesional.
+- comprender el funcionamiento básico del correo;
+- distinguir SMTP, IMAP y POP;
+- redactar mensajes profesionales;
+- usar CC y CCO;
+- organizar contactos;
+- crear reglas;
+- reconocer señales de phishing;
+- gestionar reuniones mediante calendario.
 
-## 🚨 Incidencia inicial · «URGENTE!!!» — enviado a toda la empresa
+## 🛠️ 3. Rescate guiado · Bandeja cero razonable
 
-La bandeja de entrada de Administración contiene:
+### Paso 1. Dirección de correo
 
-- 243 mensajes sin leer;
-- asuntos como «Hola» o «Mira esto»;
-- cadenas duplicadas;
-- adjuntos enormes;
-- reuniones organizadas por mensajes;
-- contactos escritos en una hoja de papel.
+```text
+usuario@dominio
+```
 
-**Misión:** convertir el correo en una herramienta de trabajo y no en otra fuente de caos.
+### Paso 2. Funcionamiento
 
-## 🛠️ Rescate guiado · Organizamos comunicaciones
+Modelo simplificado:
 
-### 1. Cómo funciona el correo
+```text
+cliente -> servidor de salida -> servidor receptor -> buzón -> cliente
+```
 
-Conceptos:
+### Paso 3. Protocolos
 
-- dirección;
-- dominio;
-- buzón;
-- servidor;
-- cliente;
-- webmail.
+- SMTP: envío;
+- IMAP: acceso/sincronización;
+- POP: descarga tradicional.
 
-### 2. Protocolos
+### Paso 4. Redacción
 
-A nivel funcional:
+Un buen mensaje incluye:
 
-- SMTP para envío;
-- IMAP para acceso/sincronización;
-- POP como modelo de descarga tradicional.
+- asunto;
+- contexto;
+- petición;
+- adjuntos;
+- despedida.
 
-### 3. Configuración
+### Paso 5. CC y CCO
 
-Revisaremos los parámetros que necesita un cliente cuando la práctica lo permita.
+Úsalos según necesidad.
 
-### 4. Mensajes
+### Paso 6. Contactos
 
-- redactar;
-- responder;
-- responder a todos;
-- reenviar;
-- CC;
-- CCO;
-- adjuntar.
+Crear, editar, buscar y agrupar.
 
-### 5. Asunto y contenido
+### Paso 7. Reglas
 
-El asunto debe permitir entender el propósito del mensaje sin abrirlo.
+Ejemplos:
 
-### 6. Firmas
+- facturas → carpeta Administración;
+- avisos automáticos → carpeta Sistemas.
 
-Crearemos una firma profesional coherente.
+### Paso 8. Spam y phishing
 
-### 7. Contactos
+Analizar:
 
-- crear;
-- editar;
-- grupos/listas;
-- búsqueda.
+- remitente;
+- enlaces;
+- urgencia;
+- adjuntos;
+- petición de credenciales.
 
-### 8. Organización
+### Paso 9. Calendario
+
+- citas;
+- reuniones;
+- invitados;
+- recordatorios.
+
+## 📚 4. Lo que necesitas saber
+
+### 4.1 SMTP, IMAP y POP
+
+**SMTP** se utiliza para el envío.
+
+**IMAP** permite consultar y sincronizar el buzón manteniendo los mensajes en el servidor.
+
+**POP** se asocia al modelo tradicional de descarga de mensajes al cliente.
+
+### 4.2 Asunto
+
+El asunto debe permitir entender el propósito sin abrir el mensaje.
+
+Mejor:
+
+```text
+Entrega presupuesto cliente C023
+```
+
+que:
+
+```text
+Hola
+```
+
+### 4.3 CC y CCO
+
+**CC** envía una copia visible a otras personas.
+
+**CCO** oculta esas direcciones al resto de destinatarios.
+
+Antes de añadir a alguien piensa si:
+
+- debe actuar;
+- solo necesita estar informado;
+- no debería recibir el mensaje.
+
+### 4.4 Responder, responder a todos y reenviar
+
+No son equivalentes.
+
+- **Responder**: solo al remitente.
+- **Responder a todos**: a todos los participantes.
+- **Reenviar**: enviar el contenido a una nueva persona.
+
+### 4.5 Organización
+
+Puedes combinar:
 
 - carpetas;
 - etiquetas/categorías;
+- búsqueda;
 - archivado;
-- búsqueda.
+- reglas automáticas.
 
-### 9. Reglas y filtros
+### 4.6 Phishing
 
-Automatizaremos la clasificación de determinados mensajes.
+Señales:
 
-### 10. Spam y phishing
-
-Señales de alerta:
-
-- remitente sospechoso;
+- dominio extraño;
 - urgencia artificial;
-- enlaces extraños;
-- adjuntos inesperados;
-- petición de credenciales.
+- enlace que no coincide;
+- adjunto inesperado;
+- petición de contraseña;
+- errores o contexto incoherente.
 
-### 11. Calendario
+Ninguna señal aislada demuestra siempre un ataque. Hay que valorar el conjunto.
 
-- cita;
-- reunión;
-- invitación;
-- disponibilidad;
-- recordatorio.
+### 4.7 Calendario
 
-### 12. Tareas
+Una reunión debe gestionarse preferentemente mediante invitación de calendario cuando la herramienta lo permita.
 
-Usaremos tareas/recordatorios cuando la herramienta disponible lo permita.
+Así pueden actualizarse:
 
-## 📚 Lo que necesitas saber
+- hora;
+- lugar;
+- asistentes;
+- cambios;
+- cancelaciones.
 
-### CC y CCO
+## 🏋️ 5. Practica
 
-No deben utilizarse por costumbre.
+1. Reescribe tres correos mal redactados.
+2. Crea reglas de clasificación.
+3. Analiza cinco correos sospechosos.
+4. Organiza una reunión con tres participantes.
 
-Antes de añadir a alguien, pregúntate:
+## 🔥 6. Nueva incidencia
 
-> ¿Necesita actuar, estar informado o no debería recibir este mensaje?
+Determina si un correo es phishing y justifica las señales.
 
-### Reunión no es una cadena de veinte correos
+## 🔒 7. Ticket cerrado · Evaluable
 
-Cuando existe calendario compartido, una reunión debe gestionarse mediante invitación y actualización del evento.
-
-## 🏋️ Ahora tú · «Limpieza de bandeja»
-
-Resolverás una simulación con correos, contactos y citas.
-
-## 🔥 Nueva incidencia · «¿Es phishing?»
-
-Analizarás varios mensajes y justificarás qué señales utilizas para decidir.
-
-## 🔒 Ticket cerrado · Evaluable
-
-Cada alumno recibirá una bandeja/simulación distinta con:
+Simulación distinta por alumno con:
 
 - mensajes;
 - contactos;
-- reglas necesarias;
+- reglas;
 - citas;
 - posibles riesgos.
 
-Deberá organizarla y resolver las tareas indicadas.
+## ✅ 8. Comprueba que sabes...
 
-## ✅ Checklist
-
-- [ ] Entiendo a nivel funcional cómo viaja el correo.
-- [ ] Distingo SMTP, IMAP y POP.
-- [ ] Sé redactar y responder profesionalmente.
+- [ ] Entiendo SMTP, IMAP y POP.
+- [ ] Sé redactar un asunto útil.
+- [ ] Distingo responder, responder a todos y reenviar.
+- [ ] Sé usar CC y CCO.
+- [ ] Sé organizar correo con reglas.
 - [ ] Sé gestionar contactos.
-- [ ] Sé organizar correo con carpetas/reglas.
-- [ ] Sé identificar señales básicas de phishing.
-- [ ] Sé gestionar citas y reuniones.
+- [ ] Sé detectar señales de phishing.
+- [ ] Sé organizar reuniones con calendario.

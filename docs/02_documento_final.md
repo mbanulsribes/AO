@@ -1,211 +1,284 @@
 # Tema 2 · `Documento_FINAL_definitivo_ahora_si.docx`
 
-!!! info "CAOS, S.L." 
-    Formas parte del equipo de rescate digital de una empresa cuya gestión ofimática es un desastre.  
-    Todo lo que arregles en este tema quedará incorporado a la empresa y podrá volver a utilizarse en temas posteriores.
+!!! info "CAOS, S.L."
+    Administración tiene un documento corporativo que se rompe cada vez que alguien lo edita.
 
-## Estructura del tema
+## 🚨 1. Incidencia inicial
 
-1. 🚨 **Incidencia inicial** — qué problema tiene hoy CAOS, S.L.
-2. 🛠️ **Rescate guiado** — resolvemos un caso completo mientras aprendemos.
-3. 📚 **Lo que necesitas saber** — teoría y procedimientos de consulta.
-4. 🏋️ **Ahora tú** — ejercicio individual de consolidación.
-5. 🔥 **Nueva incidencia** — reto menos guiado.
-6. 🔒 **Ticket cerrado** — caso evaluable individual.
+Problemas detectados:
 
-!!! warning "Importante" 
-    En los casos evaluables los datos, archivos o condiciones pueden cambiar entre alumnos. No se evalúa reproducir unos pasos de memoria, sino resolver correctamente la incidencia y poder explicar las decisiones tomadas.
+- títulos creados a mano;
+- espacios para alinear;
+- saltos hechos con Enter;
+- imágenes flotando sin control;
+- encabezados escritos en cada página;
+- tres fuentes distintas;
+- tablas desalineadas.
 
-## Objetivos del rescate
+**Objetivo:** reconstruir un documento profesional, estable y fácil de mantener.
 
-Crear y reparar documentos profesionales utilizando correctamente edición, formato, estructura de página, tablas, imágenes, revisión e impresión/exportación.
+## 🎯 2. Qué aprenderás
 
-## 🚨 Incidencia inicial · «No toques nada, que se descuadra»
+- editar texto de forma eficiente;
+- distinguir formato de carácter y de párrafo;
+- configurar página, secciones y saltos;
+- usar encabezados, pies y numeración;
+- crear y modificar tablas;
+- insertar imágenes sin desestabilizar el documento;
+- revisar y exportar a PDF;
+- detectar errores de maquetación.
 
-Administración utiliza una plantilla de ocho páginas en la que:
+## 🛠️ 3. Rescate guiado · Reparación del informe mensual
 
-- los títulos están hechos aumentando manualmente la fuente;
-- los espacios se crean pulsando Enter;
-- las columnas están alineadas con espacios;
-- el logo se mueve al escribir;
-- cada página tiene un pie diferente;
-- hay tres tipos de letra sin razón;
-- la última persona que intentó corregirlo rompió todo.
+### Paso 1. Crear, abrir y guardar
 
-**Misión:** convertirlo en un documento estable, legible y profesional.
-
-## 🛠️ Rescate guiado · Reparación de un informe de CAOS, S.L.
-
-### 1. Entorno del procesador de textos
-
-Identificamos:
-
-- cinta/menús;
-- área de documento;
-- reglas;
-- barra de estado;
-- vistas;
-- paneles de navegación.
-
-### 2. Crear, abrir y guardar
-
-Trabajaremos con:
+Trabajamos con:
 
 - nuevo documento;
 - abrir;
 - guardar;
 - guardar como;
-- versiones;
-- formatos de archivo.
+- formatos;
+- ubicación.
 
-### 3. Edición
+Guardar bien implica saber **dónde** está el archivo y **qué versión** estamos modificando.
+
+### Paso 2. Edición
+
+Herramientas esenciales:
 
 - seleccionar;
 - copiar;
 - cortar;
 - pegar;
-- deshacer/rehacer;
+- deshacer;
+- rehacer;
 - buscar;
 - reemplazar.
 
-### 4. Formato de caracteres
+### Paso 3. Formato de caracteres
 
-- familia tipográfica;
+Aplicaremos:
+
+- fuente;
 - tamaño;
-- negrita, cursiva y subrayado;
+- negrita;
+- cursiva;
+- subrayado;
 - color;
-- resaltado;
-- mayúsculas/minúsculas;
-- borrar formato.
+- resaltado.
 
-**Regla:** el formato debe tener una función, no decorar aleatoriamente.
+**Criterio profesional:** el formato debe comunicar jerarquía, no decorar.
 
-### 5. Formato de párrafos
+### Paso 4. Formato de párrafos
+
+Trabajamos:
 
 - alineación;
 - interlineado;
-- espacio anterior/posterior;
-- sangrías;
+- espacio antes/después;
+- sangría;
 - tabulaciones;
-- bordes y sombreado;
 - listas.
 
-No usaremos espacios repetidos para alinear información.
+Nunca se alinean columnas con 18 espacios.
 
-### 6. Configuración de página
+### Paso 5. Página
 
-- tamaño;
-- orientación;
 - márgenes;
+- orientación;
+- tamaño;
 - saltos de página;
 - saltos de sección.
 
-### 7. Encabezados, pies y numeración
+### Paso 6. Encabezados y pies
 
-- información corporativa;
+Creamos:
+
+- logo;
+- nombre de documento;
 - número de página;
-- primera página diferente;
-- secciones;
-- elementos repetidos.
+- pie corporativo.
 
-### 8. Tablas
+### Paso 7. Tablas
+
+Operaciones:
 
 - insertar;
-- añadir/eliminar filas y columnas;
-- combinar/dividir celdas;
-- ajustar dimensiones;
-- alineación;
-- bordes;
+- añadir/eliminar;
+- combinar/dividir;
+- ajustar;
+- ordenar cuando proceda;
 - estilos;
-- conversión entre texto y tabla.
+- bordes;
+- alineación.
 
-### 9. Imágenes y formas
+### Paso 8. Imágenes
 
 - insertar;
-- tamaño;
-- recorte básico;
-- posición;
-- ajuste de texto;
-- alineación;
-- formas y cuadros de texto.
+- redimensionar;
+- recortar;
+- ajustar texto;
+- alinear;
+- posicionar.
 
-### 10. Revisión
+### Paso 9. Revisión
 
 - ortografía;
-- gramática;
-- buscar y reemplazar;
-- comentarios si procede;
-- inspección final.
+- buscar/reemplazar;
+- inspección visual;
+- vista previa.
 
-### 11. Salida
+### Paso 10. Exportación
 
-- vista previa;
-- impresión;
-- exportación a PDF;
-- comprobación del PDF generado.
+Generamos PDF y lo abrimos para comprobar:
 
-## 📚 Lo que necesitas saber
-
-### No formatees «a ojo»
-
-Un documento profesional utiliza herramientas de estructura:
-
-- párrafos en lugar de líneas manuales;
-- tabulaciones en lugar de espacios;
-- saltos en lugar de Enter repetido;
-- encabezados/pies en lugar de escribir lo mismo en cada página;
-- tablas cuando los datos tienen estructura tabular.
-
-### Saltos de página y de sección
-
-Un salto de página inicia una nueva página.
-
-Una sección permite que distintas partes del documento tengan configuraciones diferentes, por ejemplo:
-
-- orientación;
-- encabezados;
-- pies;
+- páginas;
+- márgenes;
+- imágenes;
+- cortes;
 - numeración.
 
-## 🏋️ Ahora tú · «Circular a proveedores»
+## 📚 4. Lo que necesitas saber
 
-Recibirás una circular mal construida.
+### 4.1 Formato de carácter y formato de párrafo
 
-Debes normalizar:
+El **formato de carácter** afecta a letras o palabras concretas: tipo de letra, tamaño, negrita, color, etc.
 
-- tipografía;
-- párrafos;
-- listas;
+El **formato de párrafo** afecta al bloque completo: alineación, sangrías, interlineado, espaciado y tabulaciones.
+
+Confundir ambos niveles provoca documentos difíciles de mantener.
+
+### 4.2 Espaciado: Enter no sustituye a la maquetación
+
+Pulsar Enter muchas veces para bajar contenido crea huecos frágiles. Si cambia el texto, todo se desplaza.
+
+Para separar bloques usa:
+
+- espaciado anterior/posterior de párrafo;
+- salto de página;
+- salto de sección.
+
+### 4.3 Tabulaciones
+
+Las tabulaciones sitúan texto en posiciones definidas.
+
+Son adecuadas para pequeñas alineaciones de texto, pero no sustituyen una tabla cuando la información realmente está organizada en filas y columnas.
+
+### 4.4 Saltos de página y de sección
+
+**Salto de página:** obliga a empezar en una página nueva.
+
+**Salto de sección:** divide el documento en partes que pueden tener configuraciones diferentes, por ejemplo orientación o encabezado.
+
+### 4.5 Encabezados y pies
+
+Los encabezados y pies están pensados para información repetida:
+
+- título corporativo;
+- versión;
+- fecha;
+- número de página;
+- autoría.
+
+No deben escribirse manualmente en cada página.
+
+### 4.6 Tablas
+
+Una tabla es adecuada cuando la información tiene estructura real de filas y columnas.
+
+Buenas prácticas:
+
+- encabezados claros;
+- anchos coherentes;
+- alineación acorde al tipo de dato;
+- evitar celdas combinadas innecesarias;
+- revisar cómo se divide la tabla entre páginas.
+
+### 4.7 Imágenes y ajuste de texto
+
+Una imagen debe:
+
+- conservar proporción;
+- tener resolución suficiente;
+- usar un ajuste de texto coherente;
+- evitar posiciones flotantes inestables si no son necesarias.
+
+### 4.8 Revisión final
+
+Antes de entregar:
+
+1. activa marcas de formato si necesitas detectar saltos o espacios;
+2. revisa ortografía;
+3. comprueba encabezados y pies;
+4. revisa saltos;
+5. genera el PDF;
+6. abre el PDF y compáralo con el original.
+
+## 🏋️ 5. Practica
+
+### Ejercicio 1 · Reparación rápida
+
+Corrige un documento con:
+
+- espacios repetidos;
+- párrafos sin espaciado coherente;
+- listas manuales;
+- títulos inconsistentes.
+
+### Ejercicio 2 · Documento corporativo
+
+Crea una circular que incluya:
+
+- encabezado;
+- título;
+- dos secciones;
+- lista;
 - tabla;
-- cabecera/pie;
+- imagen;
+- pie;
+- número de página.
+
+### Ejercicio 3 · Buscar y reemplazar
+
+En un documento largo:
+
+- sustituye un nombre de empresa;
+- corrige una abreviatura;
+- detecta dobles espacios;
+- revisa ortografía.
+
+## 🔥 6. Nueva incidencia · «El contrato cambia al imprimir»
+
+El documento se ve bien en pantalla pero al generar PDF:
+
+- una tabla pasa de página;
+- una imagen se mueve;
+- el pie desaparece.
+
+Debes detectar y corregir las causas.
+
+## 🔒 7. Ticket cerrado · Evaluable
+
+Documento individual con errores deliberados.
+
+Se evalúan:
+
+- corrección de formato;
+- párrafos;
+- página;
+- tablas;
 - imágenes;
-- paginación;
+- encabezado/pie;
+- revisión;
 - PDF final.
 
-## 🔥 Nueva incidencia · «El contrato se rompe al imprimir»
+## ✅ 8. Comprueba que sabes...
 
-Debes localizar por qué un documento cambia de aspecto al editarlo o imprimirlo y reconstruir la parte problemática usando las herramientas adecuadas.
-
-## 🔒 Ticket cerrado · Evaluable
-
-Recibirás un documento diferente al de tus compañeros con errores deliberados.
-
-Deberás:
-
-1. detectar los problemas;
-2. corregirlos;
-3. aplicar una estructura coherente;
-4. añadir los elementos indicados;
-5. generar un PDF final;
-6. entregar una breve nota con tres decisiones de maquetación justificadas.
-
-## ✅ Checklist
-
-- [ ] Sé editar texto sin destruir la estructura.
-- [ ] Sé usar formato de carácter y párrafo.
-- [ ] Sé utilizar tabulaciones y listas correctamente.
-- [ ] Sé configurar página y secciones.
-- [ ] Sé usar encabezados, pies y numeración.
-- [ ] Sé crear y modificar tablas.
-- [ ] Sé colocar imágenes sin desordenar el texto.
-- [ ] Sé revisar y exportar un documento profesional.
+- [ ] Distingo formato de carácter y de párrafo.
+- [ ] Sé usar espaciado, tabulaciones y saltos correctamente.
+- [ ] Sé configurar una página y sus secciones.
+- [ ] Sé crear encabezados y pies.
+- [ ] Sé trabajar con tablas e imágenes.
+- [ ] Sé revisar un documento antes de entregarlo.
+- [ ] Sé exportar a PDF y comprobar el resultado.

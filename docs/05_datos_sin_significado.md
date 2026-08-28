@@ -1,168 +1,213 @@
 # Tema 5 · Tenemos datos, pero nadie sabe qué significan
 
-!!! info "CAOS, S.L." 
-    Formas parte del equipo de rescate digital de una empresa cuya gestión ofimática es un desastre.  
-    Todo lo que arregles en este tema quedará incorporado a la empresa y podrá volver a utilizarse en temas posteriores.
+!!! info "CAOS, S.L."
+    Dirección tiene miles de filas, pero no consigue respuestas útiles.
 
-## Estructura del tema
+## 🚨 1. Incidencia inicial
 
-1. 🚨 **Incidencia inicial** — qué problema tiene hoy CAOS, S.L.
-2. 🛠️ **Rescate guiado** — resolvemos un caso completo mientras aprendemos.
-3. 📚 **Lo que necesitas saber** — teoría y procedimientos de consulta.
-4. 🏋️ **Ahora tú** — ejercicio individual de consolidación.
-5. 🔥 **Nueva incidencia** — reto menos guiado.
-6. 🔒 **Ticket cerrado** — caso evaluable individual.
+Dirección quiere saber:
 
-!!! warning "Importante" 
-    En los casos evaluables los datos, archivos o condiciones pueden cambiar entre alumnos. No se evalúa reproducir unos pasos de memoria, sino resolver correctamente la incidencia y poder explicar las decisiones tomadas.
+- qué producto vende más;
+- qué comercial funciona mejor;
+- qué clientes han dejado de comprar;
+- qué meses son peores.
 
-## Objetivos del rescate
+**Objetivo:** pasar de datos a información.
 
-Analizar conjuntos de datos mediante búsquedas, validación, ordenación, filtros, gráficos, tablas dinámicas e importación/exportación.
+## 🎯 2. Qué aprenderás
 
-## 🚨 Incidencia inicial · «Tenemos datos para todo y respuestas para nada»
+- limpiar datos;
+- ordenar y filtrar;
+- validar entradas;
+- realizar búsquedas;
+- elegir gráficos;
+- importar CSV;
+- crear tablas dinámicas;
+- responder preguntas a partir de un conjunto de datos.
 
-Dirección pregunta:
+## 🛠️ 3. Rescate guiado · Análisis comercial
 
-- ¿qué producto funciona mejor?;
-- ¿qué comercial vende más?;
-- ¿qué clientes han dejado de comprar?;
-- ¿qué trimestre fue peor?;
-- ¿qué previsión podemos hacer?
+### Paso 1. Limpieza
 
-La respuesta de Contabilidad es: «Está todo en Excel».
+Comprueba:
 
-**Misión:** transformar datos en información.
+- encabezados;
+- filas vacías;
+- tipos;
+- duplicados;
+- valores incoherentes.
 
-## 🛠️ Rescate guiado · Del listado al panel de control
+### Paso 2. Ordenación
 
-### 1. Funciones lógicas combinadas
+Ordenamos por:
 
-Resolveremos condiciones que dependen de varios criterios.
+- importe;
+- fecha;
+- comercial;
+- varios criterios.
 
-### 2. Búsqueda y referencia
+### Paso 3. Filtros
 
-Usaremos funciones de búsqueda disponibles en la aplicación para recuperar información asociada a una clave.
+Ejemplos:
 
-Casos:
+- ventas > 1000;
+- ciudad = Valencia;
+- fecha en trimestre 2.
 
-- obtener el precio de un producto;
-- recuperar el nombre de un cliente;
-- localizar una categoría;
-- completar automáticamente una tabla.
+### Paso 4. Validación
 
-### 3. Gestión de errores
+Creamos listas para:
 
-Una hoja profesional debe distinguir entre:
+- provincia;
+- categoría;
+- estado.
+
+### Paso 5. Búsquedas
+
+A partir del código de producto recuperamos su nombre o precio.
+
+Según la aplicación se utilizará `BUSCARV`, `BUSCARX/XLOOKUP` o funciones equivalentes.
+
+### Paso 6. Gráficos
+
+Regla:
+
+> primero formula la pregunta; después elige el gráfico.
+
+- barras/columnas: comparar;
+- líneas: evolución;
+- sectores: proporciones simples y pocas categorías.
+
+### Paso 7. Importación CSV
+
+Hay que revisar:
+
+- delimitador;
+- codificación;
+- encabezados;
+- tipos.
+
+### Paso 8. Tabla dinámica
+
+Podemos resumir:
+
+- ventas por comercial;
+- ventas por mes;
+- ventas por categoría.
+
+## 📚 4. Lo que necesitas saber
+
+### 4.1 Tabla de datos limpia
+
+Una tabla fuente debería cumplir:
+
+- una fila = un registro;
+- una columna = una variable;
+- encabezados únicos;
+- sin filas vacías internas;
+- sin subtotales incrustados en el listado.
+
+### 4.2 Ordenar no es filtrar
+
+**Ordenar** cambia el orden de los registros.
+
+**Filtrar** oculta temporalmente los que no cumplen una condición.
+
+### 4.3 Validación
+
+La validación evita errores antes de que se produzcan.
+
+Ejemplos:
+
+- lista cerrada de provincias;
+- límite de valores;
+- fechas dentro de un intervalo;
+- mensajes de entrada.
+
+### 4.4 Búsquedas
+
+Una búsqueda recupera información asociada a una clave.
+
+Ejemplo:
+
+```text
+codigo_producto -> nombre_producto
+```
+
+Es importante que la clave sea coherente y que el rango de búsqueda esté bien definido.
+
+### 4.5 Gestión de errores
+
+Una hoja profesional debe distinguir:
 
 - dato inexistente;
 - error de fórmula;
 - entrada no válida.
 
-### 4. Ordenación
+Ocultar todos los errores sin analizarlos puede ocultar problemas reales.
 
-Ordenaremos por:
+### 4.6 Gráficos
 
-- texto;
-- número;
-- fecha;
-- varios criterios.
+Un gráfico debe responder una pregunta.
 
-### 5. Filtros
+Evita:
 
-Permiten mostrar únicamente registros que cumplen determinadas condiciones.
+- 3D innecesario;
+- leyendas redundantes;
+- colores sin significado;
+- exceso de categorías;
+- ejes engañosos.
 
-### 6. Tablas de datos
+### 4.7 CSV
 
-Convertiremos rangos en estructuras manejables y coherentes cuando la aplicación lo permita.
+CSV es un formato de texto para datos tabulares.
 
-### 7. Validación de datos
+Puede variar en:
 
-Evitaremos errores de entrada mediante:
+- separador;
+- codificación;
+- representación decimal;
+- formato de fecha.
 
-- listas;
-- límites;
-- tipos;
-- mensajes.
+Por eso hay que revisar la importación.
 
-### 8. Subtotales y agrupaciones
+### 4.8 Tablas dinámicas
 
-Resumiremos conjuntos organizados por categorías.
+Una tabla dinámica resume grandes conjuntos de datos sin escribir una fórmula para cada resultado.
 
-### 9. Gráficos
+Conceptos:
 
-Elegiremos el gráfico en función de la pregunta.
+- filas;
+- columnas;
+- valores;
+- filtros.
 
-Trabajaremos:
+## 🏋️ 5. Practica
 
-- columnas/barras;
-- líneas;
-- sectores solo cuando proceda;
-- otros gráficos disponibles según necesidad.
+1. Filtra ventas de Valencia superiores a 750 €.
+2. Completa automáticamente el nombre de producto desde su código.
+3. Crea un gráfico mensual.
+4. Crea una tabla dinámica por comercial y trimestre.
 
-Un gráfico no es decoración: debe comunicar una idea.
+## 🔥 6. Nueva incidencia
 
-### 10. Importación y exportación
+Dirección formula cinco preguntas sobre un fichero nuevo. Debes decidir qué herramienta utilizar para responder cada una.
 
-- CSV;
-- texto delimitado;
-- hojas externas;
-- limpieza básica;
-- codificación y separadores.
+## 🔒 7. Ticket cerrado · Evaluable
 
-### 11. Tablas dinámicas
+Cada alumno recibe:
 
-Permiten resumir y reorganizar grandes volúmenes de datos sin construir cada fórmula manualmente.
+- un dataset distinto;
+- preguntas distintas;
+- condiciones de análisis distintas.
 
-### 12. Plantillas y automatización
+## ✅ 8. Comprueba que sabes...
 
-Prepararemos libros reutilizables y revisaremos tareas susceptibles de automatización.
-
-## 📚 Lo que necesitas saber
-
-### Pregunta antes de hacer el gráfico
-
-No empieces eligiendo colores. Empieza preguntando:
-
-> ¿Qué quiero que el lector descubra?
-
-### Datos limpios
-
-Antes de analizar:
-
-- una fila = un registro;
-- una columna = una variable;
-- encabezados únicos;
-- tipos coherentes;
-- evitar filas y columnas vacías internas.
-
-## 🏋️ Ahora tú · «Informe mensual de ventas»
-
-A partir de un fichero de ventas deberás:
-
-- validar datos;
-- ordenar y filtrar;
-- obtener información mediante búsquedas;
-- crear gráficos;
-- construir un resumen.
-
-## 🔥 Nueva incidencia · «El director quiere saber qué está pasando en 5 minutos»
-
-Debes responder varias preguntas usando el conjunto de datos sin modificar manualmente los resultados.
-
-## 🔒 Ticket cerrado · Evaluable
-
-Cada alumno recibirá un fichero distinto y varias preguntas de negocio.
-
-No se indicará qué herramienta utilizar en cada pregunta.
-
-## ✅ Checklist
-
-- [ ] Sé combinar condiciones.
-- [ ] Sé recuperar información mediante búsquedas.
-- [ ] Sé ordenar y filtrar correctamente.
-- [ ] Sé aplicar validación de datos.
-- [ ] Sé elegir gráficos adecuados.
-- [ ] Sé importar datos estructurados.
-- [ ] Sé construir una tabla dinámica.
-- [ ] Sé transformar datos en respuestas justificables.
+- [ ] Sé limpiar una tabla de datos.
+- [ ] Distingo ordenar y filtrar.
+- [ ] Sé aplicar validación.
+- [ ] Sé realizar búsquedas por clave.
+- [ ] Sé importar un CSV.
+- [ ] Sé elegir un gráfico con criterio.
+- [ ] Sé crear una tabla dinámica.
+- [ ] Sé justificar cómo he obtenido una respuesta.

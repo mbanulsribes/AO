@@ -1,190 +1,223 @@
 # Tema 3 · Documentos que trabajan solos
 
-!!! info "CAOS, S.L." 
-    Formas parte del equipo de rescate digital de una empresa cuya gestión ofimática es un desastre.  
-    Todo lo que arregles en este tema quedará incorporado a la empresa y podrá volver a utilizarse en temas posteriores.
+!!! info "CAOS, S.L."
+    Recursos Humanos prepara cientos de documentos uno por uno y cada departamento usa una plantilla distinta.
 
-## Estructura del tema
+## 🚨 1. Incidencia inicial
 
-1. 🚨 **Incidencia inicial** — qué problema tiene hoy CAOS, S.L.
-2. 🛠️ **Rescate guiado** — resolvemos un caso completo mientras aprendemos.
-3. 📚 **Lo que necesitas saber** — teoría y procedimientos de consulta.
-4. 🏋️ **Ahora tú** — ejercicio individual de consolidación.
-5. 🔥 **Nueva incidencia** — reto menos guiado.
-6. 🔒 **Ticket cerrado** — caso evaluable individual.
+Recursos Humanos prepara 286 cartas cambiando manualmente:
 
-!!! warning "Importante" 
-    En los casos evaluables los datos, archivos o condiciones pueden cambiar entre alumnos. No se evalúa reproducir unos pasos de memoria, sino resolver correctamente la incidencia y poder explicar las decisiones tomadas.
-## Objetivos del rescate
+- nombre;
+- dirección;
+- fecha;
+- número de cliente.
 
-Construir documentos reutilizables y automatizados mediante estilos, documentos estructurados, plantillas, campos, formularios, combinación de correspondencia e introducción a macros.
+**Objetivo:** estandarizar y automatizar documentos repetitivos.
 
-## 🚨 Incidencia inicial · «¿De verdad hacemos 286 cartas una a una?»
+## 🎯 2. Qué aprenderás
 
-Recursos Humanos necesita enviar una comunicación personalizada a 286 personas.  
-La solución actual consiste en abrir un documento, cambiar nombre y dirección, guardar una copia y repetir.
+- usar estilos con función estructural;
+- organizar documentos largos;
+- crear plantillas reutilizables;
+- utilizar campos;
+- preparar una fuente de datos limpia;
+- realizar combinaciones de correspondencia;
+- crear documentos rellenables;
+- comprender qué es una macro y sus riesgos.
 
-Además, cada departamento utiliza una versión diferente del membrete.
+## 🛠️ 3. Rescate guiado · Comunicación masiva
 
-**Misión:** convertir los documentos repetitivos en procesos reutilizables.
+### Paso 1. Estilos
 
-## 🛠️ Rescate guiado · Creamos el sistema documental de CAOS, S.L.
+Creamos:
 
-### 1. Estilos
-
-Un estilo agrupa propiedades de formato.
-
-Trabajaremos con:
-
-- título;
-- subtítulo;
+- Título 1;
+- Título 2;
 - cuerpo;
-- encabezados de distintos niveles;
-- estilos personalizados.
+- destacado;
+- estilo corporativo.
 
 Ventajas:
 
 - coherencia;
-- modificación global;
+- cambios globales;
 - navegación;
-- tablas de contenido automáticas.
+- índice automático.
 
-### 2. Estructura de documentos largos
+### Paso 2. Documento estructurado
 
-- niveles de título;
-- esquema;
-- panel de navegación;
-- saltos;
-- secciones;
-- tabla de contenido automática.
+Aplicamos niveles de título y generamos una tabla de contenido automática.
 
-### 3. Plantillas
+### Paso 3. Plantilla
 
-Una plantilla es un documento base reutilizable.
-
-Crearemos una plantilla corporativa con:
+Creamos una plantilla corporativa con:
 
 - logo;
-- tipografías;
 - márgenes;
-- encabezado/pie;
 - estilos;
-- elementos fijos.
+- encabezado;
+- pie.
 
-### 4. Campos
+### Paso 4. Fuente de datos
 
-Los campos permiten insertar información que puede actualizarse o variar.
+| id | nombre | apellidos | email | ciudad |
+|---|---|---|---|---|
+| C001 | Lucía | Torres | lucia@example.com | Valencia |
+
+Reglas:
+
+- una fila = un registro;
+- una columna = un atributo;
+- encabezados claros;
+- sin filas vacías internas.
+
+### Paso 5. Combinación de correspondencia
+
+Proceso:
+
+1. documento principal;
+2. origen de datos;
+3. campos;
+4. vista previa;
+5. filtros;
+6. combinación.
+
+### Paso 6. Etiquetas y sobres
+
+Reutilizamos la misma fuente de datos.
+
+### Paso 7. Formularios
+
+Introducción a:
+
+- controles de texto;
+- listas;
+- casillas;
+- documentos rellenables.
+
+### Paso 8. Macros
+
+Una macro es una secuencia de acciones automatizada.
+
+!!! danger "Seguridad"
+    No ejecutes macros de origen desconocido. Una macro puede contener acciones no deseadas o maliciosas.
+
+## 📚 4. Lo que necesitas saber
+
+### 4.1 Estilo no es lo mismo que «formato bonito»
+
+Un estilo asigna una función a un fragmento del documento.
+
+Si todos los encabezados principales usan `Título 1`, podemos modificar su apariencia una sola vez y el cambio se aplicará a todos.
+
+Además, los estilos permiten:
+
+- navegación;
+- índices automáticos;
+- coherencia;
+- mantenimiento.
+
+### 4.2 Documentos largos
+
+En un documento largo conviene:
+
+- usar niveles de título;
+- evitar formatear manualmente cada encabezado;
+- usar saltos adecuados;
+- generar índices automáticos;
+- mantener una estructura consistente.
+
+### 4.3 Plantilla frente a documento
+
+La **plantilla** es el patrón.
+
+El **documento** es una instancia creada a partir de esa plantilla.
+
+Modificar una carta concreta no debería alterar la plantilla corporativa.
+
+### 4.4 Campos
+
+Los campos contienen información que puede actualizarse automáticamente.
 
 Ejemplos:
 
 - fecha;
 - número de página;
 - propiedades del documento;
-- valores procedentes de una combinación.
+- datos procedentes de una combinación.
 
-### 5. Formularios y controles
+### 4.5 Fuente de datos limpia
 
-Introducción a:
+Para combinar datos correctamente:
+
+- cada columna representa un atributo;
+- cada fila representa una persona o registro;
+- los encabezados son únicos;
+- los tipos de datos son coherentes;
+- no se introducen filas vacías dentro del conjunto.
+
+### 4.6 Combinación de correspondencia
+
+Permite crear muchos documentos personalizados a partir de:
+
+- un documento principal;
+- una fuente de datos;
+- campos variables.
+
+No es necesario abrir 286 cartas y cambiar el nombre una a una.
+
+### 4.7 Filtros
+
+Los filtros permiten combinar solo determinados registros.
+
+Ejemplo: clientes de Valencia con renovación pendiente.
+
+La solución correcta es filtrar, no borrar manualmente filas.
+
+### 4.8 Formularios
+
+Un formulario puede limitar el tipo de entrada que realiza el usuario mediante:
 
 - campos de texto;
 - listas;
 - casillas;
-- zonas protegidas;
-- documentos rellenables.
+- zonas protegidas.
 
-### 6. Combinación de correspondencia
+## 🏋️ 5. Practica
 
-Elementos:
+1. Transforma un documento manual en uno basado en estilos.
+2. Crea una plantilla corporativa.
+3. Genera 20 cartas personalizadas.
+4. Filtra solo clientes de Valencia.
 
-1. documento principal;
-2. origen de datos;
-3. campos;
-4. filtros;
-5. combinación.
+## 🔥 6. Nueva incidencia
 
-Aplicaciones:
+Solo deben recibir la comunicación quienes tengan renovación pendiente y pertenezcan a dos provincias concretas.
 
-- cartas;
-- certificados;
-- etiquetas;
-- sobres;
-- correos personalizados.
+No se permite eliminar manualmente registros.
 
-### 7. Importación y exportación
+## 🔒 7. Ticket cerrado · Evaluable
 
-Los datos pueden proceder de:
+Cada alumno recibe:
 
-- hojas de cálculo;
-- CSV;
-- bases de datos;
-- listas existentes.
+- una plantilla incompleta;
+- datos distintos;
+- criterios distintos.
 
-### 8. Automatización y macros
+Debe generar:
 
-Una macro permite automatizar una secuencia de acciones.
+- documento principal;
+- combinación;
+- salida final;
+- PDF de muestra.
 
-En este tema:
+## ✅ 8. Comprueba que sabes...
 
-- qué es;
-- para qué sirve;
-- grabación sencilla cuando la aplicación lo permita;
-- riesgos de ejecutar macros desconocidas.
-
-## 📚 Lo que necesitas saber
-
-### Estilo no es lo mismo que «formato bonito»
-
-El objetivo de un estilo es dar significado y consistencia al documento.
-
-Si todos los encabezados utilizan el estilo `Título 1`, cambiar ese estilo modifica todos los encabezados a la vez.
-
-### Plantilla frente a documento
-
-La plantilla es el patrón.  
-Cada nuevo documento se crea a partir de ella sin destruir el original.
-
-### Fuente de datos limpia
-
-Una combinación funciona mejor cuando:
-
-- cada columna representa un dato;
-- cada fila representa un registro;
-- los encabezados son claros;
-- no hay filas vacías;
-- los tipos de datos son coherentes.
-
-## 🏋️ Ahora tú · «Aviso de renovación»
-
-Crearás:
-
-- una plantilla;
-- una fuente de datos;
-- una comunicación;
-- una combinación personalizada;
-- un PDF de muestra.
-
-## 🔥 Nueva incidencia · «Solo algunos clientes deben recibirla»
-
-Debes generar comunicaciones únicamente para los registros que cumplen unas condiciones, sin editar manualmente la lista resultante.
-
-## 🔒 Ticket cerrado · Evaluable
-
-Se te asignará:
-
-- un tipo de documento;
-- una plantilla corporativa incompleta;
-- un conjunto de registros;
-- criterios de selección diferentes.
-
-Deberás producir el sistema y el resultado final.
-
-## ✅ Checklist
-
-- [ ] Sé utilizar estilos.
-- [ ] Sé generar una tabla de contenido automática.
-- [ ] Sé crear y reutilizar plantillas.
-- [ ] Entiendo para qué sirven los campos.
-- [ ] Sé preparar un formulario sencillo.
-- [ ] Sé combinar documentos con una fuente de datos.
-- [ ] Sé filtrar destinatarios.
-- [ ] Comprendo el objetivo y los riesgos básicos de las macros.
+- [ ] Sé utilizar estilos reales.
+- [ ] Sé crear una tabla de contenido automática.
+- [ ] Distingo plantilla y documento.
+- [ ] Sé preparar una fuente de datos limpia.
+- [ ] Sé insertar campos.
+- [ ] Sé combinar correspondencia.
+- [ ] Sé filtrar registros sin borrar datos manualmente.
+- [ ] Entiendo qué es una macro y sus riesgos.

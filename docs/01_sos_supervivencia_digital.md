@@ -1,73 +1,77 @@
 # Tema 1 · SOS: supervivencia en el caos digital
 
-!!! info "CAOS, S.L." 
-    Formas parte del equipo de rescate digital de una empresa cuya gestión ofimática es un desastre.  
+!!! info "CAOS, S.L."
+    Formas parte del equipo de rescate digital de una empresa cuya gestión ofimática es un desastre.
+
     Todo lo que arregles en este tema quedará incorporado a la empresa y podrá volver a utilizarse en temas posteriores.
 
-## Estructura del tema
+## 🚨 1. Incidencia inicial
 
-1. 🚨 **Incidencia inicial** — qué problema tiene hoy CAOS, S.L.
-2. 🛠️ **Rescate guiado** — resolvemos un caso completo mientras aprendemos.
-3. 📚 **Lo que necesitas saber** — teoría y procedimientos de consulta.
-4. 🏋️ **Ahora tú** — ejercicio individual de consolidación.
-5. 🔥 **Nueva incidencia** — reto menos guiado.
-6. 🔒 **Ticket cerrado** — caso evaluable individual.
+Primer día en **CAOS, S.L.**.
 
+La carpeta compartida contiene archivos con nombres como:
 
-!!! warning "Importante" 
-    En los casos evaluables los datos, archivos o condiciones pueden cambiar entre alumnos. No se evalúa reproducir unos pasos de memoria, sino resolver correctamente la incidencia y poder explicar las decisiones tomadas.
+```text
+factura.docx
+factura_nueva.docx
+factura_final.docx
+factura_final2.docx
+factura_FINAL_BUENA_ahora_si.docx
+captura1.png
+captura2.png
+presupuesto_cliente23_FINAL.xlsx
+entrega.zip
+```
 
+Además:
 
-## Objetivos del rescate
+- algunos empleados no saben qué formato deben enviar;
+- hay archivos que no se abren;
+- los correos llegan sin asunto;
+- las capturas no muestran el error;
+- nadie sabe qué versión es la correcta.
 
-Al terminar el tema deberás ser capaz de organizar un entorno de trabajo ofimático básico, reconocer los principales tipos de aplicaciones, trabajar con archivos y formatos habituales, preparar evidencias útiles y comunicar una incidencia de forma profesional.
+**Objetivo del tema:** crear un protocolo mínimo de trabajo para que la empresa pueda empezar a funcionar.
 
-## 🚨 Incidencia inicial · «¿Dónde está el archivo bueno?»
+## 🎯 2. Qué aprenderás
 
-Tu primer día en **CAOS, S.L.** empieza con una carpeta compartida llena de documentos como:
+Al terminar el tema deberás ser capaz de:
 
-- `factura.docx`
-- `factura_nueva.docx`
-- `factura_final.docx`
-- `factura_final2.docx`
-- `factura_FINAL_BUENA_ahora_si.docx`
-- `captura1.png`
-- `captura2.png`
-- `IMG_827364.jpg`
+- reconocer las principales aplicaciones ofimáticas;
+- organizar archivos y carpetas de forma profesional;
+- elegir nombres y versiones coherentes;
+- distinguir formatos habituales;
+- decidir cuándo conviene PDF, formato editable o CSV;
+- preparar capturas útiles;
+- redactar un correo profesional básico;
+- registrar una incidencia con información suficiente;
+- revisar requisitos y licencias antes de instalar software.
 
-Además, nadie sabe qué programas están instalados, algunos archivos no se abren y los empleados mandan correos sin asunto con capturas que no permiten entender el problema.
+## 🛠️ 3. Rescate guiado · La carpeta compartida
 
-**Misión:** establecer un protocolo mínimo para poder empezar a trabajar.
+### Paso 1. Identificamos las herramientas
 
-## 🛠️ Rescate guiado · Ponemos orden
+La **ofimática** reúne herramientas para crear, tratar, almacenar, organizar y comunicar información habitual en una organización.
 
-### 1. Qué es la ofimática
-
-La ofimática reúne herramientas informáticas destinadas a crear, tratar, organizar, almacenar y comunicar información habitual en un entorno de trabajo.
-
-Trabajaremos con:
+Durante el curso utilizaremos:
 
 - procesadores de texto;
 - hojas de cálculo;
 - bases de datos;
 - presentaciones;
-- correo y agenda;
-- edición de imágenes;
-- edición de vídeo.
+- gestores de correo y agenda;
+- editores de imagen;
+- editores de vídeo.
 
-### 2. Suites ofimáticas
-
-Una suite agrupa varias aplicaciones que comparten una forma de trabajo y permiten intercambiar información.
-
-Ejemplos habituales:
+Una **suite ofimática** agrupa varias de estas aplicaciones. Ejemplos habituales:
 
 - Microsoft 365;
 - LibreOffice;
 - Google Workspace.
 
-### 3. Archivos, carpetas y nombres
+### Paso 2. Creamos una estructura lógica
 
-Creamos una estructura básica:
+Una posible estructura sería:
 
 ```text
 CAOS_SL/
@@ -79,197 +83,265 @@ CAOS_SL/
 └── 99_Temporal/
 ```
 
-Reglas de trabajo:
+No existe una única estructura correcta. Debe ser:
 
-- nombres breves y descriptivos;
-- evitar `final`, `bueno`, `nuevo2`;
-- incluir fecha cuando sea relevante;
-- mantener una estructura común;
-- no duplicar información sin motivo.
+- coherente;
+- comprensible;
+- estable;
+- compartida por todo el equipo.
+
+### Paso 3. Renombramos los archivos
+
+Evita nombres como:
+
+```text
+factura_final2_buena.docx
+```
+
+Es preferible usar nombres descriptivos y, cuando proceda, fecha, cliente o versión:
+
+```text
+2026-09_factura_C023.docx
+2026-09_factura_C023_v01.docx
+2026-09_factura_C023_v02.docx
+```
+
+### Paso 4. Reconocemos extensiones
+
+| Extensión | Uso habitual |
+|---|---|
+| `.docx`, `.odt` | documentos editables |
+| `.pdf` | distribución y lectura |
+| `.xlsx`, `.ods` | hojas de cálculo |
+| `.csv` | intercambio de datos tabulares |
+| `.jpg`, `.png`, `.svg` | imagen |
+| `.mp4`, `.webm` | vídeo |
+| `.zip`, `.7z` | archivos comprimidos |
+
+!!! warning "Importante"
+    Cambiar `.odt` por `.docx` en el nombre **no convierte realmente el archivo**.
+
+### Paso 5. Elegimos formato según la finalidad
+
+Si Administración debe enviar una circular que el receptor solo tiene que leer, la mejor salida suele ser **PDF**.
+
+Si el receptor tiene que modificar el contenido, será necesario enviar además un formato editable compatible.
+
+Si otra aplicación debe importar una tabla, un **CSV** suele ser adecuado porque contiene datos tabulares en texto plano.
+
+### Paso 6. Preparamos una captura útil
+
+Una captura de soporte debe:
+
+- mostrar el error;
+- mostrar suficiente contexto;
+- ser legible;
+- evitar información privada no necesaria;
+- llevar un nombre descriptivo.
 
 Ejemplo:
 
 ```text
-2026-09_presupuesto_cliente_023.xlsx
+error_apertura_archivo_2026-09-15.png
 ```
 
-### 4. Extensiones y formatos
+### Paso 7. Redactamos un correo profesional
 
-La extensión identifica normalmente el tipo de archivo:
+**Asunto:** Incidencia al abrir listado de clientes
 
-| Tipo | Ejemplos |
-|---|---|
-| Texto | `.docx`, `.odt`, `.pdf` |
-| Hoja de cálculo | `.xlsx`, `.ods`, `.csv` |
-| Imagen | `.jpg`, `.png`, `.svg` |
-| Vídeo | `.mp4`, `.webm` |
-| Comprimido | `.zip`, `.7z` |
+> Buenos días:  
+> Al intentar abrir `listado_clientes.ods` aparece el mensaje «formato no compatible».  
+> He probado a abrirlo con la aplicación instalada en el equipo y he adjuntado una captura del error.  
+> Necesito consultar el listado, pero no modificarlo.  
+> Gracias.
 
-No basta con cambiar el nombre de la extensión para convertir un archivo.
+### Paso 8. Registramos el ticket
 
-### 5. PDF
+Campos mínimos:
 
-Usamos PDF cuando queremos distribuir un documento conservando su aspecto y evitando depender del programa con el que fue creado.
-
-Practicaremos:
-
-- exportar a PDF;
-- comprobar el resultado;
-- elegir un nombre correcto;
-- revisar tamaño y legibilidad.
-
-### 6. Compresión
-
-Un archivo comprimido permite agrupar varios ficheros y, en muchos casos, reducir su tamaño.
-
-Antes de enviar un ZIP:
-
-1. revisar su contenido;
-2. eliminar temporales;
-3. usar una estructura clara;
-4. asignar un nombre descriptivo.
-
-### 7. Capturas útiles
-
-Una captura debe demostrar algo.
-
-Debe:
-
-- mostrar el elemento relevante;
-- incluir contexto suficiente;
-- evitar datos innecesarios;
-- ser legible;
-- tener un nombre descriptivo.
-
-Una captura de toda la pantalla con el error diminuto en una esquina no es una buena evidencia.
-
-### 8. Imagen básica
-
-Conceptos iniciales:
-
-- **dimensiones:** ancho × alto en píxeles;
-- **resolución:** densidad de información de la imagen;
-- **formato:** forma de almacenar la imagen;
-- **peso:** espacio ocupado por el archivo.
-
-En este tema solo aprenderemos lo necesario para adjuntar y utilizar imágenes correctamente. La edición avanzada llegará más adelante.
-
-### 9. Correo profesional básico
-
-Un correo de trabajo debe tener:
-
-- destinatario correcto;
-- asunto útil;
-- mensaje claro;
-- adjuntos necesarios;
-- despedida adecuada.
-
-**CC** permite enviar copia visible a otras personas.  
-**CCO** oculta las direcciones de los destinatarios incluidos en ese campo.
-
-### 10. Tickets de incidencia
-
-Un buen ticket debería indicar:
-
-- quién informa;
+- usuario;
 - fecha/hora;
-- equipo o aplicación afectada;
-- qué estaba intentando hacer;
-- qué ocurrió;
+- aplicación o archivo afectado;
+- descripción;
 - mensaje de error;
-- qué se ha probado;
-- evidencias.
+- pasos realizados;
+- evidencias;
+- estado.
 
-## 📚 Lo que necesitas saber
+## 📚 4. Lo que necesitas saber
 
-### Licencias y modelos de software
+### 4.1 Software libre, propietario, freeware y shareware
 
-Diferenciaremos de forma básica:
+**Software libre** no significa necesariamente gratuito. Significa que la licencia concede libertades como usar, estudiar, modificar y redistribuir el programa bajo determinadas condiciones.
 
-- software libre;
-- software propietario;
-- freeware;
-- shareware.
+**Software propietario** está controlado por su titular y su uso depende de la licencia concedida.
 
-También veremos por qué hay que comprobar las condiciones de uso antes de instalar o distribuir software.
+Otros conceptos:
 
-### Instalación y requisitos
+- **freeware**: gratuito, pero no necesariamente libre;
+- **shareware**: versión limitada en tiempo o funciones;
+- **copyright**: conjunto de derechos del autor o titular;
+- **copyleft**: mecanismo que permite reutilización y redistribución manteniendo determinadas libertades.
+
+### 4.2 Instalación y requisitos
 
 Antes de instalar una aplicación:
 
-1. comprobar sistema operativo compatible;
-2. revisar memoria y espacio disponible;
-3. verificar dependencias o requisitos;
-4. descargar desde una fuente fiable;
-5. instalar;
-6. comprobar que funciona;
-7. documentar incidencias.
+1. comprueba el sistema operativo compatible;
+2. revisa memoria y espacio disponible;
+3. verifica dependencias;
+4. descarga desde una fuente fiable;
+5. instala;
+6. prueba que funciona;
+7. documenta incidencias.
 
-### Ayuda y documentación
+Una instalación correcta no termina cuando el asistente muestra «Finalizar»: hay que comprobar que la aplicación arranca y que puede realizar la tarea prevista.
 
-Antes de decir «no funciona»:
+### 4.3 PDF frente a archivo editable
 
-1. leer el mensaje;
-2. reproducir el problema;
-3. consultar la ayuda del programa;
-4. buscar en documentación oficial;
-5. registrar lo probado.
+El PDF es apropiado cuando queremos conservar el aspecto de un documento y facilitar su lectura en distintos equipos.
 
-## 🏋️ Ahora tú · «Carpeta compartida de Administración»
+No sustituye al archivo editable original. Por eso, en un entorno profesional puede ser necesario conservar:
 
-Recibirás una carpeta con archivos desordenados.
+- el archivo fuente;
+- el PDF final distribuido.
 
-Debes:
+### 4.4 Compresión
 
-1. proponer una estructura de carpetas;
-2. renombrar los archivos;
-3. identificar extensiones;
-4. detectar formatos inadecuados;
-5. exportar un documento a PDF;
-6. preparar una captura útil;
-7. redactar un correo de entrega;
-8. registrar una incidencia encontrada.
+Un ZIP permite:
 
-## 🔥 Nueva incidencia · «No puedo abrir esto»
+- agrupar archivos;
+- reducir tamaño en muchos casos;
+- conservar una estructura de carpetas;
+- enviar varios archivos como una sola unidad.
 
-Un empleado ha enviado un archivo que otro departamento no puede abrir.
+Antes de enviarlo revisa:
 
-Sin instrucciones paso a paso:
+- temporales;
+- duplicados;
+- nombres;
+- carpetas vacías;
+- contenido innecesario.
 
-- identifica qué información necesitas;
-- determina el tipo de archivo;
-- busca una forma válida de compartirlo;
-- documenta la solución;
-- responde al usuario.
+### 4.5 Imagen básica
 
-## 🔒 Ticket cerrado · Evaluable
+Conceptos:
 
-Recibirás una carpeta individual con:
+- **dimensiones**: ancho × alto en píxeles;
+- **formato**: JPG, PNG, SVG, etc.;
+- **peso**: espacio ocupado por el archivo;
+- **resolución**: nivel de detalle o densidad según el contexto.
 
-- archivos con nombres incorrectos;
-- al menos un formato problemático;
-- una incidencia;
-- una petición por correo.
+La edición avanzada se trabajará en el Tema 7.
 
-Tendrás que entregar:
+### 4.6 Correo profesional básico
 
-1. carpeta reorganizada;
-2. archivos correctamente nombrados;
-3. documento convertido al formato indicado;
-4. evidencia mediante captura;
-5. ticket de incidencia;
-6. correo de respuesta.
+Un mensaje de trabajo debe permitir que el receptor entienda rápidamente:
 
-### Comprobación
+- quién escribe;
+- para qué;
+- qué necesita;
+- qué adjunta;
+- si debe realizar alguna acción.
 
-La profesora podrá pedirte que expliques brevemente una de las decisiones tomadas.
+Un asunto como `Hola` o `Mira esto` obliga al receptor a abrir el mensaje para saber de qué trata.
 
-## ✅ Checklist
+### 4.7 Qué convierte una captura en evidencia
 
-- [ ] Sé distinguir los principales tipos de aplicaciones ofimáticas.
-- [ ] Sé organizar archivos y carpetas.
-- [ ] Reconozco las extensiones más habituales.
-- [ ] Puedo exportar a PDF.
-- [ ] Sé crear una captura que sirva como evidencia.
-- [ ] Sé enviar un correo con asunto y adjuntos correctos.
-- [ ] Sé redactar un ticket de incidencia útil.
+Una captura no es una prueba útil si el error aparece diminuto o fuera de contexto.
+
+Debe ayudar a otra persona a reproducir o comprender el problema.
+
+### 4.8 Error frecuente: «No funciona»
+
+«No funciona» no es un diagnóstico. Antes de pedir ayuda hay que concretar:
+
+- qué intentabas hacer;
+- qué esperabas que ocurriera;
+- qué ocurrió realmente;
+- qué mensaje apareció;
+- qué has probado.
+
+## 🏋️ 5. Practica
+
+### Ejercicio 1 · Clasifica
+
+Indica qué aplicación utilizarías principalmente para:
+
+1. redactar un informe;
+2. calcular un presupuesto;
+3. almacenar clientes y pedidos relacionados;
+4. preparar una exposición;
+5. editar un logotipo;
+6. montar un videotutorial;
+7. enviar una convocatoria.
+
+### Ejercicio 2 · Renombrado profesional
+
+Propón nombres adecuados para:
+
+```text
+factura buena.docx
+clientes NUEVO.xlsx
+captura.png
+presentacion final final.pptx
+```
+
+### Ejercicio 3 · Elige el formato
+
+Decide qué formato entregarías en cada caso:
+
+1. documento que solo debe leerse;
+2. tabla que otro departamento debe seguir editando;
+3. datos tabulares que deben importarse en otra aplicación;
+4. logotipo con transparencia;
+5. fotografía para una publicación.
+
+### Ejercicio 4 · Ticket
+
+Redacta un ticket a partir de:
+
+> «No me va el Word. Le doy y no abre.»
+
+Indica qué información falta y cómo la pedirías.
+
+## 🔥 6. Nueva incidencia · «No puedo abrir esto»
+
+Un cliente recibe `listado_clientes.ods` pero solo necesita **consultar** la información.
+
+Resuelve la incidencia y justifica el formato de salida.
+
+## 🔒 7. Ticket cerrado · Evaluable
+
+Cada alumno recibe una carpeta distinta con:
+
+- archivos mal nombrados;
+- duplicados;
+- un archivo incompatible;
+- un ZIP desordenado;
+- una captura deficiente;
+- un correo mal redactado.
+
+Entregables:
+
+1. estructura organizada;
+2. archivos renombrados;
+3. conversión solicitada;
+4. ZIP limpio;
+5. captura útil;
+6. ticket;
+7. correo de respuesta.
+
+!!! warning "Importante"
+    Los datos, archivos o condiciones pueden cambiar entre alumnos. No se evalúa repetir pasos de memoria, sino resolver correctamente la incidencia y justificar las decisiones.
+
+## ✅ 8. Comprueba que sabes...
+
+- [ ] Distingo las principales aplicaciones ofimáticas.
+- [ ] Sé organizar carpetas y archivos.
+- [ ] Sé nombrar y versionar archivos con criterio.
+- [ ] Distingo formato editable, PDF y CSV.
+- [ ] Sé preparar una captura útil.
+- [ ] Sé redactar un correo profesional básico.
+- [ ] Sé registrar una incidencia con datos suficientes.
+- [ ] Sé comprobar requisitos y licencias antes de instalar software.

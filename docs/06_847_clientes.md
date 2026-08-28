@@ -1,72 +1,34 @@
 # Tema 6 · Tenemos 847 clientes y cuatro se llaman igual
 
-!!! info "CAOS, S.L." 
-    Formas parte del equipo de rescate digital de una empresa cuya gestión ofimática es un desastre.  
-    Todo lo que arregles en este tema quedará incorporado a la empresa y podrá volver a utilizarse en temas posteriores.
+!!! info "CAOS, S.L."
+    La empresa usa varias hojas para clientes y pedidos y ya no puede garantizar que los datos sean coherentes.
 
-## Estructura del tema
+## 🚨 1. Incidencia inicial
 
-1. 🚨 **Incidencia inicial** — qué problema tiene hoy CAOS, S.L.
-2. 🛠️ **Rescate guiado** — resolvemos un caso completo mientras aprendemos.
-3. 📚 **Lo que necesitas saber** — teoría y procedimientos de consulta.
-4. 🏋️ **Ahora tú** — ejercicio individual de consolidación.
-5. 🔥 **Nueva incidencia** — reto menos guiado.
-6. 🔒 **Ticket cerrado** — caso evaluable individual.
+Problemas:
 
+- duplicados;
+- inconsistencias;
+- direcciones diferentes;
+- pedidos sin cliente identificable.
 
-!!! warning "Importante" 
-    En los casos evaluables los datos, archivos o condiciones pueden cambiar entre alumnos. No se evalúa reproducir unos pasos de memoria, sino resolver correctamente la incidencia y poder explicar las decisiones tomadas.
+**Objetivo:** diseñar una base de datos relacional.
 
+## 🎯 2. Qué aprenderás
 
-## Objetivos del rescate
+- identificar entidades y atributos;
+- diseñar tablas;
+- elegir claves primarias;
+- crear relaciones;
+- comprender la integridad referencial;
+- realizar consultas;
+- crear formularios;
+- generar informes;
+- distinguir cuándo conviene una base de datos frente a una hoja de cálculo.
 
-Diseñar y utilizar una base de datos ofimática con tablas, claves, relaciones, consultas, formularios e informes.
+## 🛠️ 3. Rescate guiado · Clientes y pedidos
 
-## 🚨 Incidencia inicial · «¿Cuál de los cuatro Carlos García es este?»
-
-CAOS, S.L. mantiene clientes en varias hojas de cálculo.
-
-Se detecta:
-
-- información duplicada;
-- direcciones diferentes para el mismo cliente;
-- nombres escritos de varias formas;
-- pedidos sin cliente claro;
-- teléfonos dentro de la columna de observaciones.
-
-**Misión:** dejar de tratar la información relacionada como simples listas independientes.
-
-## 🛠️ Rescate guiado · Creamos la base de datos de clientes y pedidos
-
-### 1. Cuándo necesitamos una base de datos
-
-Una hoja de cálculo funciona muy bien para cálculo y análisis.
-
-Una base de datos resulta especialmente útil cuando debemos gestionar muchas entidades relacionadas y mantener coherencia entre ellas.
-
-### 2. Conceptos
-
-- base de datos;
-- tabla;
-- campo;
-- registro;
-- clave primaria.
-
-### 3. Tipos de datos
-
-Elegiremos el tipo adecuado para cada campo.
-
-Ejemplos:
-
-- texto;
-- número;
-- fecha;
-- moneda;
-- sí/no.
-
-### 4. Diseño de tablas
-
-Separaremos entidades:
+### Paso 1. Entidades
 
 ```text
 CLIENTES
@@ -75,96 +37,186 @@ PEDIDOS
 LINEAS_PEDIDO
 ```
 
-### 5. Claves
+### Paso 2. Campos
 
-Una clave primaria identifica cada registro de forma única.
+Ejemplo CLIENTES:
 
-No utilizaremos el nombre de una persona como identificador único.
+| Campo | Tipo |
+|---|---|
+| id_cliente | texto/autonumérico |
+| nombre | texto |
+| email | texto |
+| ciudad | texto |
 
-### 6. Relaciones
+### Paso 3. Clave primaria
 
-Estudiaremos relaciones entre tablas y el significado de:
+`id_cliente` identifica de forma única.
 
-- uno a uno;
-- uno a muchos;
-- muchos a muchos mediante tabla intermedia.
+No usamos el nombre como clave porque pueden existir personas con el mismo nombre.
 
-### 7. Integridad
+### Paso 4. Relaciones
 
-El objetivo es evitar situaciones incoherentes, por ejemplo un pedido asociado a un cliente inexistente.
+```text
+CLIENTES 1 --- N PEDIDOS
+PEDIDOS 1 --- N LINEAS_PEDIDO
+PRODUCTOS 1 --- N LINEAS_PEDIDO
+```
 
-### 8. Importación de datos
+### Paso 5. Integridad
 
-Partiremos de información procedente de temas anteriores y prepararemos su incorporación.
+No debe existir una línea de pedido para un pedido inexistente.
 
-### 9. Consultas
+### Paso 6. Consultas
 
-Una consulta permite recuperar información según criterios.
+Ejemplo:
 
-Practicaremos:
+> pedidos pendientes de clientes de Valencia.
 
-- selección de campos;
-- criterios;
-- ordenación;
-- varias tablas;
-- cálculos sencillos.
+Campos:
 
-### 10. Formularios
+- cliente;
+- pedido;
+- fecha;
+- estado.
 
-Los formularios facilitan la introducción y consulta de datos.
+Criterios:
 
-### 11. Informes
+```text
+ciudad = "Valencia"
+estado = "Pendiente"
+```
 
-Los informes permiten presentar información de forma organizada para imprimir o distribuir.
+### Paso 7. Formularios
 
-### 12. Exportación
+Creamos formularios para facilitar el alta y consulta de datos.
 
-Extraeremos resultados hacia formatos adecuados para utilizarlos en otros programas.
+### Paso 8. Informes
 
-## 📚 Lo que necesitas saber
+Generamos un informe de pedidos por cliente.
 
-### Diseñar antes de crear
+## 📚 4. Lo que necesitas saber
 
-No empezamos pulsando «Nueva tabla».  
-Primero identificamos:
+### 4.1 Tabla, campo y registro
 
-- qué entidades existen;
-- qué atributos tiene cada una;
+- **tabla**: conjunto de registros del mismo tipo;
+- **campo**: una característica de esos registros;
+- **registro**: una fila concreta.
+
+Ejemplo: en CLIENTES, `email` es un campo y cada cliente es un registro.
+
+### 4.2 Entidades y atributos
+
+Antes de crear tablas, identifica:
+
+- qué cosas existen en el problema;
+- qué datos describen cada cosa;
 - cómo se relacionan.
 
-### No dupliques información innecesariamente
+### 4.3 Clave primaria
 
-Si la dirección de un cliente aparece en 25 pedidos, actualizarla manualmente 25 veces es una señal de mal diseño.
+La clave primaria identifica un registro de forma única.
 
-## 🏋️ Ahora tú · «Proveedores y compras»
+Una buena clave debe ser:
 
-Diseña una pequeña base de datos relacionada a partir de unas necesidades descritas.
+- única;
+- estable;
+- no ambigua.
 
-## 🔥 Nueva incidencia · «Necesito todos los pedidos pendientes de clientes de Valencia»
+### 4.4 Clave externa
 
-Debes responder mediante una consulta, no buscando manualmente fila por fila.
+Una clave externa conecta una tabla con otra.
 
-## 🔒 Ticket cerrado · Evaluable
+Ejemplo:
 
-Cada alumno recibirá un pequeño caso de negocio distinto.
+```text
+PEDIDOS.id_cliente -> CLIENTES.id_cliente
+```
 
-Deberá:
+### 4.5 Relaciones
 
-1. diseñar tablas;
-2. definir claves;
-3. crear relaciones;
-4. importar o introducir datos;
-5. construir consultas;
-6. crear un formulario;
-7. generar un informe.
+**1:1**  
+Un registro de A se relaciona con uno de B.
 
-## ✅ Checklist
+**1:N**  
+Un cliente puede tener muchos pedidos, pero cada pedido pertenece a un cliente.
+
+**N:M**  
+Un pedido puede contener muchos productos y un producto puede aparecer en muchos pedidos.
+
+Se resuelve mediante una tabla intermedia, como `LINEAS_PEDIDO`.
+
+### 4.6 Integridad referencial
+
+La integridad evita relaciones imposibles.
+
+Ejemplo: no podemos asignar un pedido al cliente `C999` si ese cliente no existe.
+
+### 4.7 Base de datos frente a hoja de cálculo
+
+Una hoja de cálculo es excelente para:
+
+- cálculo;
+- análisis;
+- gráficos.
+
+Una base de datos es preferible cuando:
+
+- existen entidades relacionadas;
+- se necesita integridad;
+- hay múltiples consultas;
+- debe evitarse duplicidad.
+
+### 4.8 Consultas
+
+Una consulta recupera información según criterios.
+
+Puede:
+
+- seleccionar campos;
+- filtrar;
+- ordenar;
+- combinar tablas;
+- calcular valores.
+
+### 4.9 Formularios e informes
+
+**Formulario:** facilita entrada y consulta.
+
+**Informe:** presenta información preparada para lectura, impresión o distribución.
+
+## 🏋️ 5. Practica
+
+1. Diseña tablas para proveedores y compras.
+2. Crea relaciones.
+3. Consulta compras > 500 € del último mes.
+4. Crea un formulario de alta de proveedor.
+
+## 🔥 6. Nueva incidencia
+
+> Necesito todos los pedidos pendientes de clientes de Valencia cuyo total sea superior a 300 €.
+
+Debes responder mediante una consulta, no buscando fila por fila.
+
+## 🔒 7. Ticket cerrado · Evaluable
+
+Mini caso distinto por alumno.
+
+Debe incluir:
+
+- diseño de tablas;
+- claves;
+- relaciones;
+- consultas;
+- formulario;
+- informe.
+
+## ✅ 8. Comprueba que sabes...
 
 - [ ] Distingo tabla, campo y registro.
+- [ ] Sé identificar entidades y atributos.
 - [ ] Sé elegir una clave primaria.
-- [ ] Sé separar entidades.
-- [ ] Sé crear relaciones.
+- [ ] Entiendo una clave externa.
+- [ ] Distingo relaciones 1:1, 1:N y N:M.
+- [ ] Entiendo la integridad referencial.
 - [ ] Sé construir consultas.
-- [ ] Sé usar formularios.
-- [ ] Sé generar informes.
-- [ ] Sé importar/exportar información.
+- [ ] Sé usar formularios e informes.

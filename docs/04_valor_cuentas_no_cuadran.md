@@ -1,92 +1,76 @@
 # Tema 4 · `#¡VALOR!`: las cuentas no cuadran
 
-!!! info "CAOS, S.L." 
-    Formas parte del equipo de rescate digital de una empresa cuya gestión ofimática es un desastre.  
-    Todo lo que arregles en este tema quedará incorporado a la empresa y podrá volver a utilizarse en temas posteriores.
+!!! info "CAOS, S.L."
+    Contabilidad tiene fórmulas que cambian al copiarse, números almacenados como texto y resultados imposibles.
 
-## Estructura del tema
+## 🚨 1. Incidencia inicial
 
-1. 🚨 **Incidencia inicial** — qué problema tiene hoy CAOS, S.L.
-2. 🛠️ **Rescate guiado** — resolvemos un caso completo mientras aprendemos.
-3. 📚 **Lo que necesitas saber** — teoría y procedimientos de consulta.
-4. 🏋️ **Ahora tú** — ejercicio individual de consolidación.
-5. 🔥 **Nueva incidencia** — reto menos guiado.
-6. 🔒 **Ticket cerrado** — caso evaluable individual.
+**Objetivo:** construir cálculos fiables, comprensibles y auditables.
 
-!!! warning "Importante" 
-    En los casos evaluables los datos, archivos o condiciones pueden cambiar entre alumnos. No se evalúa reproducir unos pasos de memoria, sino resolver correctamente la incidencia y poder explicar las decisiones tomadas.
-    
-## Objetivos del rescate
+## 🎯 2. Qué aprenderás
 
-Construir hojas de cálculo fiables utilizando tipos de datos, fórmulas, referencias y funciones básicas, de texto, lógicas, estadísticas y de fecha/hora.
+- distinguir tipos de datos;
+- crear fórmulas;
+- usar referencias relativas, absolutas y mixtas;
+- emplear funciones básicas;
+- trabajar con texto, lógica y fechas;
+- aplicar formato condicional;
+- interpretar errores;
+- diseñar hojas que puedan revisarse.
 
-## 🚨 Incidencia inicial · «El beneficio cambia cada vez que alguien copia una fórmula»
+## 🛠️ 3. Rescate guiado · Ventas de septiembre
 
-Contabilidad dispone de un libro con ventas, descuentos e IVA.
+Partimos de una tabla como esta:
 
-Problemas detectados:
+| Producto | Cantidad | Precio | %Desc. | Subtotal | Descuento | Base | %IVA | IVA | Total |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| Monitor | 2 | 129,90 | 0,10 |  |  |  | 0,21 |  |  |
 
-- algunos números están guardados como texto;
-- varias fórmulas se han sobrescrito;
-- el porcentaje de IVA cambia al copiar;
-- aparecen errores;
-- nadie sabe de dónde salen los totales.
+### Paso 1. Subtotal
 
-**Misión:** reconstruir el cálculo y hacerlo verificable.
-
-## 🛠️ Rescate guiado · Rehacemos la hoja de ventas
-
-### 1. Elementos de una hoja de cálculo
-
-- libro;
-- hoja;
-- fila;
-- columna;
-- celda;
-- rango.
-
-### 2. Tipos de datos
-
-- texto;
-- número;
-- fecha/hora;
-- porcentaje;
-- moneda;
-- valores lógicos.
-
-### 3. Fórmulas
-
-Una fórmula comienza normalmente por `=`.
-
-Ejemplo:
+En `E2`:
 
 ```text
 =B2*C2
 ```
 
-### 4. Operadores
+### Paso 2. Descuento
 
-- aritméticos: `+ - * / ^`;
-- comparación: `= > < >= <= <>`;
-- concatenación, según la aplicación.
-
-### 5. Referencias relativas
+En `F2`:
 
 ```text
-=B2*C2
+=E2*D2
 ```
 
-Al copiar la fórmula, las referencias cambian de forma relativa.
+### Paso 3. Base imponible
 
-### 6. Referencias absolutas
+En `G2`:
 
 ```text
-=B2*$H$1
+=E2-F2
 ```
 
-`$H$1` permanece fija al copiar.
+### Paso 4. IVA
 
-### 7. Referencias mixtas
+Si cada fila contiene su porcentaje de IVA:
+
+```text
+=G2*H2
+```
+
+Si el IVA general está almacenado en una celda común, por ejemplo `H1`, se usaría una referencia absoluta:
+
+```text
+=G2*$H$1
+```
+
+### Paso 5. Total
+
+```text
+=G2+I2
+```
+
+### Paso 6. Referencias mixtas
 
 Ejemplos:
 
@@ -95,120 +79,193 @@ $A2
 B$1
 ```
 
-Permiten fijar solo fila o columna.
+Se usan cuando queremos fijar solo columna o fila.
 
-### 8. Formato condicional
-
-Permite destacar celdas según reglas:
-
-- ventas bajas;
-- importes negativos;
-- fechas vencidas;
-- valores duplicados.
-
-### 9. Funciones básicas
-
-Ejemplos conceptuales:
+### Paso 7. Funciones básicas
 
 ```text
-SUMA
-PROMEDIO
-MIN
-MAX
-CONTAR
+=SUMA(J2:J20)
+=PROMEDIO(J2:J20)
+=MIN(J2:J20)
+=MAX(J2:J20)
+=CONTAR(J2:J20)
 ```
 
-### 10. Funciones estadísticas
+### Paso 8. Funciones lógicas
 
-Usaremos funciones adecuadas para:
+```text
+=SI(J2>=1000;"Objetivo";"Pendiente")
+```
 
-- contar;
-- obtener medias;
-- identificar extremos;
-- resumir información.
+Con varias condiciones:
 
-### 11. Funciones de texto
+```text
+=SI(Y(J2>=1000;K2="Valencia");"Bonus";"Sin bonus")
+```
 
-Utilidades:
+### Paso 9. Fecha y hora
+
+Trabajaremos con:
+
+- fecha actual;
+- diferencias;
+- vencimientos;
+- año, mes y día.
+
+### Paso 10. Formato condicional
+
+Ejemplos:
+
+- importes negativos;
+- objetivos alcanzados;
+- vencimientos;
+- duplicados.
+
+## 📚 4. Lo que necesitas saber
+
+### 4.1 Fórmula, función y operador
+
+Una **fórmula** es una expresión de cálculo, por ejemplo:
+
+```text
+=B2*C2
+```
+
+Una **función** es una operación predefinida, por ejemplo:
+
+```text
+=SUMA(B2:B20)
+```
+
+Los operadores indican la operación:
+
+- `+`, `-`, `*`, `/`, `^`;
+- `=`, `>`, `<`, `>=`, `<=`, `<>`.
+
+### 4.2 Referencias
+
+- relativa: `A1`;
+- absoluta: `$A$1`;
+- mixta: `$A1` o `A$1`.
+
+La diferencia se aprecia al copiar una fórmula.
+
+### 4.3 Números como texto
+
+Un valor puede parecer un número y estar almacenado como texto.
+
+Esto puede provocar:
+
+- sumas incorrectas;
+- ordenaciones extrañas;
+- funciones que ignoran valores.
+
+### 4.4 Funciones de texto
+
+Se usan para limpiar y transformar información.
+
+Ejemplos habituales:
 
 - unir;
-- extraer;
-- cambiar mayúsculas/minúsculas;
+- extraer izquierda/derecha;
 - calcular longitud;
-- limpiar datos.
+- convertir mayúsculas/minúsculas.
 
-### 12. Funciones lógicas
+### 4.5 Funciones lógicas
 
-La función condicional permite obtener un resultado u otro según una condición.
-
-Ejemplo conceptual:
+Una función condicional devuelve un resultado u otro según se cumpla una condición.
 
 ```text
 SI(condición; valor_si_verdadero; valor_si_falso)
 ```
 
-También combinaremos condiciones con funciones equivalentes a Y/O.
+Las funciones equivalentes a `Y` y `O` permiten combinar criterios.
 
-### 13. Fecha y hora
+### 4.6 Fechas
 
-Las fechas son valores que pueden utilizarse en operaciones.
+Las fechas se almacenan internamente como valores y pueden usarse en operaciones.
 
-Practicaremos:
+Por ejemplo, si `B2` contiene una fecha de vencimiento:
 
-- fecha actual;
-- diferencia entre fechas;
-- extracción de partes;
-- vencimientos.
+```text
+=B2-HOY()
+```
 
-### 14. Errores
+puede indicar cuántos días quedan.
 
-Aprenderemos a interpretar errores frecuentes y, sobre todo, a localizar su causa.
+### 4.7 Errores
 
-## 📚 Lo que necesitas saber
+No memorices solo el nombre del error. Investiga:
 
-### Una hoja debe poder auditarse
+- referencia;
+- tipo de dato;
+- operador;
+- función;
+- rango.
 
-Evita:
+### 4.8 Buen diseño
 
-- números escritos directamente dentro de fórmulas cuando deberían estar en celdas;
-- fórmulas diferentes sin motivo dentro de la misma columna;
-- celdas mezclando texto y números;
-- colores usados como único significado.
+Una hoja profesional:
 
-### Copiar no es entender
+- coloca parámetros en celdas;
+- usa encabezados claros;
+- mantiene fórmulas coherentes;
+- evita mezclar unidades;
+- evita números «mágicos» dentro de fórmulas;
+- permite seguir de dónde sale cada resultado.
 
-Antes de arrastrar una fórmula debes saber qué referencias deben cambiar y cuáles deben mantenerse.
+## 🏋️ 5. Practica
 
-## 🏋️ Ahora tú · «Comisiones comerciales»
+### Ejercicio 1 · IVA
 
-Construye una hoja que calcule importes, descuentos, impuestos y comisiones a partir de un conjunto de ventas.
+Calcula:
 
-## 🔥 Nueva incidencia · «Hay resultados imposibles»
+- subtotal;
+- descuento;
+- base;
+- IVA;
+- total.
 
-Recibirás una hoja ya calculada con varios resultados incorrectos.  
-Debes localizar los errores sin rehacer todo desde cero.
+### Ejercicio 2 · Comisión
 
-## 🔒 Ticket cerrado · Evaluable
+Reglas:
 
-Cada alumno recibirá un conjunto diferente de ventas, porcentajes y reglas.
+- ventas < 500 € → 0 %;
+- 500–999,99 € → 3 %;
+- 1000 € o más → 6 %.
 
-Se evaluará:
+### Ejercicio 3 · Texto
 
-- estructura;
+A partir de nombre y apellidos, genera un identificador.
+
+### Ejercicio 4 · Fechas
+
+Calcula días hasta vencimiento.
+
+## 🔥 6. Nueva incidencia
+
+Recibes una hoja con cinco resultados imposibles. Debes localizar las fórmulas incorrectas y explicar la causa.
+
+## 🔒 7. Ticket cerrado · Evaluable
+
+Datos distintos por alumno.
+
+Se evalúan:
+
 - fórmulas;
 - referencias;
 - funciones;
-- formato;
-- detección de errores;
-- capacidad para explicar una fórmula seleccionada.
+- lógica;
+- formato condicional;
+- interpretación.
 
-## ✅ Checklist
+## ✅ 8. Comprueba que sabes...
 
-- [ ] Distingo tipos de datos.
-- [ ] Sé escribir fórmulas.
-- [ ] Domino referencias relativas, absolutas y mixtas.
-- [ ] Sé usar funciones básicas y estadísticas.
-- [ ] Sé utilizar funciones de texto.
-- [ ] Sé construir condiciones lógicas.
+- [ ] Distingo fórmula y función.
+- [ ] Uso referencias relativas, absolutas y mixtas.
+- [ ] Sé detectar números almacenados como texto.
+- [ ] Sé utilizar funciones básicas y lógicas.
 - [ ] Sé trabajar con fechas.
-- [ ] Sé investigar un error de cálculo.
+- [ ] Sé aplicar formato condicional.
+- [ ] Sé investigar la causa de un error.
+- [ ] Sé diseñar una hoja verificable.
