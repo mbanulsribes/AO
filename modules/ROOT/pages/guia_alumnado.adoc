@@ -60,7 +60,9 @@ Trabajaremos con *LliureX 23*. Consulta la teoría, los ejemplos y los archivos 
 * Mantener una forma de trabajo profesional: nombres de archivo,
   formatos, versiones, datos y evidencias.
 
-== 4. Temas del curso
+== 4. Temas disponibles
+
+Los siguientes temas se irán habilitando durante el curso.
 
 [cols="2,3,5,1",options="header"]
 |===
@@ -68,25 +70,25 @@ Trabajaremos con *LliureX 23*. Consulta la teoría, los ejemplos y los archivos 
 
 |1. SOS: supervivencia en el caos digital |Archivos desordenados, software mal gestionado y correos imposibles. |Ofimática, suites, licencias, instalación, organización de archivos, PDF, capturas, imagen básica, correo básico e incidencias. |2 semanas
 
-|2. Documento_FINAL_definitivo_ahora_si.docx |Administración tiene documentos incoherentes y mal formateados. |Procesador de textos: edición, formato, párrafos, página, tablas, imágenes, revisión, impresión y PDF. |4 semanas
+// |2. Documento_FINAL_definitivo_ahora_si.docx |Administración tiene documentos incoherentes y mal formateados. |Procesador de textos: edición, formato, párrafos, página, tablas, imágenes, revisión, impresión y PDF. |4 semanas
 
-|3. Documentos que trabajan solos |La empresa repite manualmente cientos de documentos. |Estilos, documentos largos, índices, plantillas, campos, formularios, combinación de correspondencia y automatización. |3 semanas
+// |3. Documentos que trabajan solos |La empresa repite manualmente cientos de documentos. |Estilos, documentos largos, índices, plantillas, campos, formularios, combinación de correspondencia y automatización. |3 semanas
 
-|4. #¡VALOR!: las cuentas no cuadran |Ventas, impuestos, descuentos y gastos producen resultados incorrectos. |Hoja de cálculo: fórmulas, referencias, funciones básicas, estadísticas, texto, lógica, fecha/hora y formato condicional. |5 semanas
+// |4. #¡VALOR!: las cuentas no cuadran |Ventas, impuestos, descuentos y gastos producen resultados incorrectos. |Hoja de cálculo: fórmulas, referencias, funciones básicas, estadísticas, texto, lógica, fecha/hora y formato condicional. |5 semanas
 
-|5. Tenemos datos, pero nadie sabe qué significan |Dirección tiene muchos datos y ninguna información útil. |Búsqueda, lógica combinada, errores, filtros, tablas, validación, gráficos, importación, tablas dinámicas y automatización. |4 semanas
+// |5. Tenemos datos, pero nadie sabe qué significan |Dirección tiene muchos datos y ninguna información útil. |Búsqueda, lógica combinada, errores, filtros, tablas, validación, gráficos, importación, tablas dinámicas y automatización. |4 semanas
 
-|6. Tenemos 847 clientes y cuatro se llaman igual |Los datos de clientes están duplicados y repartidos en múltiples archivos. |Bases de datos: tablas, campos, claves, relaciones, consultas, formularios, informes e importación/exportación. |4 semanas
+// |6. Tenemos 847 clientes y cuatro se llaman igual |Los datos de clientes están duplicados y repartidos en múltiples archivos. |Bases de datos: tablas, campos, claves, relaciones, consultas, formularios, informes e importación/exportación. |4 semanas
 
-|7. Marketing ha vuelto a hacerlo |Imágenes pixeladas, enormes, deformadas o en formatos incorrectos. |Imagen digital: resolución, formatos, compresión, recorte, capas, color, transparencia, fondos y exportación. |3 semanas
+// |7. Marketing ha vuelto a hacerlo |Imágenes pixeladas, enormes, deformadas o en formatos incorrectos. |Imagen digital: resolución, formatos, compresión, recorte, capas, color, transparencia, fondos y exportación. |3 semanas
 
-|8. Necesitamos un vídeo para ayer |Hay material audiovisual disperso y la dirección necesita un vídeo urgente. |Vídeo digital, Kdenlive, proyecto, línea de tiempo, cortes, audio, títulos, transiciones, efectos y exportación. |4 semanas
+// |8. Necesitamos un vídeo para ayer |Hay material audiovisual disperso y la dirección necesita un vídeo urgente. |Vídeo digital, Kdenlive, proyecto, línea de tiempo, cortes, audio, títulos, transiciones, efectos y exportación. |4 semanas
 
-|9. Mañana viene dirección |Hay que presentar resultados sin hacer una presentación infumable. |Diseño, estructura, tipografía, color, gráficos, multimedia, animaciones, interactividad y exposición. |2 semanas
+// |9. Mañana viene dirección |Hay que presentar resultados sin hacer una presentación infumable. |Diseño, estructura, tipografía, color, gráficos, multimedia, animaciones, interactividad y exposición. |2 semanas
 
-|10. 243 correos sin leer |La comunicación interna está fuera de control. |Correo profesional, SMTP/IMAP/POP, contactos, reglas, filtros, seguridad, calendario, citas y reuniones. |2 semanas
+// |10. 243 correos sin leer |La comunicación interna está fuera de control. |Correo profesional, SMTP/IMAP/POP, contactos, reglas, filtros, seguridad, calendario, citas y reuniones. |2 semanas
 
-|11. INCIDENTE CRÍTICO |Varios departamentos fallan a la vez y nadie indica qué programa utilizar. |Integración de todo el módulo: diagnóstico, elección de herramientas, resolución, documentación y soporte al usuario. |2 semanas
+// |11. INCIDENTE CRÍTICO |Varios departamentos fallan a la vez y nadie indica qué programa utilizar. |Integración de todo el módulo: diagnóstico, elección de herramientas, resolución, documentación y soporte al usuario. |2 semanas
 
 |===
 
