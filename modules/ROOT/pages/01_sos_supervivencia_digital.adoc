@@ -472,7 +472,7 @@ xref:attachment$tema1/02_nueva_incidencia.zip[Descargar archivos de la nueva inc
 
 Descarga y descomprime el ZIP de esta actividad. El cliente C023 ha recibido `listado_clientes.ods`. Su visor no admite ODS y solo necesita *consultar* los códigos, nombres y localidades. No necesita editar ni importar datos.
 
-==== Encargo
+=== Encargo
 
 Abre `solicitud.txt` y registra el ticket antes de resolverlo. Trabaja con una copia del original.
 
@@ -485,7 +485,7 @@ Abre `solicitud.txt` y registra el ticket antes de resolverlo. Trabaja con una c
 . Completa el ticket con diagnóstico, solución, comprobación y estado. La verificación local permite indicar *resuelto; pendiente de confirmación del cliente*. No inventes una confirmación.
 . Redacta `correo_respuesta.txt`: asunto con número de incidencia, explicación comprensible, archivo adjunto previsto y petición de confirmación. No envíes un correo real.
 
-==== Resultado de la práctica
+=== Resultado de la práctica
 
 Prepara `T1_Incidencia_Apellido_Nombre.zip` con el original ODS, el PDF, la captura, `ticket.txt` y `correo_respuesta.txt`.
 
@@ -493,7 +493,7 @@ Conserva el ZIP en tu carpeta de trabajo para revisarlo en clase. Esta práctica
 
 *Criterio de éxito:* el cliente puede consultar toda la información sin necesitar una hoja de cálculo; el original se conserva y el ticket permite entender qué se ha comprobado.
 
-==== Puesta en común
+=== Puesta en común
 
 ¿Qué cambiaría si el cliente necesitara editar el listado? ¿Y si necesitara importarlo en otra aplicación? Explica qué comprobarías sobre compatibilidad o separador y codificación antes de entregar.
 
