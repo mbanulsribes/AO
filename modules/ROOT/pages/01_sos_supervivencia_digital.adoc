@@ -1,5 +1,10 @@
 = Tema 1 · SOS: supervivencia en el caos digital
 
+[NOTE]
+====
+*Última actualización:* 8 de septiembre de 2026, a las 18:30 h.
+====
+
 .CAOS, S.L.
 [NOTE]
 ====
