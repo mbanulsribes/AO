@@ -1,0 +1,22 @@
+= Aplicaciones Ofimáticas · 1.º SMR
+:page-layout: default
+
+== Proyecto CAOS, S.L.
+
+Durante el curso trabajaremos como si formáramos parte del equipo de una empresa ficticia: *CAOS, S.L.*. Cada tema parte de una incidencia realista que tendrás que comprender, resolver, comprobar y documentar.
+
+El objetivo no es únicamente aprender a usar aplicaciones ofimáticas, sino aprender a elegir la herramienta adecuada y trabajar con criterios profesionales.
+
+== Temas
+
+. xref:01_sos_supervivencia_digital.adoc[Tema 1 · SOS: supervivencia digital]
+. xref:02_documento_final.adoc[Tema 2 · Documento FINAL]
+. xref:03_documentos_que_trabajan_solos.adoc[Tema 3 · Documentos que trabajan solos]
+. xref:04_valor_cuentas_no_cuadran.adoc[Tema 4 · #¡VALOR!: las cuentas no cuadran]
+. xref:05_datos_sin_significado.adoc[Tema 5 · Datos sin significado]
+. xref:06_847_clientes.adoc[Tema 6 · 847 clientes]
+. xref:07_marketing_ha_vuelto.adoc[Tema 7 · Marketing ha vuelto]
+. xref:08_video_para_ayer.adoc[Tema 8 · Un vídeo para ayer]
+. xref:09_manana_viene_direccion.adoc[Tema 9 · Mañana viene dirección]
+. xref:10_243_correos.adoc[Tema 10 · 243 correos]
+. xref:11_incidente_critico.adoc[Tema 11 · Incidente crítico]

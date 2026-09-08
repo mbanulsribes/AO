@@ -1,0 +1,1210 @@
+*CAOS, S.L.*
+
+*Planificación docente con fechas*
+
+Aplicaciones Ofimáticas · 1.º SMR · Curso 2026-2027
+
+Horario: martes 2 h · jueves 3 h · viernes 2 h. Hilo conductor: rescate
+digital de CAOS, S.L.
+
+= 1. Criterios de temporalización
+
+* Todos los temas siguen la secuencia: incidencia inicial → ejemplo
+guiado → teoría organizada → ejercicio autónomo → nueva incidencia →
+caso evaluable.
+* Martes: presentación de problema y explicación guiada. Jueves: bloque
+principal de práctica. Viernes: consolidación, reto, corrección o
+evaluable.
+* Los contenidos reutilizan datos y productos de CAOS, S.L. para
+mantener continuidad entre temas.
+* Se dejan sesiones de contingencia y cierre al final del curso para
+recuperaciones, incidencias del centro y ajustes de ritmo.
+
+= 2. Calendario usado
+
+Base oficial: Formación Profesional en la Comunitat Valenciana del 9 de
+septiembre de 2026 al 18 de junio de 2027. Vacaciones de Navidad del 22
+de diciembre de 2026 al 6 de enero de 2027 y vacaciones de Pascua del 25
+de marzo al 5 de abril de 2027. Festivos generales que afectan a este
+horario: 9 de octubre, 8 de diciembre y 19 de marzo.
+
+IMPORTANTE — Días locales de València/Fallas: las sesiones del 16 y 18
+de marzo se reservan como contingencia y no contienen aprendizaje
+crítico. La propuesta municipal para 2027 estaba pendiente de
+ratificación definitiva en las fuentes consultadas; revisar el
+calendario del centro antes de cerrar la programación.
+
+= 3. Temporalización día a día
+
+Fecha
+
+Día / h
+
+Tema
+
+Fase
+
+Qué se trabaja
+
+Estado
+
+10/09/2026
+
+Jueves 3 h
+
+T1 · SOS digital
+
+Incidencia + guiado
+
+Presentación del módulo y de CAOS, S.L. Diagnóstico inicial. Qué es la
+ofimática, tipos de aplicaciones y suites.
+
+11/09/2026
+
+Viernes 2 h
+
+T1 · SOS digital
+
+Guiado + práctica
+
+Organización de archivos y carpetas, extensiones, nombres de archivo y
+estructura de trabajo de la empresa.
+
+15/09/2026
+
+Martes 2 h
+
+T1 · SOS digital
+
+Guiado
+
+Software libre/propietario, licencias, instalación, desinstalación,
+requisitos hardware y software.
+
+17/09/2026
+
+Jueves 3 h
+
+T1 · SOS digital
+
+Guiado + ejercicio
+
+PDF, compresión, capturas, imagen básica (tamaño/resolución/formato) y
+correo básico: asunto, CC/CCO y adjuntos.
+
+18/09/2026
+
+Viernes 2 h
+
+T1 · SOS digital
+
+Reto + evaluable
+
+Ticket de incidencia: describir problema, evidencias, solución y
+comunicación profesional. Caso evaluable breve de supervivencia digital.
+
+22/09/2026
+
+Martes 2 h
+
+T2 · Documento_FINAL
+
+Incidencia + guiado
+
+Documento administrativo caótico. Interfaz, crear/abrir/guardar,
+selección y edición, copiar/cortar/pegar.
+
+24/09/2026
+
+Jueves 3 h
+
+T2 · Documento_FINAL
+
+Guiado
+
+Formato de caracteres y párrafos: fuente, alineación, interlineado,
+espaciado, sangrías y listas.
+
+25/09/2026
+
+Viernes 2 h
+
+T2 · Documento_FINAL
+
+Ejercicio
+
+Reparación individual de un documento corto con errores de edición y
+formato.
+
+29/09/2026
+
+Martes 2 h
+
+T2 · Documento_FINAL
+
+Guiado
+
+Tabulaciones, listas multinivel y estructura visual de documentos
+profesionales.
+
+01/10/2026
+
+Jueves 3 h
+
+T2 · Documento_FINAL
+
+Guiado
+
+Configuración de página: márgenes, orientación, tamaño, saltos de página
+y secciones.
+
+02/10/2026
+
+Viernes 2 h
+
+T2 · Documento_FINAL
+
+Ejercicio
+
+Incidencia: normalizar un documento administrativo de varias páginas.
+
+06/10/2026
+
+Martes 2 h
+
+T2 · Documento_FINAL
+
+Guiado
+
+Encabezados, pies de página, numeración y elementos repetitivos.
+
+08/10/2026
+
+Jueves 3 h
+
+T2 · Documento_FINAL
+
+Guiado + práctica
+
+Tablas: creación, formato, dimensiones, alineación, datos y conversión
+texto/tabla.
+
+13/10/2026
+
+Martes 2 h
+
+T2 · Documento_FINAL
+
+Guiado
+
+Imágenes, formas, ajuste de texto, posición y composición de página.
+
+15/10/2026
+
+Jueves 3 h
+
+T2 · Documento_FINAL
+
+Integración
+
+Revisión, ortografía, buscar/reemplazar, impresión y exportación PDF.
+Caso completo guiado de rescate documental.
+
+16/10/2026
+
+Viernes 2 h
+
+T2 · Documento_FINAL
+
+Evaluable
+
+Caso evaluable individual: documento profesional completo a partir de un
+archivo defectuoso.
+
+20/10/2026
+
+Martes 2 h
+
+T3 · Documentos automáticos
+
+Incidencia + guiado
+
+Dirección quiere uniformidad. Estilos, estilos de título y jerarquía de
+documentos.
+
+22/10/2026
+
+Jueves 3 h
+
+T3 · Documentos automáticos
+
+Guiado
+
+Documentos largos: secciones, esquema, niveles, navegación y tabla de
+contenidos automática.
+
+23/10/2026
+
+Viernes 2 h
+
+T3 · Documentos automáticos
+
+Ejercicio
+
+Reestructuración individual de un documento largo utilizando estilos e
+índice automático.
+
+27/10/2026
+
+Martes 2 h
+
+T3 · Documentos automáticos
+
+Guiado
+
+Plantillas: qué guardan, crear, reutilizar y modificar plantillas
+corporativas.
+
+29/10/2026
+
+Jueves 3 h
+
+T3 · Documentos automáticos
+
+Guiado
+
+Campos, controles y formularios básicos. Diseño de documentos
+reutilizables.
+
+30/10/2026
+
+Viernes 2 h
+
+T3 · Documentos automáticos
+
+Ejercicio
+
+Crear una plantilla corporativa funcional para CAOS, S.L.
+
+03/11/2026
+
+Martes 2 h
+
+T3 · Documentos automáticos
+
+Guiado
+
+Combinación de correspondencia: documento principal, fuente de datos,
+campos, filtros y destinatarios.
+
+05/11/2026
+
+Jueves 3 h
+
+T3 · Documentos automáticos
+
+Integración
+
+Etiquetas/sobres, importación/exportación y automatización. Concepto y
+uso responsable de macros.
+
+06/11/2026
+
+Viernes 2 h
+
+T3 · Documentos automáticos
+
+Evaluable
+
+Caso evaluable: generar documentación masiva y reutilizable a partir de
+datos individuales.
+
+10/11/2026
+
+Martes 2 h
+
+T4 · #¡VALOR!
+
+Incidencia + guiado
+
+Hoja de ventas defectuosa. Interfaz, libro/hoja/celda, tipos de datos y
+manejo de celdas.
+
+12/11/2026
+
+Jueves 3 h
+
+T4 · #¡VALOR!
+
+Guiado
+
+Fórmulas, operadores, prioridad de operaciones y copia de fórmulas.
+
+13/11/2026
+
+Viernes 2 h
+
+T4 · #¡VALOR!
+
+Ejercicio
+
+Reconstrucción de cálculos básicos de ventas y gastos.
+
+17/11/2026
+
+Martes 2 h
+
+T4 · #¡VALOR!
+
+Guiado
+
+Referencias relativas y comportamiento al copiar fórmulas.
+
+19/11/2026
+
+Jueves 3 h
+
+T4 · #¡VALOR!
+
+Guiado
+
+Referencias absolutas y mixtas. IVA, descuentos, tarifas y parámetros
+fijos.
+
+20/11/2026
+
+Viernes 2 h
+
+T4 · #¡VALOR!
+
+Ejercicio
+
+Incidencia de cálculo con referencias relativas, absolutas y mixtas.
+
+24/11/2026
+
+Martes 2 h
+
+T4 · #¡VALOR!
+
+Guiado
+
+Funciones básicas y matemáticas: suma, promedio, máximo, mínimo,
+redondeos y recuentos.
+
+26/11/2026
+
+Jueves 3 h
+
+T4 · #¡VALOR!
+
+Guiado
+
+Funciones estadísticas y análisis básico de resultados.
+
+27/11/2026
+
+Viernes 2 h
+
+T4 · #¡VALOR!
+
+Ejercicio
+
+Caso de control mensual con funciones matemáticas y estadísticas.
+
+01/12/2026
+
+Martes 2 h
+
+T4 · #¡VALOR!
+
+Guiado
+
+Funciones de texto: limpiar, unir, extraer y normalizar datos.
+
+03/12/2026
+
+Jueves 3 h
+
+T4 · #¡VALOR!
+
+Guiado
+
+Funciones lógicas: SI, Y, O y condiciones combinadas sencillas.
+
+04/12/2026
+
+Viernes 2 h
+
+T4 · #¡VALOR!
+
+Ejercicio
+
+Incidencia: clasificar operaciones y detectar situaciones mediante
+lógica.
+
+10/12/2026
+
+Jueves 3 h
+
+T4 · #¡VALOR!
+
+Integración
+
+Fecha/hora, formato condicional, errores frecuentes y caso completo de
+contabilidad.
+
+11/12/2026
+
+Viernes 2 h
+
+T4 · #¡VALOR!
+
+Evaluable
+
+Caso evaluable individual de hoja de cálculo básica/intermedia.
+
+15/12/2026
+
+Martes 2 h
+
+T5 · Datos con sentido
+
+Incidencia + guiado
+
+Dirección pide respuestas a partir de datos. Funciones lógicas
+combinadas y tratamiento de errores.
+
+17/12/2026
+
+Jueves 3 h
+
+T5 · Datos con sentido
+
+Guiado
+
+Funciones de búsqueda y referencia. Localizar y cruzar información.
+
+18/12/2026
+
+Viernes 2 h
+
+T5 · Datos con sentido
+
+Ejercicio
+
+Caso individual de búsqueda, clasificación y control de errores.
+
+07/01/2027
+
+Jueves 3 h
+
+T5 · Datos con sentido
+
+Reentrada + guiado
+
+Repaso activo. Ordenación y filtros simples/múltiples sobre datos de
+CAOS, S.L.
+
+08/01/2027
+
+Viernes 2 h
+
+T5 · Datos con sentido
+
+Ejercicio
+
+Limpieza y filtrado de un conjunto de datos.
+
+12/01/2027
+
+Martes 2 h
+
+T5 · Datos con sentido
+
+Guiado
+
+Tablas de datos, validación, listas y control de entrada.
+
+14/01/2027
+
+Jueves 3 h
+
+T5 · Datos con sentido
+
+Guiado
+
+Subtotales, agrupación y funciones financieras seleccionadas.
+
+15/01/2027
+
+Viernes 2 h
+
+T5 · Datos con sentido
+
+Ejercicio
+
+Caso de control de gastos/presupuesto con validación y subtotales.
+
+19/01/2027
+
+Martes 2 h
+
+T5 · Datos con sentido
+
+Guiado
+
+Gráficos: elección, creación, formato y lectura crítica.
+
+21/01/2027
+
+Jueves 3 h
+
+T5 · Datos con sentido
+
+Guiado + integración
+
+Importación/exportación, plantillas, tablas dinámicas y síntesis de
+información.
+
+22/01/2027
+
+Viernes 2 h
+
+T5 · Datos con sentido
+
+Evaluable
+
+Caso evaluable: convertir datos brutos en información útil para
+dirección.
+
+26/01/2027
+
+Martes 2 h
+
+T6 · BBDD
+
+Incidencia + guiado
+
+Clientes duplicados y dispersos. Hoja de cálculo vs base de datos.
+Conceptos de tabla, campo y registro.
+
+28/01/2027
+
+Jueves 3 h
+
+T6 · BBDD
+
+Guiado
+
+Tipos de datos, claves primarias y diseño correcto de tablas.
+
+29/01/2027
+
+Viernes 2 h
+
+T6 · BBDD
+
+Ejercicio
+
+Diseño individual de una base de datos sencilla a partir de requisitos.
+
+02/02/2027
+
+Martes 2 h
+
+T6 · BBDD
+
+Guiado
+
+Modelo relacional y relaciones entre tablas. Integridad y coherencia de
+datos.
+
+04/02/2027
+
+Jueves 3 h
+
+T6 · BBDD
+
+Guiado + práctica
+
+Creación de tablas, relaciones e importación de datos existentes.
+
+05/02/2027
+
+Viernes 2 h
+
+T6 · BBDD
+
+Ejercicio
+
+Incidencia: depurar e importar datos de clientes/proveedores.
+
+09/02/2027
+
+Martes 2 h
+
+T6 · BBDD
+
+Guiado
+
+Consultas básicas: selección, criterios, ordenación y parámetros.
+
+11/02/2027
+
+Jueves 3 h
+
+T6 · BBDD
+
+Guiado
+
+Consultas multitabla, operadores, campos calculados y agregación.
+
+12/02/2027
+
+Viernes 2 h
+
+T6 · BBDD
+
+Ejercicio
+
+Construcción de consultas para responder preguntas de negocio.
+
+16/02/2027
+
+Martes 2 h
+
+T6 · BBDD
+
+Guiado
+
+Formularios: creación, controles, navegación y usabilidad.
+
+18/02/2027
+
+Jueves 3 h
+
+T6 · BBDD
+
+Integración
+
+Informes, agrupación, exportación y cierre del sistema de información.
+
+19/02/2027
+
+Viernes 2 h
+
+T6 · BBDD
+
+Evaluable
+
+Caso evaluable individual de diseño, consultas y explotación de una BBDD
+ofimática.
+
+23/02/2027
+
+Martes 2 h
+
+T7 · Marketing
+
+Incidencia + guiado
+
+Recursos gráficos defectuosos. Mapa de bits vs vectorial, píxel,
+dimensiones y resolución.
+
+25/02/2027
+
+Jueves 3 h
+
+T7 · Marketing
+
+Guiado
+
+Formatos, compresión, transparencia, profundidad de color y elección
+según destino.
+
+26/02/2027
+
+Viernes 2 h
+
+T7 · Marketing
+
+Ejercicio
+
+Diagnóstico y optimización de un lote de imágenes para usos distintos.
+
+02/03/2027
+
+Martes 2 h
+
+T7 · Marketing
+
+Guiado
+
+Editor de imagen: recorte, redimensionado, rotación y transformaciones.
+
+04/03/2027
+
+Jueves 3 h
+
+T7 · Marketing
+
+Guiado
+
+Selecciones, capas, texto, fondos y transparencia.
+
+05/03/2027
+
+Viernes 2 h
+
+T7 · Marketing
+
+Ejercicio
+
+Reparación individual de piezas de marketing con especificaciones
+concretas.
+
+09/03/2027
+
+Martes 2 h
+
+T7 · Marketing
+
+Guiado + integración
+
+Brillo, contraste, color, exportación, optimización y licencias de
+recursos.
+
+11/03/2027
+
+Jueves 3 h
+
+T7 · Marketing
+
+Reto
+
+Campaña gráfica de CAOS, S.L. con múltiples formatos de salida.
+
+12/03/2027
+
+Viernes 2 h
+
+T7 · Marketing
+
+Evaluable
+
+Caso evaluable individual de edición y optimización de imágenes.
+
+16/03/2027
+
+Martes 2 h
+
+T7 · Contingencia
+
+Buffer / Fallas
+
+Sesión reservada: recuperación, mejora de evidencias, soporte RA9 o
+actividad breve. No introducir contenido crítico.
+
+18/03/2027
+
+Jueves 3 h
+
+T7 · Contingencia
+
+Buffer / Fallas
+
+Sesión reservada: cierre, incidencias pendientes o no lectivo local si
+se confirma. No introducir contenido crítico.
+
+23/03/2027
+
+Martes 2 h
+
+T8 · Vídeo
+
+Incidencia + introducción
+
+Vídeo urgente: conceptos de vídeo digital, resolución, relación de
+aspecto, FPS, formatos y códecs.
+
+06/04/2027
+
+Martes 2 h
+
+T8 · Vídeo
+
+Guiado
+
+Kdenlive: interfaz, proyecto, organización de recursos e importación.
+
+08/04/2027
+
+Jueves 3 h
+
+T8 · Vídeo
+
+Guiado
+
+Línea de tiempo, pistas, cortes, división, mover y reorganizar clips.
+
+09/04/2027
+
+Viernes 2 h
+
+T8 · Vídeo
+
+Ejercicio
+
+Montaje básico individual a partir de recursos comunes.
+
+13/04/2027
+
+Martes 2 h
+
+T8 · Vídeo
+
+Guiado
+
+Audio: pistas, niveles, música, voz y sincronización básica.
+
+15/04/2027
+
+Jueves 3 h
+
+T8 · Vídeo
+
+Guiado
+
+Títulos, rótulos, créditos y composición visual.
+
+16/04/2027
+
+Viernes 2 h
+
+T8 · Vídeo
+
+Ejercicio
+
+Crear una secuencia con vídeo, audio y títulos correctamente organizada.
+
+20/04/2027
+
+Martes 2 h
+
+T8 · Vídeo
+
+Guiado
+
+Transiciones: uso, duración, continuidad y criterio de edición.
+
+22/04/2027
+
+Jueves 3 h
+
+T8 · Vídeo
+
+Guiado
+
+Efectos, transformaciones, animación y previsualización.
+
+23/04/2027
+
+Viernes 2 h
+
+T8 · Vídeo
+
+Reto
+
+Edición avanzada de una pieza audiovisual de CAOS, S.L.
+
+27/04/2027
+
+Martes 2 h
+
+T8 · Vídeo
+
+Guiado + integración
+
+Exportación/renderizado: formatos, calidad, resolución, peso y
+compatibilidad.
+
+29/04/2027
+
+Jueves 3 h
+
+T8 · Vídeo
+
+Proyecto
+
+Videotutorial: planificación, grabación/edición, claridad y
+documentación para soporte.
+
+30/04/2027
+
+Viernes 2 h
+
+T8 · Vídeo
+
+Evaluable
+
+Caso evaluable individual de montaje y exportación de vídeo.
+
+04/05/2027
+
+Martes 2 h
+
+T9 · Presentaciones
+
+Incidencia + guiado
+
+Dirección presenta mañana. Objetivo, audiencia, estructura narrativa y
+errores habituales.
+
+06/05/2027
+
+Jueves 3 h
+
+T9 · Presentaciones
+
+Guiado
+
+Diseño: composición, tipografía, color, contraste, imágenes y
+consistencia visual.
+
+07/05/2027
+
+Viernes 2 h
+
+T9 · Presentaciones
+
+Ejercicio
+
+Rediseño individual de una presentación deficiente.
+
+11/05/2027
+
+Martes 2 h
+
+T9 · Presentaciones
+
+Guiado
+
+Tablas, gráficos, diagramas y reutilización de datos de Excel/BBDD.
+
+13/05/2027
+
+Jueves 3 h
+
+T9 · Presentaciones
+
+Integración
+
+Patrones/plantillas, multimedia, transiciones, animaciones,
+hipervínculos, notas y configuración.
+
+14/05/2027
+
+Viernes 2 h
+
+T9 · Presentaciones
+
+Evaluable
+
+Caso evaluable: presentación ejecutiva con datos reales del proyecto
+CAOS, S.L.
+
+18/05/2027
+
+Martes 2 h
+
+T10 · 243 correos
+
+Incidencia + guiado
+
+Funcionamiento del correo, dirección, servidores, webmail/cliente y
+SMTP/IMAP/POP.
+
+20/05/2027
+
+Jueves 3 h
+
+T10 · 243 correos
+
+Guiado
+
+Configuración, envío/recepción, CC/CCO, adjuntos, firmas y contactos.
+
+21/05/2027
+
+Viernes 2 h
+
+T10 · 243 correos
+
+Ejercicio
+
+Bandeja de entrada simulada: responder, reenviar, organizar y comunicar
+correctamente.
+
+25/05/2027
+
+Martes 2 h
+
+T10 · 243 correos
+
+Guiado
+
+Carpetas, categorías, búsqueda, filtros, reglas, spam, phishing y
+seguridad.
+
+27/05/2027
+
+Jueves 3 h
+
+T10 · 243 correos
+
+Guiado + integración
+
+Calendario, citas, reuniones, invitaciones, tareas y recordatorios.
+
+28/05/2027
+
+Viernes 2 h
+
+T10 · 243 correos
+
+Evaluable
+
+Caso evaluable de gestión integral de comunicación y agenda.
+
+01/06/2027
+
+Martes 2 h
+
+T11 · INCIDENTE CRÍTICO
+
+Lanzamiento
+
+Presentación de crisis global. Diagnóstico, priorización y elección
+autónoma de herramientas.
+
+03/06/2027
+
+Jueves 3 h
+
+T11 · INCIDENTE CRÍTICO
+
+Trabajo autónomo
+
+Resolución del caso: documentos + datos + comunicación. Seguimiento
+individual sin instrucciones de herramienta.
+
+04/06/2027
+
+Viernes 2 h
+
+T11 · INCIDENTE CRÍTICO
+
+Checkpoint
+
+Entrega parcial, verificación de evidencias y mini comprobaciones
+individuales.
+
+08/06/2027
+
+Martes 2 h
+
+T11 · INCIDENTE CRÍTICO
+
+Trabajo autónomo
+
+Integración multimedia, presentación de resultados y documentación de
+soporte.
+
+10/06/2027
+
+Jueves 3 h
+
+T11 · INCIDENTE CRÍTICO
+
+Cierre
+
+Manual/guía/FAQ o videotutorial; registro y cierre de incidencias.
+
+11/06/2027
+
+Viernes 2 h
+
+T11 · INCIDENTE CRÍTICO
+
+Evaluable final
+
+Entrega final y comprobación individual del incidente crítico.
+
+15/06/2027
+
+Martes 2 h
+
+Cierre de curso
+
+Recuperación
+
+Recuperaciones de casos pendientes / evidencias insuficientes / mejora
+de resultados.
+
+17/06/2027
+
+Jueves 3 h
+
+Cierre de curso
+
+Consolidación
+
+Resolución de incidencias finales, revisión del portfolio de CAOS, S.L.
+y cierre de competencias.
+
+18/06/2027
+
+Viernes 2 h
+
+Cierre de curso
+
+Cierre
+
+Devolución, reflexión final, archivo/entrega del proyecto y cierre del
+módulo.
+
+Leyenda: amarillo = caso evaluable · naranja = contingencia/calendario
+local · verde = cierre/recuperación.
+
+= 4. Resumen por tema
+
+[width="100%",cols="16%,17%,29%,38%",options="header",]
+|===
+|*Bloque* |*Fechas* |*Horas previstas* |*Contenido*
+|T1 |10–18 sep |12 h |SOS digital
+|T2 |22 sep–16 oct |26 h |Procesador de textos
+|T3 |20 oct–6 nov |21 h |Word avanzado/automatización
+|T4 |10 nov–11 dic |33 h |Hoja de cálculo base-intermedia
+|T5 |15 dic–22 ene |26 h |Hoja de cálculo avanzada
+|T6 |26 ene–19 feb |28 h |Bases de datos
+|T7 |23 feb–12 mar |21 h + 5 h contingencia |Imagen digital
+|T8 |23 mar–30 abr |30 h |Vídeo
+|T9 |4–14 may |14 h |Presentaciones
+|T10 |18–28 may |14 h |Correo y agenda
+|T11 |1–11 jun |14 h |Incidente crítico
+|Buffer |15–18 jun |7 h |Recuperación/cierre
+|===
+
+= 5. Fuentes y notas de calendario
+
+• Generalitat Valenciana. Resolución de 15 de junio de 2026 de la
+Dirección General de Centros Docentes: calendario escolar 2026-2027.
+
+• El calendario local de València puede introducir días no lectivos
+adicionales o permutas. Antes de publicar fechas definitivas de
+evaluables, contrastar el calendario aprobado por el centro/municipio.
+
+• Esta temporalización es operativa, no rígida: si un grupo necesita más
+tiempo en una competencia, desplazar contenido manteniendo los bloques
+de contingencia y cierre.

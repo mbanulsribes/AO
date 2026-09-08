@@ -1,0 +1,6 @@
+name: ao
+title: Aplicaciones Ofimáticas
+version: ~
+start_page: ROOT:index.adoc
+nav:
+- modules/ROOT/nav.adoc
