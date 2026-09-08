@@ -109,7 +109,53 @@ que sabes resolver un problema. Por eso los datos, condiciones o errores
 pueden variar entre alumnos y puede pedirse una breve justificación o
 comprobación de lo realizado.
 
-== 7. Horario semanal
+=== Demuestra lo que sabes hacer
+
+En algunas actividades evaluables se solicitará un *vídeo breve de pantalla* como parte de la solución. El enunciado indicará qué debes mostrar, la duración y los archivos que debes entregar junto al vídeo.
+
+En el vídeo deberás:
+
+* mostrar cómo realizas una operación importante;
+* explicar por qué has elegido ese procedimiento;
+* comprobar el resultado;
+* comentar algún error encontrado y cómo lo has resuelto, si lo hubo.
+
+Como orientación, los vídeos durarán *3–5 minutos*, salvo que el enunciado indique otra duración. No necesitas mostrar tu cara.
+
+Se valora el procedimiento, la explicación y la comprobación, no la edición del vídeo. La profesora podrá pedirte que repitas una operación o expliques una parte de tu entrega.
+
+== 7. Cómo utilizaremos la inteligencia artificial
+
+Aprenderemos a utilizar la *IA como herramienta de apoyo*. Primero necesitas adquirir una base que te permita entender sus propuestas, detectar errores y comprobar los resultados.
+
+=== Primero inténtalo
+
+Al aprender un procedimiento nuevo, empieza con los apuntes y las explicaciones de clase. Haz un primer intento y concreta dónde te has atascado.
+
+=== Aquí puedes ayudarte de IA
+
+En las prácticas indicadas podrás utilizarla para:
+
+* aclarar un concepto;
+* pedir una pista después de intentarlo;
+* revisar una solución propia;
+* comparar procedimientos y detectar posibles errores.
+
+=== Comprueba su respuesta
+
+Prueba la propuesta en tus archivos, revisa el resultado y explica con tus palabras qué has hecho. Una respuesta de IA puede contener errores o instrucciones que no correspondan a la aplicación o versión del aula.
+
+.IA en las evaluables
+[IMPORTANT]
+====
+Cada evaluable indicará *si se permite utilizar IA y en qué partes*. Algunas se realizarán sin IA para comprobar tu autonomía.
+
+Cuando la utilices, deberás explicar brevemente para qué y cómo has comprobado su respuesta.
+
+No presentes como propio un trabajo que no entiendes. Debes poder explicar y reproducir lo que entregas.
+====
+
+== 8. Horario semanal
 
 [cols="1,1,4",options="header"]
 |===
