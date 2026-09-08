@@ -193,22 +193,78 @@ Campos mínimos:
 
 == 📚 4. Lo que necesitas saber
 
-=== 4.1 Software libre, propietario, freeware y shareware
+=== 4.1 Licencias y modelos de software
 
-*Software libre* no significa necesariamente gratuito. Significa que la
-licencia concede libertades como usar, estudiar, modificar y
-redistribuir el programa bajo determinadas condiciones.
+Una *licencia de software* establece qué permite el titular y bajo qué condiciones: uso, copia, modificación o distribución. Descargar un programa no significa adquirir todos los derechos sobre él.
 
-*Software propietario* está controlado por su titular y su uso depende
-de la licencia concedida.
+==== Tres preguntas diferentes
 
-Otros conceptos:
+[cols="1,2,2",options="header"]
+|===
+|Pregunta |Qué describe |Ejemplos
+|¿Qué puedo hacer con él? |Licencia y permisos |Libre, propietario
+|¿Cómo se paga? |Modelo económico |Gratuito, pago único, suscripción, freemium
+|¿Cómo se utiliza? |Forma de acceso |Instalado en el equipo, servicio en la nube, combinación de ambos
+|===
 
-* *freeware*: gratuito, pero no necesariamente libre;
-* *shareware*: versión limitada en tiempo o funciones;
-* *copyright*: conjunto de derechos del autor o titular;
-* *copyleft*: mecanismo que permite reutilización y redistribución
-manteniendo determinadas libertades.
+Estas categorías se combinan. Un programa propietario puede ser gratuito; uno libre puede venderse. Una suscripción puede incluir aplicaciones instalables y servicios web.
+
+==== Software libre y código abierto
+
+El software libre permite ejecutar el programa para cualquier propósito, estudiar y modificar su funcionamiento, compartir copias y distribuir versiones modificadas. Estudiarlo y modificarlo requiere acceso al código fuente. Libre no equivale a precio cero.
+
+El *código fuente* es el conjunto de instrucciones con las que se construye un programa. Poder consultarlo no basta para que un programa sea libre o de código abierto: la licencia debe conceder también los permisos correspondientes.
+
+*Código abierto* u *open source* pone el acento en las condiciones de acceso, modificación y redistribución. Comparte gran parte de las licencias con el software libre, aunque sus enfoques son diferentes.
+
+==== Software propietario
+
+Su licencia restringe alguna de las libertades anteriores. Puede permitir el uso sin autorizar modificar o redistribuir el programa. Hay que revisar, por ejemplo, usuarios o dispositivos autorizados, duración, uso profesional y condiciones de actualización. No todos los productos tienen las mismas restricciones.
+
+==== Copyright, copyleft y licencias permisivas
+
+* *Copyright*: derechos de autor sobre el software; también existe en el software libre.
+* *Copyleft*: utiliza la licencia para conservar determinadas libertades cuando se distribuye el programa o sus versiones modificadas. El alcance depende de la licencia. No significa que cualquier modificación privada deba publicarse.
+* *Licencias permisivas*: permiten amplios usos y redistribución con obligaciones como conservar avisos de autoría y licencia, sin exigir en general que las versiones derivadas se distribuyan bajo la misma licencia.
+
+==== Modelos de distribución y pago
+
+[cols="1,3",options="header"]
+|===
+|Modelo |Qué debes comprobar
+|Freeware |Se ofrece sin coste, pero puede ser propietario. Revisa si admite uso profesional y redistribución.
+|Shareware o prueba |Permite evaluar el programa con límites de tiempo o funciones. Comprueba qué ocurre al terminar la prueba.
+|Freemium |Tiene una parte gratuita y funciones o capacidad de pago. Comprueba si la tarea requiere alguna función de pago.
+|Pago único |Se paga por una licencia según sus condiciones; no implica actualizaciones futuras ni servicios ilimitados.
+|Suscripción |Se paga periódicamente. Comprueba funciones, renovación y acceso a los datos al finalizar.
+|Servicio en la nube o SaaS |Se accede a un servicio alojado por el proveedor. Puede ser gratuito o de pago; revisa conexión, exportación de datos y condiciones del servicio.
+|===
+
+==== Antes de elegir en CAOS, S.L.
+
+. Describe la tarea y los formatos que necesitas abrir y guardar.
+. Comprueba compatibilidad con el sistema, memoria, espacio y conexión.
+. Consulta la licencia o las condiciones oficiales de la edición concreta.
+. Comprueba uso profesional, número de usuarios o equipos y duración.
+. Identifica límites de la versión gratuita, costes y posibilidad de exportar los datos.
+. Registra fuente, fecha de consulta y decisión. Si falta información, indica qué debes confirmar.
+
+No hace falta instalar ningún programa para resolver los casos de este tema.
+
+==== Caso breve: el precio no basta
+
+CAOS, S.L. necesita una herramienta para tres equipos de trabajo. Compara estas ofertas ficticias:
+
+* *A*: gratuita solo para uso personal; uso profesional no autorizado.
+* *B*: software libre que permite uso profesional; descarga gratuita y soporte opcional de pago.
+* *C*: software propietario por suscripción; el plan propuesto cubre tres usuarios y permite uso profesional.
+
+¿Cuál descartarías? ¿Qué comprobarías antes de elegir entre las restantes? Justifica con permisos, compatibilidad y coste, no solo con el precio de descarga.
+
+.Fuentes para ampliar
+* https://www.gnu.org/philosophy/free-sw.es.html[GNU: definición de software libre].
+* https://www.gnu.org/licenses/copyleft.es.html[GNU: copyleft].
+* https://opensource.org/osd[Open Source Initiative: definición de código abierto].
 
 === 4.2 Instalación y requisitos
 
@@ -346,40 +402,125 @@ ____
 
 Indica qué información falta y cómo la pedirías.
 
+=== Ahora tú · Crea y rescata la carpeta de CAOS, S.L.
+
+*Modalidad:* individual. *Tiempo orientativo:* 45–55 minutos. Utiliza los archivos de `01_ahora_tu` del paquete de materiales. Todos los datos son ficticios.
+
+==== Pasos
+
+. Descomprime el paquete. Conserva `entrada` como copia original y abre `LEEME.txt`.
+. Crea `CAOS_SL_Apellido_Nombre`. En Windows, abre el Explorador, entra en tu carpeta de trabajo y utiliza *Nuevo > Carpeta*. Escribe el nombre y pulsa Intro.
+. Abre esa carpeta y crea `01_Administracion`, `02_Clientes`, `03_Ventas`, `04_Marketing`, `05_Soporte` y `99_Temporal`. Dentro de Administración crea `Historico`; dentro de Soporte, `Evidencias`.
+. Activa la visualización de las extensiones desde las opciones de vista del explorador. Comprueba la extensión antes de renombrar.
+. Abre los archivos de `entrada`. Lee el contenido y las fechas internas. No decidas cuál es la versión vigente por palabras como «FINAL» ni solo por la fecha de modificación del sistema.
+. Copia cada archivo a su departamento. Compara las dos copias de factura y la revisión aprobada. Conserva el documento anterior en `Historico` y deja una sola copia de cada contenido en la carpeta de trabajo.
+. Renombra usando `AAAA-MM-DD_tipo_identificador_vNN.ext` cuando corresponda. Para capturas utiliza un nombre que describa el problema.
+. Extrae `entrega.zip` en una carpeta de revisión. Integra el documento útil, identifica la copia repetida y excluye el temporal de la entrega. No borres la copia original.
+. Completa `registro_cambios.csv` con nombre original, destino, nuevo nombre y motivo. Anota también los duplicados y temporales excluidos.
+. En Soporte crea `protocolo.txt`: estructura acordada, regla de nombres, gestión de versiones, elección de formato y comprobación antes de enviar.
+. Haz una captura de la estructura organizada. Guarda `estructura_carpetas.png` en Evidencias.
+. Comprime tu carpeta como `T1_Practica_Apellido_Nombre.zip`. Extráela en otro lugar y abre dos archivos para comprobarla.
+
+==== Archivos de partida
+
+[cols="1,2",options="header"]
+|===
+|Archivo |Trabajo que debes realizar
+|`factura.txt`, `factura copia.txt`, `factura_FINAL_BUENA.txt` |Comparar contenido, identificar duplicado y distinguir versiones.
+|`clientes NUEVO.csv` |Abrir como datos separados por punto y coma; comprobar encabezados y registros.
+|`presupuesto final.txt` |Clasificar y renombrar según fecha y cliente.
+|`campaña.txt` |Clasificar el borrador de Marketing.
+|`correo malo.txt` |Reescribir asunto, contexto, necesidad y adjuntos en `correo_respuesta.txt`.
+|`entrega.zip` |Extraer, revisar e integrar solo el contenido útil.
+|===
+
+Los archivos TXT permiten practicar la organización sin necesitar una aplicación concreta. No los conviertas cambiando su extensión.
+
+==== Antes de entregar
+
+* [ ] Puedo localizar cada archivo por su contenido.
+* [ ] He conservado las versiones distintas y eliminado solo copias redundantes de la entrega.
+* [ ] El registro explica todos los cambios y exclusiones.
+* [ ] El ZIP se extrae y sus documentos se abren.
+
 == 🔥 6. Nueva incidencia · «No puedo abrir esto»
 
-Un cliente recibe `listado_clientes.ods` pero solo necesita
-*consultar* la información.
+*Modalidad:* parejas, con entrega individual. *Tiempo orientativo:* 30–40 minutos.
 
-Resuelve la incidencia y justifica el formato de salida.
+Utiliza `02_nueva_incidencia`. El cliente C023 ha recibido `listado_clientes.ods`. Su visor no admite ODS y solo necesita *consultar* los códigos, nombres y localidades. No necesita editar ni importar datos.
+
+==== Encargo
+
+Abre `solicitud.txt` y registra el ticket antes de resolverlo. Trabaja con una copia del original.
+
+. Abre `simulador_error.html` en el navegador y pulsa *Abrir listado*. Es una simulación didáctica local: no representa un fallo real de tu equipo.
+. Captura el aviso con el nombre del archivo y contexto legible. Guarda `INC-001_error_apertura.png`. No presentes la captura como un error real de tu aplicación.
+. Abre `listado_clientes.ods` en una hoja de cálculo compatible del aula. Si no hay ninguna disponible, registra el bloqueo y solicita ayuda al docente.
+. Elige un formato de salida según la necesidad del cliente y justifica por qué los otros formatos no son la mejor opción.
+. Exporta el listado a PDF mediante la función de exportación de la aplicación. Conserva el ODS. Ajusta orientación, márgenes y área de impresión para evitar columnas cortadas.
+. Abre el PDF en un visor distinto de la hoja de cálculo. Comprueba encabezados, cinco clientes, tildes y ausencia de páginas vacías.
+. Completa el ticket con diagnóstico, solución, comprobación y estado. La verificación local permite indicar *resuelto; pendiente de confirmación del cliente*. No inventes una confirmación.
+. Redacta `correo_respuesta.txt`: asunto con número de incidencia, explicación comprensible, archivo adjunto previsto y petición de confirmación. No envíes un correo real.
+
+==== Entrega
+
+Entrega `T1_Incidencia_Apellido_Nombre.zip` con el original ODS, el PDF, la captura, `ticket.txt` y `correo_respuesta.txt`.
+
+*Criterio de éxito:* el cliente puede consultar toda la información sin necesitar una hoja de cálculo; el original se conserva y el ticket permite entender qué se ha comprobado.
+
+==== Puesta en común
+
+¿Qué cambiaría si el cliente necesitara editar el listado? ¿Y si necesitara importarlo en otra aplicación? Explica qué comprobarías sobre compatibilidad o separador y codificación antes de entregar.
 
 == 🔒 7. Ticket cerrado · Evaluable
 
-Cada alumno recibe una carpeta distinta con:
+*Trabajo individual. Tiempo orientativo: 90 minutos. Calificación: 10 puntos.* Puedes consultar el tema y la ayuda de las aplicaciones. Debes realizar y justificar tus propias decisiones.
 
-* archivos mal nombrados;
-* duplicados;
-* un archivo incompatible;
-* un ZIP desordenado;
-* una captura deficiente;
-* un correo mal redactado.
+==== Encargo de CAOS, S.L.
 
-Entregables:
+El docente te asignará el paquete A, B o C de `03_evaluable`. Lee `encargo.txt`: determina el cliente, la versión aprobada y si el destinatario necesita consultar, editar o importar el listado. Las variantes tienen la misma rúbrica.
 
-[arabic]
-. estructura organizada;
-. archivos renombrados;
-. conversión solicitada;
-. ZIP limpio;
-. captura útil;
-. ticket;
-. correo de respuesta.
+La entrada contiene archivos mal nombrados, un duplicado exacto, una versión anterior, un listado ODS incompatible con el sistema del destinatario, un ZIP desordenado, una captura deficiente, un correo mal redactado y fichas de software ficticio.
 
-.Importante
-[WARNING]
-====
-Los datos, archivos o condiciones pueden cambiar entre alumnos. No se evalúa repetir pasos de memoria, sino resolver correctamente la incidencia y justificar las decisiones.
-====
+==== Trabajo que debes realizar
+
+. Conserva la entrada original y crea una estructura de trabajo por departamentos.
+. Revisa el contenido antes de renombrar. Identifica la versión aprobada, conserva la anterior como histórico y evita copias redundantes en la entrega.
+. Revisa el ZIP de entrada e integra su contenido útil. Documenta duplicados y temporales excluidos.
+. Convierte el listado al formato que necesite tu destinatario. Mantén el ODS y verifica el archivo convertido: cinco registros, tres columnas, nombres completos y tildes. Cambiar la extensión no es una conversión.
+. Genera una captura útil del simulador suministrado y otra de la comprobación del archivo convertido. Identifica la primera como simulación; no inventes pruebas.
+. Registra un ticket con usuario, fecha/hora, archivo, aplicación y versión utilizadas, necesidad, error, diagnóstico, pasos, evidencias, resultado y estado.
+. Reescribe el correo para el destinatario. Incluye asunto, explicación, adjunto previsto y siguiente paso; entrega el borrador sin enviarlo.
+. Compara las tres fichas de software. En `decision_software.txt` clasifica licencia, precio y forma de acceso; elige una opción compatible con el encargo y justifica los descartes. Señala los requisitos pendientes de verificar.
+. Completa `registro_cambios.csv` y prepara un ZIP con los originales en `00_Originales`, el trabajo organizado y las evidencias. Los duplicados conservados como evidencia en `00_Originales` no penalizan la limpieza del trabajo.
+. Extrae el ZIP y comprueba que sus archivos se abren. Añade `comprobacion.txt` indicando qué archivos has abierto y el resultado real.
+
+==== Entregables
+
+Un único `T1_Evaluable_Apellido_Nombre_X.zip`, donde X es tu variante, con:
+
+* `00_Originales`: copia de la entrada.
+* Carpetas por departamentos: documentos clasificados y renombrados, versión anterior identificada y listado convertido junto al ODS.
+* `05_Soporte`: `ticket.txt`, `correo_respuesta.txt`, `decision_software.txt`, `registro_cambios.csv`, `comprobacion.txt` y subcarpeta `Evidencias` con las dos capturas.
+
+==== Rúbrica
+
+[cols="3,1,5",options="header"]
+|===
+|Criterio |Puntos |Evidencia para la puntuación completa
+|Estructura y localización |1 |Departamentos coherentes y archivos localizables.
+|Nombres, versiones y duplicados |1,5 |Nombres descriptivos; versión aprobada e histórico correctos; registro que explica cambios y exclusiones.
+|Conversión y comprobación |2 |Formato ajustado al encargo, conversión real, original conservado y cinco registros completos verificados.
+|ZIP y conservación |1 |ZIP extraíble, trabajo sin temporales ni copias redundantes, originales conservados y comprobación documentada.
+|Evidencias |1 |Capturas legibles con contexto, simulación identificada y verificación del resultado.
+|Ticket |1,5 |Datos suficientes, pasos reproducibles, diagnóstico razonado, resultado y estado honestos.
+|Correo |1 |Asunto preciso, explicación clara, adjunto identificado y siguiente paso.
+|Licencias y elección de software |1 |Distingue licencia, precio y acceso; elige y descarta con motivos y revisa requisitos.
+|===
+
+En cada criterio se concede el 100 % si cumple todos los indicadores, el 50 % si el resultado es utilizable pero falta alguno y el 0 % si falta o no permite realizar la tarea. La nota es la suma; aprobado desde 5/10. Una entrega que solo cambia la extensión obtiene 0 en conversión. Un error se valora en su criterio, sin penalización adicional global.
+
+El docente puede pedirte abrir un archivo y explicar una decisión para comprobar la autoría y comprensión.
 
 == ✅ 8. Comprueba que sabes…
 
@@ -391,3 +532,6 @@ Los datos, archivos o condiciones pueden cambiar entre alumnos. No se evalúa re
 * [ ] Sé redactar un correo profesional básico.
 * [ ] Sé registrar una incidencia con datos suficientes.
 * [ ] Sé comprobar requisitos y licencias antes de instalar software.
+
+* [ ] Distingo licencia, modelo de pago y forma de acceso.
+* [ ] Justifico una elección de software a partir de sus condiciones.
