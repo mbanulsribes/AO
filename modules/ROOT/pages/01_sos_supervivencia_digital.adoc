@@ -457,6 +457,14 @@ Los archivos TXT permiten practicar la organización sin necesitar una aplicaci�
 
 Conserva el ZIP en tu carpeta de trabajo para revisarlo en clase. Esta práctica no requiere entrega en Aules.
 
+==== Primero inténtalo; después, revisa con IA
+
+Organiza los archivos, compara las versiones y escribe tu regla de nombres *sin IA*, utilizando los apuntes. Después de ese primer intento, puedes pedir a la herramienta de IA indicada por la profesora que revise tu regla.
+
+Ejemplo de petición: «Esta es mi regla de nombres y estos son tres ejemplos ficticios. Señala posibles ambigüedades y hazme preguntas para mejorarla; no resuelvas la actividad por mí».
+
+Si utilizas IA, añade a `protocolo.txt` tres líneas: qué consultaste, qué sugerencia aceptaste o rechazaste y cómo la comprobaste. No subas datos personales ni archivos ajenos. Si no utilizas IA, revisa la regla con la lista de comprobación del tema.
+
 ==== Antes de terminar
 
 * [ ] Puedo localizar cada archivo por su contenido.
@@ -497,9 +505,34 @@ Conserva el ZIP en tu carpeta de trabajo para revisarlo en clase. Esta práctica
 
 ¿Qué cambiaría si el cliente necesitara editar el listado? ¿Y si necesitara importarlo en otra aplicación? Explica qué comprobarías sobre compatibilidad o separador y codificación antes de entregar.
 
+=== IA para revisar el ticket y el correo
+
+Redacta primero tu ticket y tu correo *sin IA*. Después puedes pedir a la herramienta indicada por la profesora que señale información que falta o frases poco claras, utilizando solo los datos ficticios del caso.
+
+Ejemplo: «Revisa este borrador de ticket. Indica qué información falta para comprender el problema. No inventes datos ni lo reescribas entero».
+
+Tú decides qué cambiar. Guarda el borrador y anota al final de tu documento de trabajo qué sugerencia aplicaste y cómo la comprobaste; esa anotación no forma parte del correo destinado al cliente. Si no utilizas IA, realiza la revisión por parejas.
+
+=== Ensayo de grabación de pantalla
+
+Antes de la evaluable practicaremos en *LliureX 23* con la herramienta de grabación que indique la profesora. No es necesario instalar programas por tu cuenta.
+
+. Abre una copia del listado de práctica y prepara la ventana que vas a grabar.
+. Haz una prueba breve de pantalla y voz, sin mostrar tu cara. Comprueba que se entiende la explicación y se leen los datos.
+. Graba cómo conviertes el archivo y abres el resultado. Explica lo que compruebas.
+. Detén la grabación, guarda el vídeo y reprodúcelo. Comprueba imagen, sonido, formato y tamaño.
+
+Si el micrófono o la grabación no funcionan, avisa durante el ensayo para resolverlo antes de la evaluable. La profesora indicará una alternativa si es necesaria.
+
 == 🔒 7. Ticket cerrado · Evaluable
 
-La actividad evaluable se realizará y entregará en *Aules*.
+La actividad evaluable se realizará y entregará en *Aules*. En el Tema 1 será *individual y sin IA*: puedes consultar los apuntes y la ayuda de las aplicaciones, pero no asistentes generativos.
+
+Entregarás *los archivos del trabajo en un ZIP y un vídeo de pantalla de 3–5 minutos*, por separado. El vídeo debe mostrar una decisión sobre versiones o duplicados, la conversión del listado y la comprobación del resultado. No necesitas mostrar tu cara ni editar el vídeo.
+
+El vídeo sustituye parte de las justificaciones escritas: el registro de cambios y el ticket seguirán siendo breves y útiles. Se evalúan el procedimiento y la explicación, no la calidad de la edición.
+
+Dispondrás de *90 minutos*. Como orientación: 55 para resolver, 20 para preparar y grabar el vídeo, y 15 para comprobar los archivos y preparar la entrega. El enunciado de Aules concreta los requisitos.
 
 Cuando el docente la habilite, entra en *Tema 1 → Ticket cerrado · Evaluable*. Allí encontrarás el enunciado, la variante asignada, la rúbrica y el plazo de entrega.
 
@@ -518,6 +551,8 @@ Las prácticas anteriores te preparan para organizar los archivos, resolver la i
 
 * [ ] Distingo licencia, modelo de pago y forma de acceso.
 * [ ] Justifico una elección de software a partir de sus condiciones.
+* [ ] Sé grabar y reproducir una demostración breve de mi trabajo.
+* [ ] Distingo cuándo puedo utilizar IA y compruebo sus sugerencias.
 
 .Referencias de manejo
 * https://docs.kde.org/stable_kf6/es/dolphin/dolphin/command-reference.html[Dolphin: referencia de órdenes].
