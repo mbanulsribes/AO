@@ -80,6 +80,16 @@ habituales:
 * LibreOffice;
 * Google Workspace.
 
+.Nuestro entorno de trabajo: LliureX 23
+[NOTE]
+====
+En el aula trabajaremos con *LliureX 23* y utilizaremos *LibreOffice Writer* para documentos y *LibreOffice Calc* para hojas de cálculo. Para los archivos `.txt`, utiliza el editor de texto instalado; para el simulador `.html`, el navegador.
+
+Abre el gestor de archivos y la herramienta de capturas desde el menú de aplicaciones. Los nombres de las opciones pueden variar según la versión y el idioma del equipo. Si tu gestor es Dolphin, las referencias a sus menús te servirán de guía.
+
+Respeta las mayúsculas y minúsculas de los nombres: `Clientes` y `clientes` pueden identificar carpetas distintas. Guarda el trabajo en la ubicación que indique el docente.
+====
+
 === Paso 2. Creamos una estructura lógica
 
 Una posible estructura sería:
@@ -288,6 +298,8 @@ Una instalación correcta no termina cuando el asistente muestra
 «Finalizar»: hay que comprobar que la aplicación arranca y que puede
 realizar la tarea prevista.
 
+En los equipos del aula, las instalaciones se realizarán solo cuando lo indique el docente, utilizando las herramientas y fuentes autorizadas para LliureX. Las actividades de este tema se resuelven con las aplicaciones disponibles.
+
 === 4.3 PDF frente a archivo editable
 
 El PDF es apropiado cuando queremos conservar el aspecto de un documento
@@ -415,18 +427,18 @@ xref:attachment$tema1/01_ahora_tu.zip[Descargar archivos de «Ahora tú» (ZIP)]
 
 ==== Pasos
 
-. Descomprime el paquete. Conserva `entrada` como copia original y abre `LEEME.txt`.
-. Crea `CAOS_SL_Apellido_Nombre`. En Windows, abre el Explorador, entra en tu carpeta de trabajo y utiliza *Nuevo > Carpeta*. Escribe el nombre y pulsa Intro.
+. Abre el ZIP descargado con el gestor de archivos comprimidos de LliureX y utiliza *Extraer* para guardarlo en tu carpeta de trabajo. Trabaja con la carpeta extraída, no dentro del ZIP. Conserva `entrada` como copia original y abre `LEEME.txt` con el editor de texto.
+. Crea `CAOS_SL_Apellido_Nombre`. En LliureX 23, abre el gestor de archivos y entra en tu carpeta de trabajo. Haz clic derecho en una zona vacía y busca la opción de crear una carpeta; en Dolphin, *Crear nuevo > Carpeta*. Escribe el nombre y confirma.
 . Abre esa carpeta y crea `01_Administracion`, `02_Clientes`, `03_Ventas`, `04_Marketing`, `05_Soporte` y `99_Temporal`. Dentro de Administración crea `Historico`; dentro de Soporte, `Evidencias`.
-. Activa la visualización de las extensiones desde las opciones de vista del explorador. Comprueba la extensión antes de renombrar.
+. Observa el nombre completo y su extensión (`.txt`, `.csv`, `.zip`...). Si el nombre aparece cortado, amplía la columna o consulta las propiedades del archivo. Al renombrar, conserva la extensión.
 . Abre los archivos de `entrada`. Lee el contenido y las fechas internas. No decidas cuál es la versión vigente por palabras como «FINAL» ni solo por la fecha de modificación del sistema.
 . Copia cada archivo a su departamento. Compara las dos copias de factura y la revisión aprobada. Conserva el documento anterior en `Historico` y deja una sola copia de cada contenido en la carpeta de trabajo.
 . Renombra usando `AAAA-MM-DD_tipo_identificador_vNN.ext` cuando corresponda. Para capturas utiliza un nombre que describa el problema.
 . Extrae `entrega.zip` en una carpeta de revisión. Integra el documento útil, identifica la copia repetida y excluye el temporal de la entrega. No borres la copia original.
 . Completa `registro_cambios.csv` con nombre original, destino, nuevo nombre y motivo. Anota también los duplicados y temporales excluidos.
 . En Soporte crea `protocolo.txt`: estructura acordada, regla de nombres, gestión de versiones, elección de formato y comprobación antes de enviar.
-. Haz una captura de la estructura organizada. Guarda `estructura_carpetas.png` en Evidencias.
-. Comprime tu carpeta como `T1_Practica_Apellido_Nombre.zip`. Extráela en otro lugar y abre dos archivos para comprobarla.
+. Abre la herramienta de capturas desde el menú de aplicaciones de LliureX. Captura la ventana del gestor de archivos con la estructura organizada y guarda `estructura_carpetas.png` en Evidencias.
+. Selecciona tu carpeta y busca la opción *Comprimir* del menú contextual o utiliza el gestor de archivos comprimidos. Elige el formato *ZIP* y guarda `T1_Practica_Apellido_Nombre.zip` fuera de la carpeta que comprimes. Extráelo en otro lugar y abre dos archivos para comprobarlo.
 
 ==== Archivos de partida
 
@@ -465,10 +477,10 @@ Descarga y descomprime el ZIP de esta actividad. El cliente C023 ha recibido `li
 Abre `solicitud.txt` y registra el ticket antes de resolverlo. Trabaja con una copia del original.
 
 . Abre `simulador_error.html` en el navegador y pulsa *Abrir listado*. Es una simulación didáctica local: no representa un fallo real de tu equipo.
-. Captura el aviso con el nombre del archivo y contexto legible. Guarda `INC-001_error_apertura.png`. No presentes la captura como un error real de tu aplicación.
-. Abre `listado_clientes.ods` en una hoja de cálculo compatible del aula. Si no hay ninguna disponible, registra el bloqueo y solicita ayuda al docente.
+. Utiliza la herramienta de capturas de LliureX para capturar el aviso con el nombre del archivo y contexto legible. Guarda `INC-001_error_apertura.png`. No presentes la captura como un error real de tu aplicación.
+. Abre `listado_clientes.ods` con *LibreOffice Calc*. El ODS se debe poder abrir en el equipo del aula; la incompatibilidad del caso corresponde al visor del cliente. Si no puedes abrirlo en Calc, registra el problema real y solicita ayuda al docente.
 . Elige un formato de salida según la necesidad del cliente y justifica por qué los otros formatos no son la mejor opción.
-. Exporta el listado a PDF mediante la función de exportación de la aplicación. Conserva el ODS. Ajusta orientación, márgenes y área de impresión para evitar columnas cortadas.
+. En LibreOffice Calc, utiliza *Archivo > Exportar a > Exportar a PDF*. Conserva el ODS. Revisa la vista previa de impresión y ajusta orientación, márgenes y área de impresión para evitar columnas cortadas.
 . Abre el PDF en un visor distinto de la hoja de cálculo. Comprueba encabezados, cinco clientes, tildes y ausencia de páginas vacías.
 . Completa el ticket con diagnóstico, solución, comprobación y estado. La verificación local permite indicar *resuelto; pendiente de confirmación del cliente*. No inventes una confirmación.
 . Redacta `correo_respuesta.txt`: asunto con número de incidencia, explicación comprensible, archivo adjunto previsto y petición de confirmación. No envíes un correo real.
@@ -506,3 +518,7 @@ Las prácticas anteriores te preparan para organizar los archivos, resolver la i
 
 * [ ] Distingo licencia, modelo de pago y forma de acceso.
 * [ ] Justifico una elección de software a partir de sus condiciones.
+
+.Referencias de manejo
+* https://docs.kde.org/stable_kf6/es/dolphin/dolphin/command-reference.html[Dolphin: referencia de órdenes].
+* https://help.libreoffice.org/latest/es/text/shared/01/ref_pdf_export.html[LibreOffice: exportar a PDF].
