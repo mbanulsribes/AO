@@ -409,7 +409,9 @@ Indica qué información falta y cómo la pedirías.
 
 === Ahora tú · Crea y rescata la carpeta de CAOS, S.L.
 
-*Modalidad:* individual. *Tiempo orientativo:* 45–55 minutos. Utiliza los archivos de `01_ahora_tu` del paquete de materiales. Todos los datos son ficticios.
+*Modalidad:* individual. *Tiempo orientativo:* 45–55 minutos. Descarga y descomprime los archivos de la práctica desde el siguiente enlace. Todos los datos son ficticios.
+
+xref:attachment$tema1/01_ahora_tu.zip[Descargar archivos de «Ahora tú» (ZIP)]
 
 ==== Pasos
 
@@ -441,7 +443,9 @@ Indica qué información falta y cómo la pedirías.
 
 Los archivos TXT permiten practicar la organización sin necesitar una aplicación concreta. No los conviertas cambiando su extensión.
 
-==== Antes de entregar
+Conserva el ZIP en tu carpeta de trabajo para revisarlo en clase. Esta práctica no requiere entrega en Aules.
+
+==== Antes de terminar
 
 * [ ] Puedo localizar cada archivo por su contenido.
 * [ ] He conservado las versiones distintas y eliminado solo copias redundantes de la entrega.
@@ -450,9 +454,11 @@ Los archivos TXT permiten practicar la organización sin necesitar una aplicaci�
 
 == 🔥 6. Nueva incidencia · «No puedo abrir esto»
 
-*Modalidad:* parejas, con entrega individual. *Tiempo orientativo:* 30–40 minutos.
+xref:attachment$tema1/02_nueva_incidencia.zip[Descargar archivos de la nueva incidencia (ZIP)]
 
-Utiliza `02_nueva_incidencia`. El cliente C023 ha recibido `listado_clientes.ods`. Su visor no admite ODS y solo necesita *consultar* los códigos, nombres y localidades. No necesita editar ni importar datos.
+*Modalidad:* parejas, con trabajo final individual. *Tiempo orientativo:* 30–40 minutos.
+
+Descarga y descomprime el ZIP de esta actividad. El cliente C023 ha recibido `listado_clientes.ods`. Su visor no admite ODS y solo necesita *consultar* los códigos, nombres y localidades. No necesita editar ni importar datos.
 
 ==== Encargo
 
@@ -467,9 +473,11 @@ Abre `solicitud.txt` y registra el ticket antes de resolverlo. Trabaja con una c
 . Completa el ticket con diagnóstico, solución, comprobación y estado. La verificación local permite indicar *resuelto; pendiente de confirmación del cliente*. No inventes una confirmación.
 . Redacta `correo_respuesta.txt`: asunto con número de incidencia, explicación comprensible, archivo adjunto previsto y petición de confirmación. No envíes un correo real.
 
-==== Entrega
+==== Resultado de la práctica
 
-Entrega `T1_Incidencia_Apellido_Nombre.zip` con el original ODS, el PDF, la captura, `ticket.txt` y `correo_respuesta.txt`.
+Prepara `T1_Incidencia_Apellido_Nombre.zip` con el original ODS, el PDF, la captura, `ticket.txt` y `correo_respuesta.txt`.
+
+Conserva el ZIP en tu carpeta de trabajo para revisarlo en clase. Esta práctica no requiere entrega en Aules.
 
 *Criterio de éxito:* el cliente puede consultar toda la información sin necesitar una hoja de cálculo; el original se conserva y el ticket permite entender qué se ha comprobado.
 
@@ -479,53 +487,11 @@ Entrega `T1_Incidencia_Apellido_Nombre.zip` con el original ODS, el PDF, la capt
 
 == 🔒 7. Ticket cerrado · Evaluable
 
-*Trabajo individual. Tiempo orientativo: 90 minutos. Calificación: 10 puntos.* Puedes consultar el tema y la ayuda de las aplicaciones. Debes realizar y justificar tus propias decisiones.
+La actividad evaluable se realizará y entregará en *Aules*.
 
-==== Encargo de CAOS, S.L.
+Cuando el docente la habilite, entra en *Tema 1 → Ticket cerrado · Evaluable*. Allí encontrarás el enunciado, la variante asignada, la rúbrica y el plazo de entrega.
 
-El docente te asignará el paquete A, B o C de `03_evaluable`. Lee `encargo.txt`: determina el cliente, la versión aprobada y si el destinatario necesita consultar, editar o importar el listado. Las variantes tienen la misma rúbrica.
-
-La entrada contiene archivos mal nombrados, un duplicado exacto, una versión anterior, un listado ODS incompatible con el sistema del destinatario, un ZIP desordenado, una captura deficiente, un correo mal redactado y fichas de software ficticio.
-
-==== Trabajo que debes realizar
-
-. Conserva la entrada original y crea una estructura de trabajo por departamentos.
-. Revisa el contenido antes de renombrar. Identifica la versión aprobada, conserva la anterior como histórico y evita copias redundantes en la entrega.
-. Revisa el ZIP de entrada e integra su contenido útil. Documenta duplicados y temporales excluidos.
-. Convierte el listado al formato que necesite tu destinatario. Mantén el ODS y verifica el archivo convertido: cinco registros, tres columnas, nombres completos y tildes. Cambiar la extensión no es una conversión.
-. Genera una captura útil del simulador suministrado y otra de la comprobación del archivo convertido. Identifica la primera como simulación; no inventes pruebas.
-. Registra un ticket con usuario, fecha/hora, archivo, aplicación y versión utilizadas, necesidad, error, diagnóstico, pasos, evidencias, resultado y estado.
-. Reescribe el correo para el destinatario. Incluye asunto, explicación, adjunto previsto y siguiente paso; entrega el borrador sin enviarlo.
-. Compara las tres fichas de software. En `decision_software.txt` clasifica licencia, precio y forma de acceso; elige una opción compatible con el encargo y justifica los descartes. Señala los requisitos pendientes de verificar.
-. Completa `registro_cambios.csv` y prepara un ZIP con los originales en `00_Originales`, el trabajo organizado y las evidencias. Los duplicados conservados como evidencia en `00_Originales` no penalizan la limpieza del trabajo.
-. Extrae el ZIP y comprueba que sus archivos se abren. Añade `comprobacion.txt` indicando qué archivos has abierto y el resultado real.
-
-==== Entregables
-
-Un único `T1_Evaluable_Apellido_Nombre_X.zip`, donde X es tu variante, con:
-
-* `00_Originales`: copia de la entrada.
-* Carpetas por departamentos: documentos clasificados y renombrados, versión anterior identificada y listado convertido junto al ODS.
-* `05_Soporte`: `ticket.txt`, `correo_respuesta.txt`, `decision_software.txt`, `registro_cambios.csv`, `comprobacion.txt` y subcarpeta `Evidencias` con las dos capturas.
-
-==== Rúbrica
-
-[cols="3,1,5",options="header"]
-|===
-|Criterio |Puntos |Evidencia para la puntuación completa
-|Estructura y localización |1 |Departamentos coherentes y archivos localizables.
-|Nombres, versiones y duplicados |1,5 |Nombres descriptivos; versión aprobada e histórico correctos; registro que explica cambios y exclusiones.
-|Conversión y comprobación |2 |Formato ajustado al encargo, conversión real, original conservado y cinco registros completos verificados.
-|ZIP y conservación |1 |ZIP extraíble, trabajo sin temporales ni copias redundantes, originales conservados y comprobación documentada.
-|Evidencias |1 |Capturas legibles con contexto, simulación identificada y verificación del resultado.
-|Ticket |1,5 |Datos suficientes, pasos reproducibles, diagnóstico razonado, resultado y estado honestos.
-|Correo |1 |Asunto preciso, explicación clara, adjunto identificado y siguiente paso.
-|Licencias y elección de software |1 |Distingue licencia, precio y acceso; elige y descarta con motivos y revisa requisitos.
-|===
-
-En cada criterio se concede el 100 % si cumple todos los indicadores, el 50 % si el resultado es utilizable pero falta alguno y el 0 % si falta o no permite realizar la tarea. La nota es la suma; aprobado desde 5/10. Una entrega que solo cambia la extensión obtiene 0 en conversión. Un error se valora en su criterio, sin penalización adicional global.
-
-El docente puede pedirte abrir un archivo y explicar una decisión para comprobar la autoría y comprensión.
+Las prácticas anteriores te preparan para organizar los archivos, resolver la incidencia y justificar tus decisiones.
 
 == ✅ 8. Comprueba que sabes…
 
