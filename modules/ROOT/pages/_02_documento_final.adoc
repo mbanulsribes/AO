@@ -1,297 +1,247 @@
-= Tema 2 · `Documento_FINAL_definitivo_ahora_si.docx`
+= Tema 2 · Documento FINAL: que no se rompa al editar
+
+[NOTE]
+====
+*Última actualización:* 8 de septiembre de 2026, a las 22:11 h.
+====
 
 .CAOS, S.L.
 [NOTE]
 ====
-Administración tiene un documento corporativo que se rompe cada vez que alguien lo edita.
+Administración recibe `Documento_FINAL_definitivo_ahora_si.docx`. Parece terminado, pero se desordena cuando cambia el texto. Tu misión es convertirlo en un documento estable, revisado y listo para distribuir.
+
+Trabajaremos en *LliureX 23 con LibreOffice Writer*. Conservaremos el DOCX recibido y guardaremos el trabajo en *ODT*. El PDF será la copia de consulta.
 ====
 
 == 🚨 1. Incidencia inicial
 
-Problemas detectados:
+El informe contiene títulos formateados a mano, tres fuentes, espacios para alinear, párrafos vacíos, listas escritas con números, un logotipo deformado y números de página tecleados. La información es válida; su presentación necesita reparación.
 
-* títulos creados a mano;
-* espacios para alinear;
-* saltos hechos con Enter;
-* imágenes flotando sin control;
-* encabezados escritos en cada página;
-* tres fuentes distintas;
-* tablas desalineadas.
-
-*Objetivo:* reconstruir un documento profesional, estable y fácil de
-mantener.
+*Objetivo:* corregir la estructura y comprobar que el documento sigue funcionando cuando se añade contenido. No basta con que una captura parezca correcta.
 
 == 🎯 2. Qué aprenderás
 
-* editar texto de forma eficiente;
-* distinguir formato de carácter y de párrafo;
-* configurar página, secciones y saltos;
-* usar encabezados, pies y numeración;
-* crear y modificar tablas;
-* insertar imágenes sin desestabilizar el documento;
-* revisar y exportar a PDF;
-* detectar errores de maquetación.
+* Abrir, guardar y versionar documentos de Writer.
+* Seleccionar, buscar, reemplazar y revisar texto sin alterar sus datos.
+* Distinguir carácter, párrafo y página.
+* Aplicar estilos de párrafo básicos, espaciados, listas y tabulaciones.
+* Utilizar saltos reales, encabezados, pies y campos de numeración.
+* Formatear tablas e insertar imágenes proporcionadas y estables.
+* Exportar a PDF y comprobar contenido y maquetación.
+* Explicar una reparación en vídeo y utilizar IA solo en las revisiones autorizadas.
 
-== 🛠️ 3. Rescate guiado · Reparación del informe mensual
+== 🛠️ 3. Rescate guiado · Reparación del informe
 
-=== Paso 1. Crear, abrir y guardar
+xref:attachment$tema2/01_rescate_y_practica.zip[Descargar informe y materiales de práctica (ZIP)]
 
-Trabajamos con:
+=== Paso 1. Preparamos una copia
 
-* nuevo documento;
-* abrir;
-* guardar;
-* guardar como;
-* formatos;
-* ubicación.
+. Extrae el ZIP desde el gestor de archivos de LliureX. Trabaja fuera del archivo comprimido.
+. En `CAOS_SL_Apellido_Nombre/01_Administracion`, crea `Tema2`, con `00_Originales`, `01_Trabajo`, `02_PDF` y `03_Evidencias`.
+. Conserva el DOCX y los archivos recibidos en `00_Originales`.
+. Abre el DOCX con Writer. Usa *Archivo > Guardar como* y selecciona *Texto ODF (.odt)*. Guarda `T2_informe_Apellido_Nombre_v01.odt` en Trabajo.
+. Lee `datos_control.txt`. No cambies cifras, responsables ni fechas al corregir el formato.
 
-Guardar bien implica saber *dónde* está el archivo y *qué versión*
-estamos modificando.
+=== Paso 2. Miramos lo que no se imprime
 
-=== Paso 2. Edición
+Activa *Ver > Marcas de formato*; en Writer también puedes utilizar *Ctrl + F10*. Observa espacios, tabulaciones y marcas de fin de párrafo. Estas ayudas no se imprimen.
 
-Herramientas esenciales:
+Identifica antes de tocar: ¿hay párrafos vacíos para separar?, ¿espacios para alinear?, ¿números escritos a mano? Anota tres problemas en `registro_reparaciones.txt`.
 
-* seleccionar;
-* copiar;
-* cortar;
-* pegar;
-* deshacer;
-* rehacer;
-* buscar;
-* reemplazar.
+=== Paso 3. Editamos con control
 
-=== Paso 3. Formato de caracteres
+Selecciona antes de aplicar un cambio. Usa Deshacer si modificas una zona equivocada. Pega como texto sin formato cuando quieras evitar traer estilos de otra fuente.
 
-Aplicaremos:
+Busca `CAOS SL` y sustitúyelo por `CAOS, S.L.` revisando cada coincidencia. Corrige `informacion`. Detecta espacios duplicados, pero no ejecutes reemplazos masivos sin mirar el contexto.
 
-* fuente;
-* tamaño;
-* negrita;
-* cursiva;
-* subrayado;
-* color;
-* resaltado.
+=== Paso 4. Carácter, párrafo y títulos
 
-*Criterio profesional:* el formato debe comunicar jerarquía, no decorar.
+Elige *Liberation Sans, 11 puntos* para el cuerpo, alineación izquierda, interlineado 1,15 y 6 puntos después de párrafo. Puedes seleccionar los párrafos de cuerpo y aplicar esos ajustes desde las opciones de carácter y párrafo.
 
-=== Paso 4. Formato de párrafos
+Aplica *Título* al título principal y *Título 1* a los cinco apartados, desde la lista de estilos. Comprueba que los apartados se ven coherentes. En este tema utilizamos estilos básicos; su personalización, las plantillas y los índices se desarrollarán en el Tema 3.
 
-Trabajamos:
+Usa negrita para destacar palabras concretas, sin cambiar toda la fuente. Elimina sangrías accidentales y párrafos vacíos que solo añaden espacio.
 
-* alineación;
-* interlineado;
-* espacio antes/después;
-* sangría;
-* tabulaciones;
-* listas.
+=== Paso 5. Listas y pequeñas alineaciones
 
-Nunca se alinean columnas con 18 espacios.
+Convierte las tres tareas en una lista numerada real. Elimina los números tecleados para que no se dupliquen. Inserta un elemento entre dos tareas y comprueba que la numeración se actualiza; después deshaz la prueba.
 
-=== Paso 5. Página
+Las tabulaciones sirven para alinear entradas breves. Para «Responsable» y «Departamento», sustituye las cadenas de espacios por una tabulación con una posición definida. Para registros con varias columnas, utiliza una tabla.
 
-* márgenes;
-* orientación;
-* tamaño;
-* saltos de página;
-* saltos de sección.
+=== Paso 6. Configuramos la página
 
-=== Paso 6. Encabezados y pies
+En *Formato > Estilo de página*, configura A4 vertical y márgenes de 2 cm. Conserva espacio para encabezado y pie. Antes de «3. RECURSOS PREVISTOS», utiliza un *salto de página real*; no una cadena de Enter.
 
-Creamos:
+.Una diferencia importante en Writer
+[IMPORTANT]
+====
+Los *estilos de página* controlan orientación, márgenes, encabezados y pies. Para cambiar solo una página a horizontal, se utiliza un estilo de página distinto aplicado mediante un salto adecuado.
 
-* logo;
-* nombre de documento;
-* número de página;
-* pie corporativo.
+Una *sección* de Writer delimita contenido y puede controlar columnas o protección. No equivale al «salto de sección» de Word ni sirve por sí sola para cambiar la orientación de una página.
+====
 
-=== Paso 7. Tablas
+=== Paso 7. Encabezado, pie y numeración automática
 
-Operaciones:
+. Elimina los encabezados y pies escritos como párrafos dentro del cuerpo.
+. Activa el encabezado y el pie del estilo de página que utilices, desde las opciones de Writer.
+. Escribe `CAOS, S.L. | T2-P01` en el encabezado.
+. En el pie, escribe `Uso interno · Página ` e inserta el campo *Número de página*, desde *Insertar > Campo*.
+. Comprueba al menos las dos primeras páginas. No escribas un «1» esperando que se actualice.
 
-* insertar;
-* añadir/eliminar;
-* combinar/dividir;
-* ajustar;
-* ordenar cuando proceda;
-* estilos;
-* bordes;
-* alineación.
+=== Paso 8. Tabla con estructura
 
-=== Paso 8. Imágenes
+Conserva tres columnas y cuatro filas de datos, además de la cabecera. Aplica un formato coherente: cabecera identificable, unidades alineadas a la derecha, textos a la izquierda y bordes discretos. Ajusta anchos y comprueba que las palabras no quedan cortadas.
 
-* insertar;
-* redimensionar;
-* recortar;
-* ajustar texto;
-* alinear;
-* posicionar.
+En las propiedades de tabla y sus opciones de flujo, revisa la repetición de la cabecera cuando una tabla continúa en otra página. Distingue permitir que la tabla continúe de permitir que una fila se divida. No fuerces toda una tabla larga a permanecer en una página.
 
-=== Paso 9. Revisión
+=== Paso 9. Imagen estable
 
-* ortografía;
-* buscar/reemplazar;
-* inspección visual;
-* vista previa.
+El logotipo se ha deformado deliberadamente. Sustitúyelo por `marca_caos.png`. Conserva la proporción al cambiar su tamaño; para 6 cm de ancho, su alto proporcionado es 1,5 cm.
 
-=== Paso 10. Exportación
+Para esta práctica, elige *Anclar > Como carácter*. La imagen se comporta como un elemento de su párrafo. Alinea el párrafo y comprueba que al añadir texto la imagen no tapa nada. No es el único anclaje posible, pero facilita este documento.
 
-Generamos PDF y lo abrimos para comprobar:
+El *anclaje* determina a qué se vincula la imagen; el *ajuste* determina cómo circula el texto alrededor. Son decisiones distintas.
 
-* páginas;
-* márgenes;
-* imágenes;
-* cortes;
-* numeración.
+=== Paso 10. Revisamos y exportamos
+
+. Revisa la ortografía y contrasta los datos con la ficha de control.
+. Guarda el ODT y abre la vista previa de impresión.
+. Exporta con *Archivo > Exportar a > Exportar a PDF*. Guarda el PDF en `02_PDF`.
+. Abre el PDF en un visor y revisa todas sus páginas: contenido, tabla, logotipo, encabezado, pie y numeración.
+. En una copia de prueba del ODT, añade un párrafo antes de la tabla. Comprueba qué cambia y que nada se superpone. Deshaz o descarta la prueba antes de entregar.
 
 == 📚 4. Lo que necesitas saber
 
-=== 4.1 Formato de carácter y formato de párrafo
+=== 4.1 Tres niveles de formato
 
-El *formato de carácter* afecta a letras o palabras concretas: tipo de
-letra, tamaño, negrita, color, etc.
+[cols="1,2,2",options="header"]
+|===
+|Nivel |Controla |Ejemplo
+|Carácter |Fuente, tamaño, negrita, color |Destacar una fecha dentro de una frase.
+|Párrafo |Alineación, espaciado, interlineado, sangrías |Separar dos párrafos sin añadir líneas vacías.
+|Página |Tamaño, orientación, márgenes, encabezado y pie |Preparar una página A4 para imprimir.
+|===
 
-El *formato de párrafo* afecta al bloque completo: alineación, sangrías,
-interlineado, espaciado y tabulaciones.
+Un estilo reúne propiedades para aplicarlas de forma coherente. El formato directo modifica una selección concreta y puede imponerse sobre el estilo. Si algo no responde al estilo, revisa si arrastra formato directo.
 
-Confundir ambos niveles provoca documentos difíciles de mantener.
+=== 4.2 Enter, salto de línea y salto de página
 
-=== 4.2 Espaciado: Enter no sustituye a la maquetación
+* *Enter*: inicia un párrafo nuevo.
+* *Mayús + Enter*: inicia una línea dentro del mismo párrafo.
+* *Salto de página*: hace que el contenido siguiente comience en otra página.
 
-Pulsar Enter muchas veces para bajar contenido crea huecos frágiles. Si
-cambia el texto, todo se desplaza.
+El espacio antes y después separa párrafos. Los saltos resuelven necesidades de estructura. Ninguno debe utilizarse para simular otro sin motivo.
 
-Para separar bloques usa:
+=== 4.3 Mantener contenido junto
 
-* espaciado anterior/posterior de párrafo;
-* salto de página;
-* salto de sección.
+Un título debe acompañar al párrafo que introduce. Las opciones de flujo del párrafo permiten mantenerlo con el siguiente. El control de líneas viudas y huérfanas evita líneas aisladas al principio o al final de una página.
 
-=== 4.3 Tabulaciones
+Utiliza estas opciones donde tengan sentido. Si marcas muchos párrafos como inseparables, puedes provocar grandes huecos.
 
-Las tabulaciones sitúan texto en posiciones definidas.
+=== 4.4 Secciones y estilos de página
 
-Son adecuadas para pequeñas alineaciones de texto, pero no sustituyen
-una tabla cuando la información realmente está organizada en filas y
-columnas.
+Una sección puede servir para un bloque a dos columnas o para proteger contenido. Un estilo de página define la disposición de la página completa. No es necesario crear secciones para cada apartado del informe.
 
-=== 4.4 Saltos de página y de sección
+Ejercicio guiado breve: en una copia, aplica orientación horizontal a una página mediante un estilo de página y vuelve después a vertical. Conserva esta prueba separada; el informe entregado se pide en vertical.
 
-*Salto de página:* obliga a empezar en una página nueva.
+=== 4.5 Campos y texto fijo
 
-*Salto de sección:* divide el documento en partes que pueden tener
-configuraciones diferentes, por ejemplo orientación o encabezado.
+`Página 1` escrito a mano es texto fijo. Un campo de número de página obtiene su valor del documento. El encabezado y el pie se repiten según el estilo de página; si cambias de estilo, comprueba que sigan activados.
 
-=== 4.5 Encabezados y pies
+=== 4.6 Tablas e imágenes
 
-Los encabezados y pies están pensados para información repetida:
+Las tablas organizan información relacionada en filas y columnas. No utilices una tabla para esconder una maquetación que puede resolverse con párrafos. Evita combinaciones innecesarias de celdas.
 
-* título corporativo;
-* versión;
-* fecha;
-* número de página;
-* autoría.
+Una imagen debe ser legible, proporcionada y pertinente. Reducir su tamaño en la página no siempre reduce el peso del archivo. Conserva una copia del recurso original y comprueba cómo queda en el PDF.
 
-No deben escribirse manualmente en cada página.
+=== 4.7 ODT, DOCX y PDF
 
-=== 4.6 Tablas
+* *ODT*: archivo de trabajo editable de Writer.
+* *DOCX*: formato de intercambio con otras aplicaciones. Al abrir o guardar, revisa posibles cambios de maquetación.
+* *PDF*: copia para consultar o imprimir. No sustituye al editable ni se considera imposible de modificar.
 
-Una tabla es adecuada cuando la información tiene estructura real de
-filas y columnas.
+Si la salida cambia, revisa primero fuentes disponibles, estilos de página, márgenes, anclajes y opciones de flujo. No atribuyas cualquier salto a un fallo del programa.
 
-Buenas prácticas:
+=== 4.8 Revisión y uso de IA
 
-* encabezados claros;
-* anchos coherentes;
-* alineación acorde al tipo de dato;
-* evitar celdas combinadas innecesarias;
-* revisar cómo se divide la tabla entre páginas.
-
-=== 4.7 Imágenes y ajuste de texto
-
-Una imagen debe:
-
-* conservar proporción;
-* tener resolución suficiente;
-* usar un ajuste de texto coherente;
-* evitar posiciones flotantes inestables si no son necesarias.
-
-=== 4.8 Revisión final
-
-Antes de entregar:
-
-[arabic]
-. activa marcas de formato si necesitas detectar saltos o espacios;
-. revisa ortografía;
-. comprueba encabezados y pies;
-. revisa saltos;
-. genera el PDF;
-. abre el PDF y compáralo con el original.
+El corrector ortográfico ayuda, pero no comprueba si una cifra o una fecha es correcta. La IA tampoco garantiza la exactitud del documento. Antes de aceptar una sugerencia, comprueba que conserva el contenido y corresponde a Writer.
 
 == 🏋️ 5. Practica
 
-=== Ejercicio 1 · Reparación rápida
+=== Ahora tú · El informe que resiste cambios
 
-Corrige un documento con:
+*Tiempo orientativo: 70–90 minutos.* Trabaja con una copia nueva del paquete de práctica después del rescate guiado. Conserva el original y repara el documento con menos ayuda.
 
-* espacios repetidos;
-* párrafos sin espaciado coherente;
-* listas manuales;
-* títulos inconsistentes.
+Tu resultado debe tener:
 
-=== Ejercicio 2 · Documento corporativo
+* A4 vertical, márgenes de 2 cm y cuerpo de 11 puntos.
+* Un título y cinco apartados con jerarquía coherente.
+* Párrafos espaciados y lista automática de tres tareas.
+* Encabezado y pie reales, con numeración automática.
+* Tabla con tres columnas y cuatro filas de datos, conservando todos los valores.
+* Logotipo proporcionado y anclado como carácter.
+* El apartado 3 en página nueva mediante un salto real.
+* Empresa normalizada a `CAOS, S.L.` y corrección de `información`.
 
-Crea una circular que incluya:
+Guarda ODT, PDF y un registro breve de cinco reparaciones con formato «problema / acción / comprobación». No se exige un número final fijo de páginas: se evalúan estabilidad, contenido y legibilidad.
 
-* encabezado;
-* título;
-* dos secciones;
-* lista;
-* tabla;
-* imagen;
-* pie;
-* número de página.
+==== Primero tú; después, revisión con IA
 
-=== Ejercicio 3 · Buscar y reemplazar
+Haz el diagnóstico y las primeras reparaciones sin IA. Después, si la profesora lo autoriza, consulta una duda concreta con la herramienta indicada. Ejemplo: «En Writer he usado Enter para separar apartados. ¿Qué diferencia hay entre espaciado de párrafo y salto de página? Dame una pista, no rehagas el documento».
 
-En un documento largo:
+No subas documentos personales o de terceros. Anota qué consultaste, qué sugerencia aceptaste o rechazaste y cómo la comprobaste. Si no utilizas IA, realiza la misma revisión con los apuntes y un compañero.
 
-* sustituye un nombre de empresa;
-* corrige una abreviatura;
-* detecta dobles espacios;
-* revisa ortografía.
+=== Ejercicio 2 · Circular corporativa
 
-== 🔥 6. Nueva incidencia · «El contrato cambia al imprimir»
+Crea desde cero una circular de una o dos páginas para comunicar un cambio ficticio en la organización del archivo. Incluye título, dos apartados, lista de tres instrucciones, tabla de responsables, logotipo, encabezado y número automático de página. Decide primero quién la recibe y qué debe hacer.
 
-El documento se ve bien en pantalla pero al generar PDF:
+Entrega de práctica: ODT y PDF. Comprueba que el destinatario puede encontrar la fecha, la acción y la persona responsable.
 
-* una tabla pasa de página;
-* una imagen se mueve;
-* el pie desaparece.
+=== Ejercicio 3 · Buscar y reemplazar con criterio
 
-Debes detectar y corregir las causas.
+En una copia del informe, localiza el nombre de la empresa y los espacios duplicados. Antes de sustituir, explica el alcance de la selección. Comprueba que no has cambiado referencias, unidades ni nombres propios. Describe un caso en el que «Reemplazar todo» sería una mala decisión.
+
+== 🔥 6. Nueva incidencia · «El acuerdo cambia al imprimir»
+
+xref:attachment$tema2/02_nueva_incidencia.zip[Descargar la nueva incidencia (ZIP)]
+
+*Tiempo orientativo: 50–60 minutos.* El «acuerdo» es un texto ficticio de práctica, no un contrato real. Administración añade contenido y necesita comprobar que el documento sigue funcionando.
+
+. Abre `solicitud.txt` y repara el DOCX con los criterios anteriores. Conserva el original y guarda una versión base ODT.
+. Inserta todo el contenido de `ampliacion.txt` antes del apartado 3.
+. Revisa cómo cambia la paginación. Comprueba tabla, logotipo, encabezado y número de página.
+. Corrige con espaciado, opciones de flujo, anclaje o estilo de página según el problema observado. No borres contenido para hacer que quepa.
+. Exporta a PDF y abre todas las páginas. Si un elemento no ha fallado, anota que lo has comprobado; no inventes errores.
+. Redacta un ticket breve: qué cambió, qué observaste, qué ajustaste y cómo verificaste el resultado.
+
+Conserva ODT, PDF y ticket para revisar en clase. La IA solo puede ayudarte a revisar tu diagnóstico después del primer intento; no debe resolver ni reescribir el documento.
+
+=== Ensayo del vídeo
+
+Con la herramienta autorizada de grabación de LliureX 23, ensaya una demostración de 3–5 minutos. Muestra una reparación real, una prueba de estabilidad y el PDF. Prueba sonido y tamaño de archivo antes de la evaluable. No necesitas mostrar la cara ni editar el vídeo.
 
 == 🔒 7. Ticket cerrado · Evaluable
 
-Documento individual con errores deliberados.
+La actividad se realizará y entregará en *Aules*, preferentemente un viernes. El enunciado indicará fecha, variante y criterios.
 
-Se evalúan:
+Será *individual y sin IA*, con consulta de apuntes y ayuda de Writer. Entregarás un ZIP con original, ODT, PDF y registro breve, además de un vídeo MP4 o WebM separado de 3–5 minutos. El vídeo mostrará una reparación, el funcionamiento de la numeración automática y la comprobación del PDF.
 
-* corrección de formato;
-* párrafos;
-* página;
-* tablas;
-* imágenes;
-* encabezado/pie;
-* revisión;
-* PDF final.
+Tiempo previsto: *90 minutos*: 55 para reparar, 20 para preparar y grabar y 15 para comprobar la entrega. Se valora el procedimiento y la explicación; no se puntúa el montaje audiovisual. Practicaremos la grabación antes de la prueba.
 
 == ✅ 8. Comprueba que sabes…
 
-* [ ] Distingo formato de carácter y de párrafo.
-* [ ] Sé usar espaciado, tabulaciones y saltos correctamente.
-* [ ] Sé configurar una página y sus secciones.
-* [ ] Sé crear encabezados y pies.
-* [ ] Sé trabajar con tablas e imágenes.
-* [ ] Sé revisar un documento antes de entregarlo.
-* [ ] Sé exportar a PDF y comprobar el resultado.
+* [ ] Conservo el original y guardo una copia ODT con nombre coherente.
+* [ ] Distingo carácter, párrafo, página y sección en Writer.
+* [ ] Utilizo estilos básicos, listas y espaciados sin depender de espacios o Enter repetidos.
+* [ ] Configuro encabezado, pie y numeración automática.
+* [ ] Mantengo los datos de una tabla y compruebo su paginación.
+* [ ] Inserto una imagen proporcionada y justifico su anclaje.
+* [ ] Reviso el PDF completo y pruebo la estabilidad del editable.
+* [ ] Puedo demostrar una operación y explicar mis decisiones en vídeo.
+* [ ] Compruebo las sugerencias de IA y respeto las condiciones de cada actividad.
+
+.Ayuda de LibreOffice
+* https://help.libreoffice.org/latest/es/text/swriter/guide/pagestyles.html[Estilos de página].
+* https://help.libreoffice.org/latest/es/text/swriter/guide/pageorientation.html[Orientación de página].
+* https://help.libreoffice.org/latest/es/text/swriter/guide/table_repeat_multiple_headers.html[Repetir cabeceras de tabla].
+* https://help.libreoffice.org/latest/es/text/shared/01/05260000.html[Anclaje de objetos].
