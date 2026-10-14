@@ -2,3 +2,4 @@
 * xref:guia_alumnado.adoc[Guía del alumnado]
 * Temas
 ** xref:01_sos_supervivencia_digital.adoc[Tema 1 · SOS: supervivencia digital]
+** xref:02_documento_final.adoc[Tema 2 · Documento FINAL]
