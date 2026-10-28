@@ -1,0 +1,293 @@
+= Tema 3 · Documentos que trabajan solos
+
+[NOTE]
+====
+*Última actualización:* 28 de octubre de 2026.
+====
+
+.CAOS, S.L.
+[NOTE]
+====
+Recursos Humanos prepara cientos de documentos uno por uno: copia una carta, cambia el nombre, la dirección y la fecha, la guarda y vuelve a empezar. Además, cada departamento usa una plantilla distinta y el manual de acogida tiene un índice escrito a mano que ya no coincide con las páginas.
+
+Trabajaremos en *LliureX 23 con LibreOffice Writer*. Conservaremos los archivos recibidos, guardaremos el trabajo en *ODT*, las plantillas en *OTT* y las salidas de consulta en *PDF*.
+====
+
+== 🚨 1. Incidencia inicial
+
+Este trimestre, el departamento de Clientes debe enviar *286 cartas* de renovación. Hasta ahora se hacían a mano, cambiando en cada una:
+
+* el tratamiento, el nombre y los apellidos;
+* la dirección completa;
+* la fecha de renovación;
+* el número de cliente.
+
+Con ese método aparecen errores: cartas con el nombre de otra persona, fechas sin cambiar y clientes que reciben la carta aunque ya han renovado.
+
+*Objetivo:* conseguir que los documentos repetitivos se generen solos a partir de una *plantilla* y una *fuente de datos*, y que los documentos largos mantengan su estructura e índice automáticamente.
+
+== 🎯 2. Qué aprenderás
+
+* Usar estilos de párrafo con función estructural y modificarlos de forma global.
+* Organizar un documento largo con niveles de título, Navegador y tabla de contenido automática.
+* Crear y reutilizar una plantilla corporativa (`.ott`).
+* Insertar campos: fecha, número de página y datos de una combinación.
+* Preparar una fuente de datos limpia en Calc.
+* Realizar una combinación de correspondencia con filtros, sin borrar registros.
+* Generar etiquetas a partir de la misma fuente de datos.
+* Crear un formulario sencillo con controles.
+* Explicar qué es una macro y por qué no se ejecutan macros de origen desconocido.
+
+== 🛠️ 3. Rescate guiado · Comunicación masiva
+
+xref:attachment$tema3/01_rescate_y_practica.zip[Descargar materiales del rescate y de la práctica (ZIP)]
+
+=== Paso 1. Preparamos el espacio de trabajo
+
+. Extrae el ZIP desde el gestor de archivos de LliureX. Trabaja fuera del archivo comprimido.
+. En `CAOS_SL_Apellido_Nombre/02_Clientes` crea `Tema3`, con `00_Originales`, `01_Trabajo`, `02_Plantillas`, `03_Datos`, `04_Salidas` y `05_Evidencias`.
+. Copia todo el material recibido en `00_Originales`. No lo modifiques.
+. Lee `LEEME.txt` y `datos_control.txt`. Las cifras de control sirven para comprobar tu trabajo; no las escribas a mano en los documentos.
+
+=== Paso 2. Estilos con función
+
+Abre `Manual_acogida_RRHH_borrador.docx` y guárdalo como `T3_manual_Apellido_Nombre_v01.odt` en `01_Trabajo`.
+
+Activa *Ver > Marcas de formato* (*Ctrl + F10*) y abre el panel de estilos con *F11*. Observa que los apartados parecen títulos, pero son párrafos normales con negrita y tamaño grande aplicados a mano.
+
+. Aplica *Título* al título principal del manual.
+. Aplica *Título 1* a los seis apartados numerados y *Título 2* a los subapartados (2.1, 2.2…).
+. Aplica *Cuerpo de texto* a los párrafos normales y elimina los párrafos vacíos que solo separaban.
+. Si un título conserva formato manual, selecciónalo y usa *Formato > Limpiar formato directo* (*Ctrl + M*).
+
+Ahora cambia el aspecto *una sola vez*: en el panel de estilos, haz clic derecho sobre *Título 1 > Modificar…* y elige Liberation Sans, 14 pt, negrita y el color corporativo verde. Todos los apartados cambian a la vez. Esa es la diferencia entre un estilo y un formato bonito.
+
+=== Paso 3. Documento largo e índice automático
+
+. Abre el *Navegador* con *F5*. Si los estilos están bien aplicados, verás los títulos en orden y podrás saltar entre ellos o moverlos.
+. Borra el índice escrito a mano (las líneas con puntos y números de página tecleados).
+. En su lugar, usa *Insertar > Tabla de contenido e índice > Tabla de contenido, índice o bibliografía…*. Acepta la tabla de contenido con dos niveles.
+. Comprueba que el índice coincide con los títulos y las páginas reales.
+. Añade un párrafo largo en el apartado 1 hasta que algún título cambie de página. Haz clic derecho en el índice y elige *Actualizar índice*. Comprueba que los números cambian solos. Deshaz la prueba.
+. Inserta un *salto de página* real después del índice y sustituye «Página 1 de 3» por un pie con el campo *Número de página* (lo practicaste en el Tema 2).
+
+=== Paso 4. Plantilla corporativa
+
+Una plantilla guarda el *diseño*, no los datos de una carta concreta. Crearemos la plantilla de cartas de CAOS, S.L.
+
+. Abre `carta_renovacion_C001.docx` y guárdala como ODT en `01_Trabajo`.
+. Configura A4 vertical y márgenes de 2,5 cm. Sustituye el logotipo deformado por `marca_caos.png` con su proporción (6 × 1,5 cm) y anclado *como carácter*.
+. Coloca el logotipo y `CAOS, S.L. · Departamento de Clientes` en el *encabezado*. En el pie, escribe `clientes@caos.test · Página ` y añade el campo *Número de página*.
+. Sustituye la fecha escrita a mano por un campo: *Insertar > Campo > Más campos…* (*Ctrl + F2*) > pestaña *Documento* > *Fecha* (variable).
+. Comprueba que los textos usan estilos (*Cuerpo de texto*, *Firma*…) y no formato directo.
+. Borra los datos del cliente C001 (nombre, dirección, fecha de renovación, id). Deja en su lugar huecos claros; en el paso 6 los ocuparán campos.
+. Guarda con *Archivo > Guardar como* y en *Tipo de archivo* elige *Plantilla de texto ODF (.ott)*. Nombre: `T3_plantilla_carta_CAOS.ott`, en `02_Plantillas`.
+. Cierra la plantilla y haz doble clic sobre el `.ott`. Se abre un documento *Sin título* basado en ella: así se usa una plantilla. Si quieres cambiar la plantilla en sí, ábrela con *Archivo > Abrir* o *Archivo > Plantillas > Gestionar plantillas*.
+
+=== Paso 5. Fuente de datos limpia
+
+Abre `clientes_renovacion.ods` en Calc y guarda una copia como `T3_clientes_limpio.ods` en `03_Datos`. Trabaja en la copia.
+
+. Observa los problemas: una fila de título encima de los encabezados, una fila vacía en medio y una fila de total al final. Ninguna de ellas es un cliente.
+. Elimina esas tres filas *en la copia*. Los encabezados (`id`, `tratamiento`, `nombre`…) deben quedar en la fila 1.
+. Comprueba que quedan exactamente los registros que indica `datos_control.txt`.
+. Guarda y *cierra* la hoja antes de usarla desde Writer.
+
+[cols="1,2",options="header"]
+|===
+|Regla |Por qué
+|Una fila = un registro |Cada fila se convierte en una carta.
+|Una columna = un dato |Cada encabezado se convierte en un campo.
+|Encabezados únicos en la fila 1 |Writer los usa como nombres de campo.
+|Sin filas vacías, títulos ni totales |Se convertirían en cartas vacías o erróneas.
+|Mismo tipo de dato en cada columna |Evita fechas o códigos con formatos distintos.
+|===
+
+=== Paso 6. Combinación de correspondencia
+
+. Haz doble clic sobre tu plantilla para crear un documento nuevo y guárdalo como `T3_carta_principal.odt` en `01_Trabajo`. Este es el *documento principal*.
+. Abre *Ver > Fuentes de datos* (*Ctrl + Mayús + F4*). Si tu hoja no aparece, regístrala con *Archivo > Asistentes > Fuente de datos de direcciones…* y elige *Otra fuente de datos externa > Hoja de cálculo*, seleccionando `T3_clientes_limpio.ods`.
+. Despliega la fuente y la hoja `Clientes`. Arrastra cada encabezado de columna al hueco correspondiente de la carta: `<tratamiento> <nombre> <apellidos>`, `<direccion>`, `<cp> <localidad> (<provincia>)`, `<fecha_renovacion>` e `<id>`. Los campos aparecen con fondo gris.
+. Comprueba los espacios y signos de puntuación entre campos. El saludo puede quedar como `Estimado/a <tratamiento> <apellidos>:`.
+. Abre *Herramientas > Asistente para combinar correspondencia*. Elige *Usar el documento actual* y *Carta*.
+. En el paso de bloque de direcciones, pulsa *Seleccionar lista de direcciones*, elige tu fuente y pulsa *Filtrar…*. Crea la condición `estado_renovacion` = `Pendiente`.
+. Avanza hasta la vista previa y revisa varias cartas con las flechas: cada una debe tener datos distintos y coherentes.
+. En el último paso elige *Guardar documento combinado > Guardar como documento único* y guarda `T3_cartas_combinadas.odt` en `04_Salidas`.
+. Comprueba el número de cartas con `datos_control.txt`. Exporta las dos primeras a PDF como muestra.
+
+.Filtrar no es borrar
+[IMPORTANT]
+====
+Para enviar la carta solo a algunos clientes se usa un *filtro*. No se borran, ocultan ni reordenan filas de la fuente: otro departamento puede necesitar esos registros y el filtro deja constancia del criterio usado.
+====
+
+=== Paso 7. Etiquetas y sobres
+
+. Usa *Archivo > Nuevo > Etiquetas*.
+. En la pestaña *Etiquetas*, elige tu base de datos y la tabla `Clientes`. Inserta los campos `tratamiento`, `nombre`, `apellidos`, `direccion`, `cp`, `localidad` y `provincia` en el cuadro de texto, con saltos de línea entre ellos.
+. Elige el formato de etiqueta que indique la profesora (por ejemplo, una hoja A4 de 3 × 8) y pulsa *Documento nuevo*.
+. Comprueba que se repiten los mismos datos de la fuente. No hace falta crear otra lista de direcciones: se reutiliza la misma.
+
+Los sobres funcionan igual desde *Insertar > Sobre…*: el destinatario se compone con los mismos campos.
+
+=== Paso 8. Formulario sencillo
+
+Recursos Humanos quiere un formulario de solicitud de permisos que se rellene en el ordenador sin estropear el diseño.
+
+. Crea un documento nuevo a partir de tu plantilla y escribe el título *Solicitud de permiso* y las etiquetas: Nombre, Departamento, Tipo de permiso, Fecha y Confirmo que he avisado a mi responsable.
+. Activa *Formulario > Modo diseño*.
+. Inserta un *Campo de texto* para el nombre, un *Cuadro de lista* para el departamento (Administración, Clientes, Ventas, Marketing y Soporte), otro para el tipo de permiso, un *Campo de fecha* y una *Casilla de verificación*.
+. Haz doble clic en el cuadro de lista para abrir sus propiedades y escribe las opciones en *Entradas de la lista*.
+. Desactiva el *Modo diseño* y prueba el formulario como lo haría otra persona. Guárdalo como `T3_formulario_permisos.ott` en `02_Plantillas`.
+
+=== Paso 9. Macros: concepto y seguridad
+
+Una *macro* es una secuencia de acciones guardada para repetirla automáticamente. Puede ahorrar tiempo, pero también puede ejecutar acciones que no ves: borrar archivos, enviar datos o modificar documentos.
+
+* Revisa el nivel en *Herramientas > Opciones > LibreOffice > Seguridad > Seguridad de macros*. Déjalo en *Alto* o *Muy alto*.
+* No habilites macros de documentos recibidos por correo o descargados, aunque el mensaje te lo pida.
+* En este tema *no* crearemos ni ejecutaremos macros. Si en clase se muestra una grabación de macro, será con un documento propio y supervisada por la profesora.
+
+.Seguridad
+[CAUTION]
+====
+No ejecutes macros de origen desconocido. Muchos ataques llegan como documentos de oficina que piden «habilitar contenido» o «habilitar macros».
+====
+
+== 📚 4. Lo que necesitas saber
+
+=== 4.1 Estilo no es lo mismo que «formato bonito»
+
+Un estilo asigna una *función* a un fragmento: título de apartado, cuerpo, firma… Si todos los apartados usan *Título 1*, cambias su aspecto una sola vez y se actualizan todos. Los estilos además alimentan el Navegador y la tabla de contenido.
+
+El *formato directo* (negrita, tamaño o color aplicados a mano) se impone sobre el estilo. Si un título no cambia al modificar su estilo, límpialo con *Ctrl + M*.
+
+=== 4.2 Documentos largos
+
+* Usa niveles de título coherentes: *Título 1* para apartados y *Título 2* para subapartados.
+* Revisa la estructura en el *Navegador* (*F5*).
+* La tabla de contenido se genera a partir de los títulos; nunca la escribas a mano.
+* Después de cambios importantes, actualiza el índice.
+
+=== 4.3 Plantilla frente a documento
+
+[cols="1,2,2",options="header"]
+|===
+| |Plantilla (`.ott`) |Documento (`.odt`)
+|Qué es |El patrón: diseño, estilos, encabezado, pie, logotipo. |Una carta concreta creada a partir del patrón.
+|Cómo se abre |Doble clic crea un documento nuevo *Sin título*. |Doble clic abre ese mismo archivo.
+|Si lo cambio |Cambian los documentos que se creen después. |Solo cambia esa carta.
+|===
+
+=== 4.4 Campos
+
+Un campo contiene información que el programa calcula o completa: la fecha, el número de página, propiedades del documento o datos de una fuente. Se reconocen por su fondo gris en pantalla (no se imprime). Si escribes la fecha a mano, es texto fijo; si insertas el campo *Fecha*, se actualiza.
+
+=== 4.5 Fuente de datos limpia
+
+* Cada columna representa un atributo y cada fila, un registro.
+* Los encabezados son únicos y están en la primera fila.
+* Los tipos de datos son coherentes en toda la columna.
+* No hay filas vacías, títulos ni totales dentro del conjunto.
+* Antes de limpiar, conserva el original.
+
+=== 4.6 Combinación de correspondencia
+
+Une tres piezas: un *documento principal* (la carta con campos), una *fuente de datos* (la hoja de clientes) y unos *campos variables*. El resultado son tantas cartas como registros cumplan el criterio. No hay que abrir 286 cartas y cambiar el nombre una a una.
+
+=== 4.7 Filtros
+
+Los filtros seleccionan qué registros participan en la combinación. Puedes combinar condiciones: por ejemplo, `estado_renovacion = Pendiente` *y* `provincia = Valencia`. Si necesitas varias provincias, usa la opción *O* en el filtro. La solución correcta es filtrar, no borrar filas.
+
+=== 4.8 Formularios
+
+Un formulario guía a quien lo rellena y limita el tipo de entrada: campos de texto, listas cerradas, fechas o casillas. Así se evita que cada persona escriba los datos de una forma distinta. Los controles se insertan en *Modo diseño* y se usan con el modo diseño desactivado.
+
+=== 4.9 Uso de IA
+
+La IA puede explicar un paso del asistente o ayudarte a entender un mensaje de error, pero no sabe qué datos tiene tu fuente ni comprueba el número de cartas generadas. Nunca subas a una IA datos personales reales de clientes o personas.
+
+== 🏋️ 5. Practica
+
+=== Ahora tú · Las cartas que se hacen solas
+
+*Tiempo orientativo: 90–120 minutos.* Trabaja con una copia nueva del paquete de práctica después del rescate guiado y con menos ayuda.
+
+Tu resultado debe incluir:
+
+* `T3_manual_Apellido_Nombre_v02.odt`: títulos con estilos (*Título*, *Título 1*, *Título 2*), estilo *Título 1* modificado una sola vez, tabla de contenido automática actualizada, salto de página tras el índice y numeración automática.
+* `T3_plantilla_carta_CAOS.ott`: logotipo proporcionado en el encabezado, pie con número de página, campo de fecha y textos con estilos.
+* `T3_clientes_limpio.ods`: copia limpia de la fuente con el número de registros de `datos_control.txt`.
+* `T3_carta_principal.odt` con todos los campos y `T3_cartas_combinadas.odt` con las cartas de los clientes con renovación *pendiente de la provincia de Valencia*.
+* Un PDF con las dos primeras cartas.
+* `registro_T3.txt` con cinco decisiones en formato «problema / acción / comprobación».
+
+Comprueba el número de cartas con `datos_control.txt`. Si no coincide, revisa el filtro y la limpieza de la fuente antes de tocar la carta.
+
+==== Primero tú; después, revisión con IA
+
+Haz la combinación sin IA. Después, si la profesora lo autoriza, puedes consultar una duda concreta. Ejemplo: «En LibreOffice Writer, mi combinación genera una carta vacía al principio. ¿Qué debo revisar en la hoja de datos? Dame una pista, no la solución completa». Anota la consulta y cómo comprobaste la respuesta.
+
+=== Ejercicio 2 · Circular interna con plantilla
+
+Crea con tu plantilla una circular para todos los departamentos sobre el nuevo procedimiento de cartas. Incluye título, dos apartados con *Título 1*, una lista de tres pasos, el campo de fecha y la firma del departamento. Entrega ODT y PDF.
+
+=== Ejercicio 3 · Formulario de permisos
+
+Completa el formulario del paso 8. Rellénalo tú como si fueras un trabajador y expórtalo a PDF. Explica en dos líneas qué errores evita cada lista cerrada.
+
+== 🔥 6. Nueva incidencia · «Solo Valencia y Castellón»
+
+xref:attachment$tema3/02_nueva_incidencia.zip[Descargar la nueva incidencia (ZIP)]
+
+*Tiempo orientativo: 50–60 minutos.* Dirección lanza la campaña de otoño. Solo deben recibir la carta los clientes con renovación pendiente de las provincias de *Valencia* y *Castellón*. No se permite borrar, ocultar ni reordenar registros.
+
+. Lee `solicitud.txt` y conserva los originales.
+. Crea un documento principal nuevo a partir de *tu* plantilla y conéctalo a `clientes_campana_otono.ods`.
+. Construye el filtro: `estado_renovacion = Pendiente` *Y* (`provincia = Valencia` *O* `provincia = Castellón`). Piensa cómo expresarlo en el cuadro del filtro.
+. Genera el documento combinado y comprueba el número de cartas y su reparto por provincias con `datos_control.txt`.
+. Crea la hoja de etiquetas para los mismos destinatarios.
+. Redacta un ticket breve: criterio usado, número de cartas, cómo lo comprobaste y qué harías si los datos de control no coincidieran.
+
+Conserva el documento principal, el combinado, el PDF de muestra, las etiquetas y el ticket para revisar en clase.
+
+=== Ensayo del vídeo
+
+Ensaya una demostración de 3–5 minutos con la herramienta de grabación de LliureX 23. Muestra la fuente de datos limpia, la inserción de un campo, el filtro, la vista previa de dos cartas distintas y la comprobación del total. No necesitas mostrar la cara ni editar el vídeo.
+
+== 🔒 7. Ticket cerrado · Evaluable
+
+La actividad se realizará y entregará en *Aules*. El enunciado indicará fecha, variante y criterios.
+
+Será *individual y sin IA*, con consulta de apuntes y de la ayuda de LibreOffice. Cada persona recibirá una plantilla incompleta, una fuente de datos distinta y un criterio de filtro propio. Deberás entregar un ZIP con:
+
+* la plantilla corporativa corregida (`.ott`);
+* la copia limpia de la fuente de datos;
+* el documento principal con campos (`.odt`);
+* el documento combinado y un PDF de muestra;
+* un registro breve de decisiones y comprobaciones.
+
+Además, un vídeo MP4 o WebM separado, de 3–5 minutos, mostrando el filtro, la vista previa y la comprobación del número de cartas.
+
+Tiempo previsto: *90 minutos*: 55 para resolver, 20 para preparar y grabar y 15 para comprobar la entrega. Se valora el procedimiento y la comprobación; no se puntúa el montaje audiovisual.
+
+== ✅ 8. Comprueba que sabes…
+
+* [ ] Aplico y modifico estilos de título y de cuerpo sin formato directo.
+* [ ] Reviso la estructura con el Navegador.
+* [ ] Inserto y actualizo una tabla de contenido automática.
+* [ ] Distingo plantilla (`.ott`) y documento (`.odt`), y creo documentos a partir de una plantilla.
+* [ ] Inserto campos de fecha y de número de página.
+* [ ] Preparo una fuente de datos limpia sin modificar el original.
+* [ ] Inserto campos de una fuente de datos y combino correspondencia.
+* [ ] Filtro registros sin borrar datos y compruebo el número de documentos generados.
+* [ ] Genero etiquetas con la misma fuente de datos.
+* [ ] Creo un formulario sencillo con controles.
+* [ ] Explico qué es una macro y por qué no se ejecutan macros de origen desconocido.
+
+.Ayuda de LibreOffice
+* https://help.libreoffice.org/latest/es/text/swriter/guide/stylist_update.html[Actualizar estilos a partir de una selección].
+* https://help.libreoffice.org/latest/es/text/swriter/guide/indices_toc.html[Crear una tabla de contenido].
+* https://help.libreoffice.org/latest/es/text/swriter/guide/template_create.html[Crear una plantilla de documento].
+* https://help.libreoffice.org/latest/es/text/swriter/guide/form_letters_main.html[Crear una carta modelo (combinar correspondencia)].
+* https://help.libreoffice.org/latest/es/text/swriter/guide/labels_database.html[Imprimir etiquetas de direcciones].

@@ -11,5 +11,6 @@ El objetivo no es únicamente aprender a usar aplicaciones ofimáticas, sino apr
 
 . xref:01_sos_supervivencia_digital.adoc[Tema 1 · SOS: supervivencia digital]
 . xref:02_documento_final.adoc[Tema 2 · Documento FINAL]
+. xref:03_documentos_que_trabajan_solos.adoc[Tema 3 · Documentos que trabajan solos]
 
 Los siguientes temas se publicarán a medida que avancemos en el curso.
