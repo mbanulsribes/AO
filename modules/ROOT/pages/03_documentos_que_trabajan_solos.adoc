@@ -106,7 +106,7 @@ Abre `clientes_renovacion.ods` en Calc y guarda una copia como `T3_clientes_limp
 === Paso 6. Combinación de correspondencia
 
 . Haz doble clic sobre tu plantilla para crear un documento nuevo y guárdalo como `T3_carta_principal.odt` en `01_Trabajo`. Este es el *documento principal*.
-. Abre *Ver > Fuentes de datos* (*Ctrl + Mayús + F4*). Si tu hoja no aparece, regístrala con *Archivo > Asistentes > Fuente de datos de direcciones…* y elige *Otra fuente de datos externa > Hoja de cálculo*, seleccionando `T3_clientes_limpio.ods`.
+. Añade la hoja de cálculo como fuente de datos: abre *Editar > Intercambiar base de datos…* (*Edita > Intercanvia base de dades…*), pulsa *Examinar…* (*Navega…*), selecciona `T3_clientes_limpio.ods` y pulsa *Definir* (*Defineix*). Después abre *Ver > Fuentes de datos* (*Ctrl + Mayús + F4*) para ver la hoja.
 . Despliega la fuente y la hoja `Clientes`. Arrastra cada encabezado de columna al hueco correspondiente de la carta: `<tratamiento> <nombre> <apellidos>`, `<direccion>`, `<cp> <localidad> (<provincia>)`, `<fecha_renovacion>` e `<id>`. Los campos aparecen con fondo gris.
 . Comprueba los espacios y signos de puntuación entre campos. El saludo puede quedar como `Estimado/a <tratamiento> <apellidos>:`.
 . Abre *Herramientas > Asistente para combinar correspondencia*. Elige *Usar el documento actual* y *Carta*.
