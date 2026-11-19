@@ -1,8 +1,8 @@
-= Tema 4 · `+#VALOR!+`: las cuentas no cuadran
+= Tema 4 · `+#¡VALOR!+`: las cuentas no cuadran
 
 [NOTE]
 ====
-*Última actualización:* 19 de noviembre de 2026 (funciones en valenciano).
+*Última actualización:* 19 de noviembre de 2026.
 ====
 
 .CAOS, S.L.
@@ -11,8 +11,12 @@
 Contabilidad trabaja con hojas de cálculo heredadas: fórmulas que cambian al copiarse, números guardados como texto, totales escritos a mano y resultados imposibles. Nadie sabe ya de dónde sale cada cifra.
 
 Trabajaremos en *LliureX 23 con LibreOffice Calc*. Conservaremos los archivos recibidos y guardaremos el trabajo en *ODS*.
+====
 
-Nuestro Calc está en *valenciano*, así que las funciones se escriben con su nombre en valenciano (`MITJANA`, `COMPTA`, `SI`, `I`…). En el apartado 4.10 tienes la equivalencia con el castellano.
+.Calc en valenciano
+[TIP]
+====
+En clase, Calc está en *valenciano*: los menús y los nombres de las funciones cambian. En este tema todo aparece en castellano y, al lado, el apunte en valenciano: _(val. ...)_. En el apartado 4.10 tienes la tabla completa de funciones. Las fórmulas que ya están en una hoja se traducen solas al abrirla; solo cambia lo que tienes que escribir.
 ====
 
 == 🚨 1. Incidencia inicial
@@ -26,9 +30,9 @@ Dirección ha recibido el resumen de ventas de septiembre con un total de *4.850
 * Distinguir libro, hoja, celda y rango, y reconocer los tipos de datos (número, texto, fecha, porcentaje).
 * Escribir fórmulas con operadores y respetar la prioridad de operaciones.
 * Copiar fórmulas y usar referencias relativas, absolutas y mixtas.
-* Usar funciones básicas: `SUMA`, `MITJANA`, `MIN`, `MAX`, `COMPTA`, `COMPTAA` y `ARROD`.
+* Usar funciones básicas: `SUMA`, `PROMEDIO`, `MIN`, `MAX`, `CONTAR`, `CONTARA` y `REDONDEAR`.
 * Limpiar y transformar texto con funciones de texto.
-* Tomar decisiones con `SI`, `I` y `O`.
+* Tomar decisiones con `SI`, `Y` y `O`.
 * Calcular con fechas: vencimientos y días restantes.
 * Resaltar información con formato condicional.
 * Interpretar los mensajes de error y encontrar su causa.
@@ -50,7 +54,7 @@ xref:attachment$tema4/01_rescate_y_practica.zip[Descargar materiales del rescate
 
 Un *libro* (`.ods`) contiene varias *hojas* (pestañas de abajo: *Ventas*, *Tarifas*, *Clientes*, *Cobros*). Cada *celda* se nombra por su columna y su fila (`B8`) y un *rango* es un bloque de celdas (`B8:B19`).
 
-. Activa *Ver > Resaltar valores* (*Ctrl + F8*). Calc colorea el contenido: *azul* = número, *negro* = texto, *verde* = fórmula.
+. Activa *Ver > Destacar valores* (*Ctrl + F8*) [.small]#(val. _Visualitza > Realçament dels valors_)#. Calc colorea el contenido: *azul* = número, *negro* = texto, *verde* = fórmula.
 . Revisa la columna *Cantidad* de la hoja *Ventas*. Tres celdas aparecen en negro: parecen números, pero están guardadas como *texto*. Una de ellas incluso dice `8 uds`.
 . Escribe la prueba `=SUMA(B8:B19)` en una celda libre. El resultado no coincide con las unidades de `datos_control.txt`: *SUMA ignora el texto*. Borra la prueba.
 . Corrige las tres celdas: selecciónalas, borra el contenido y escribe solo el número (`3`, `8`, `25`). Comprueba que ahora salen en azul.
@@ -81,10 +85,10 @@ Calc calcula primero lo que está entre paréntesis, luego potencias (`^`), desp
 
 === Paso 4. Copiar fórmulas: referencias relativas y absolutas
 
-. Selecciona `E8:G8` y arrastra el *controlador de relleno* (el cuadradito de la esquina inferior derecha) hasta la fila 19. También puedes seleccionar `E8:G19` y usar *Hoja > Rellenar celdas > Rellenar hacia abajo* (*Ctrl + D*).
+. Selecciona `E8:G8` y arrastra el *controlador de relleno* (el cuadradito de la esquina inferior derecha) hasta la fila 19. También puedes seleccionar `E8:G19` y usar *Hoja > Rellenar celdas > Rellenar hacia abajo* (*Ctrl + D*) [.small]#(val. _Full > Ompli les cel·les > Ompli cap a avall_)#.
 . Haz clic en `E12`: la fórmula es `=B12*C12`. Al copiar hacia abajo, las referencias han «bajado» con la fila. Son *referencias relativas*.
 . El IVA está en una celda de parámetros, `M4` (21 %). Escribe en `H8` la fórmula `=G8*M4` y cópiala hacia abajo. Observa el desastre: `H9` da una cifra enorme y el resto, 0. Haz clic en `H9`: la fórmula es `=G9*M5`. La referencia al IVA también ha bajado.
-. Corrige `H8` para que la referencia al IVA no se mueva: `=G8*$M$4`. El `$` fija la columna y la fila. Es una *referencia absoluta*. Puedes ponerla con *Mayús + F4* mientras editas la referencia.
+. Corrige `H8` para que la referencia al IVA no se mueva: `=G8*$M$4`. El `$` fija la columna y la fila. Es una *referencia absoluta*. Puedes ponerla con *Mayús + F4* [.small]#(val. *Maj + F4*)# mientras editas la referencia.
 . Vuelve a copiar `H8` hasta la fila 19 y comprueba que todas las filas usan `$M$4`.
 . En `I8` escribe `=G8+H8` y cópiala hasta `I19`.
 
@@ -112,19 +116,19 @@ Una *función* es una operación ya preparada: tiene un nombre y unos *argumento
 . En la fila 20 (*TOTAL*) escribe `=SUMA(B8:B19)` en `B20` y cópiala a `E20:I20`.
 . Prepara un resumen en `L8:M12`:
 +
-[cols="1,2",options="header"]
+[cols="1,2,2",options="header"]
 |===
-|Rótulo (columna L) |Fórmula (columna M)
-|Media Total |`=MITJANA(I8:I19)`
-|Mínimo |`=MIN(I8:I19)`
-|Máximo |`=MAX(I8:I19)`
-|Líneas |`=COMPTA(I8:I19)`
-|Productos |`=COMPTAA(A8:A19)`
+|Rótulo (columna L) |Fórmula (columna M) |En valenciano
+|Media Total |`=PROMEDIO(I8:I19)` |`=MITJANA(I8:I19)`
+|Mínimo |`=MIN(I8:I19)` |`=MIN(I8:I19)`
+|Máximo |`=MAX(I8:I19)` |`=MAX(I8:I19)`
+|Líneas |`=CONTAR(I8:I19)` |`=COMPTA(I8:I19)`
+|Productos |`=CONTARA(A8:A19)` |`=COMPTAA(A8:A19)`
 |===
-. `COMPTA` cuenta celdas con *números*; `COMPTAA` cuenta celdas *no vacías* (también texto).
-. Compara tus totales con `datos_control.txt`. Si hay diferencias de céntimos, es por redondeo. Para dejar el IVA con dos decimales reales, puedes usar `=ARROD(G8*$M$4;2)`.
+. `CONTAR` cuenta celdas con *números*; `CONTARA` cuenta celdas *no vacías* (también texto).
+. Compara tus totales con `datos_control.txt`. Si hay diferencias de céntimos, es por redondeo. Para dejar el IVA con dos decimales reales, puedes usar `=REDONDEAR(G8*$M$4;2)` [.small]#(val. `=ARROD(G8*$M$4;2)`)#.
 
-TIP: Escribe `=SUMA(` y selecciona el rango con el ratón: Calc escribe las referencias por ti. Con *Insertar > Función…* (*Ctrl + F2*) tienes el asistente con la explicación de cada argumento.
+TIP: Escribe `=SUMA(` y selecciona el rango con el ratón: Calc escribe las referencias por ti. Con *Insertar > Función…* (*Ctrl + F2*) [.small]#(val. _Insereix > Funció…_)# tienes el asistente con la explicación de cada argumento.
 
 === Paso 7. Funciones de texto · Clientes
 
@@ -134,20 +138,24 @@ La hoja *Clientes* tiene nombres escritos de cualquier manera: espacios de más,
 +
 [source,text]
 ----
-=INICIALMAJUSC(RETALLA(A4)&" "&RETALLA(B4))
+=NOMPROPIO(ESPACIOS(A4)&" "&ESPACIOS(B4))
 ----
 +
-`RETALLA` quita los espacios sobrantes, `&` une textos y `INICIALMAJUSC` pone en mayúscula la primera letra de cada palabra.
+_Val.:_ `=INICIALMAJUSC(RETALLA(A4)&" "&RETALLA(B4))`
++
+`ESPACIOS` quita los espacios sobrantes, `&` une textos y `NOMPROPIO` pone en mayúscula la primera letra de cada palabra.
 . En `D4` crea un código con la inicial del nombre y las cuatro primeras letras de los apellidos, en minúsculas:
 +
 [source,text]
 ----
-=MINUSC(ESQUERRA(RETALLA(A4);1)&ESQUERRA(RETALLA(B4);4))
+=MINUSC(IZQUIERDA(ESPACIOS(A4);1)&IZQUIERDA(ESPACIOS(B4);4))
 ----
-. En `E4` calcula la longitud del nombre completo: `=LONG(C4)`.
++
+_Val.:_ `=MINUSC(ESQUERRA(RETALLA(A4);1)&ESQUERRA(RETALLA(B4);4))`
+. En `E4` calcula la longitud del nombre completo: `=LARGO(C4)` [.small]#(val. `=LONG(C4)`)#.
 . Copia `C4:E4` hasta la fila 9 y comprueba el primer y el último código con `datos_control.txt`.
 
-Otras funciones útiles: `MAJUSC`, `DRETA`, `MIG`, `SUBSTITUEIX` y `CONCATENA`.
+Otras funciones útiles: `MAYUSC`, `DERECHA`, `EXTRAE`, `SUSTITUIR` y `CONCATENAR`.
 
 === Paso 8. Funciones lógicas
 
@@ -166,37 +174,37 @@ SI(condición; valor_si_verdadero; valor_si_falso)
 ----
 +
 `M5` contiene el objetivo por línea (1.000 €). Cópiala hasta `J19`.
-. Cuenta las líneas que alcanzan el objetivo: `=COMPTASI(J8:J19;"Objetivo")`.
-. Para combinar condiciones se usan `I` (se cumplen todas) y `O` (se cumple al menos una). Las usarás en el paso 9 y en la práctica.
+. Cuenta las líneas que alcanzan el objetivo: `=CONTAR.SI(J8:J19;"Objetivo")` [.small]#(val. `=COMPTASI(J8:J19;"Objetivo")`)#.
+. Para combinar condiciones se usan `Y` (se cumplen todas) y `O` (se cumple al menos una). En valenciano, `Y` se escribe `I`. Las usarás en el paso 9 y en la práctica.
 
 === Paso 9. Fechas · Cobros
 
 Abre la hoja *Cobros*. Calc guarda cada fecha como un *número de días*, por eso se puede sumar y restar con fechas.
 
-. En `F6` calcula el vencimiento: `=C6+D6` (emisión + plazo en días). Si sale un número raro, dale formato de fecha con *Formato > Celdas* (*Ctrl + 1*) > *Fecha*.
+. En `F6` calcula el vencimiento: `=C6+D6` (emisión + plazo en días). Si sale un número raro, dale formato de fecha con *Formato > Celdas* (*Ctrl + 1*) > *Fecha* [.small]#(val. _Format > Cel·les > Data_)#.
 . En `G6` calcula los días que faltan respecto a la fecha de revisión: `=F6-$B$3`. Un número negativo significa que ya ha vencido.
 . En `H6`: `=SI(G6<0;"Vencida";"En plazo")`.
-. En `I6`, solo se reclaman por teléfono las vencidas de 500 € o más: `=SI(I(H6="Vencida";E6>=500);"Sí";"No")`.
-. En `J6` extrae el mes de emisión: `=MES(C6)`. También existen `ANY` y `DIA`.
+. En `I6`, solo se reclaman por teléfono las vencidas de 500 € o más: `=SI(Y(H6="Vencida";E6>=500);"Sí";"No")` [.small]#(val. `=SI(I(H6="Vencida";E6>=500);"Sí";"No")`)#.
+. En `J6` extrae el mes de emisión: `=MES(C6)`. También existen `AÑO` y `DIA` [.small]#(val. `ANY` y `DIA`)#.
 . Copia `F6:J6` hasta la última factura.
 
 .Fecha fija o HOY()
 [NOTE]
 ====
-En una hoja real escribirías `=AVUI()` en `B3` para que la fecha se actualice sola. Aquí usamos una fecha fija para que todo el grupo obtenga los mismos resultados.
+En una hoja real escribirías `=HOY()` [.small]#(val. `=AVUI()`)# en `B3` para que la fecha se actualice sola. Aquí usamos una fecha fija para que todo el grupo obtenga los mismos resultados.
 ====
 
 === Paso 10. Formato condicional
 
-El formato condicional cambia el aspecto de una celda según su valor. Usa *Formato > Formato condicional > Condición…*.
+El formato condicional cambia el aspecto de una celda según su valor. Usa *Formato > Condicional > Condición…* [.small]#(val. _Format > Condicional > Condició…_)#.
 
-. *Negativos:* selecciona `G8:I19` de *Ventas* y crea la condición _El valor de la celda es · menor que · 0_ con un estilo de fondo rojo. Pruébalo: escribe `10` en el descuento del Tóner, verás su base y su total en rojo, y deshaz el cambio.
+. *Negativos:* selecciona `G8:I19` de *Ventas* y crea la condición _El valor de la celda · menor que · 0_ [.small]#(val. _El valor de la cel·la · menor que · 0_)# con un estilo de fondo rojo. Pruébalo: escribe `10` en el descuento del Tóner, verás su base y su total en rojo, y deshaz el cambio.
 . *Objetivo:* selecciona `J8:J19` y resalta en verde las celdas iguales a `"Objetivo"`.
 . *Vencimientos:* en *Cobros*, selecciona `H6:H15` y resalta en rojo `"Vencida"`.
-. *Duplicados:* selecciona la columna de facturas (`A6:A15`) y elige _El valor de la celda es · duplicado_. Aparece una factura repetida. En tu copia de trabajo, elimina la fila duplicada y anótalo en tu registro.
+. *Duplicados:* selecciona la columna de facturas (`A6:A15`) y elige _El valor de la celda · está duplicado_ [.small]#(val. _El valor de la cel·la · és un duplicat_)#. Aparece una factura repetida. En tu copia de trabajo, elimina la fila duplicada y anótalo en tu registro.
 . Comprueba los totales de *Cobros* con `datos_control.txt`.
 
-Para revisar o borrar condiciones usa *Formato > Formato condicional > Gestionar…*.
+Para revisar o borrar condiciones usa *Formato > Condicional > Gestionar…* [.small]#(val. _Format > Condicional > Gestiona…_)#.
 
 == 📚 4. Lo que necesitas saber
 
@@ -208,7 +216,7 @@ Una *fórmula* es una expresión de cálculo que empieza por `=`: `=B8*C8`. Una 
 |===
 |Operadores |Uso
 |`+` `-` `*` `/` `^` |Sumar, restar, multiplicar, dividir, potencia.
-|`=` `>` `<` `>=` `+<=+` `<>` |Comparar (dan CERT o FALS).
+|`=` `>` `<` `>=` `+<=+` `<>` |Comparar (dan VERDADERO o FALSO; val. CERT o FALS).
 |`&` |Unir textos.
 |===
 
@@ -223,29 +231,29 @@ Una *fórmula* es una expresión de cálculo que empieza por `=`: `=B8*C8`. Una 
 |Mixta |`A$1` |la fila queda fija; la columna cambia.
 |===
 
-La diferencia solo se nota *al copiar* la fórmula. *Mayús + F4* cambia el tipo de referencia mientras editas.
+La diferencia solo se nota *al copiar* la fórmula. *Mayús + F4* [.small]#(val. *Maj + F4*)# cambia el tipo de referencia mientras editas.
 
 === 4.3 Números como texto
 
 Un valor puede parecer un número y estar guardado como texto (`'25`, `8 uds`, `1.250 €` escrito a mano…). Consecuencias:
 
-* `SUMA` y `MITJANA` lo ignoran sin avisar: el total sale más bajo;
+* `SUMA` y `PROMEDIO` lo ignoran sin avisar: el total sale más bajo;
 * las ordenaciones salen extrañas;
-* si el texto no es un número limpio, la fórmula da `+#VALOR!+`.
+* si el texto no es un número limpio, la fórmula da `+#¡VALOR!+`.
 
-Detéctalo con *Ver > Resaltar valores* (*Ctrl + F8*) o por la alineación a la izquierda.
+Detéctalo con *Ver > Destacar valores* (*Ctrl + F8*) o por la alineación a la izquierda.
 
 === 4.4 Funciones de texto
 
 [cols="1,2",options="header"]
 |===
 |Función |Qué hace
-|`RETALLA(texto)` |Quita los espacios sobrantes.
-|`MAJUSC`, `MINUSC`, `INICIALMAJUSC` |Mayúsculas, minúsculas, inicial en mayúscula.
-|`ESQUERRA(texto;n)`, `DRETA(texto;n)` |Extrae n caracteres por la izquierda o la derecha.
-|`MIG(texto;inicio;n)` |Extrae n caracteres desde una posición.
-|`LONG(texto)` |Cuenta los caracteres.
-|`&` o `CONCATENA` |Une textos.
+|`ESPACIOS(texto)` |Quita los espacios sobrantes. _Val.: `RETALLA`._
+|`MAYUSC`, `MINUSC`, `NOMPROPIO` |Mayúsculas, minúsculas, inicial en mayúscula. _Val.: `MAJUSC`, `MINUSC`, `INICIALMAJUSC`._
+|`IZQUIERDA(texto;n)`, `DERECHA(texto;n)` |Extrae n caracteres por la izquierda o la derecha. _Val.: `ESQUERRA`, `DRETA`._
+|`EXTRAE(texto;inicio;n)` |Extrae n caracteres desde una posición. _Val.: `MIG`._
+|`LARGO(texto)` |Cuenta los caracteres. _Val.: `LONG`._
+|`&` o `CONCATENAR` |Une textos. _Val.: `CONCATENA`._
 |===
 
 === 4.5 Funciones lógicas
@@ -254,7 +262,7 @@ Detéctalo con *Ver > Resaltar valores* (*Ctrl + F8*) o por la alineación a la 
 |===
 |Función |Ejemplo
 |`SI` |`=SI(I8>=1000;"Objetivo";"Pendiente")`
-|`I` |`=SI(I(C6>=1000;B6="Valencia");"Bonus";"Sin bonus")`: deben cumplirse todas.
+|`Y` |`=SI(Y(C6>=1000;B6="Valencia");"Bonus";"Sin bonus")`: deben cumplirse todas. _Val.: `I`._
 |`O` |`=SI(O(C6<500;C6>2000);"Revisar";"")`: basta con una.
 |SI anidado |`=SI(C6>=1000;6%;SI(C6>=500;3%;0%))`: varios tramos.
 |===
@@ -266,9 +274,9 @@ Los textos van entre comillas (`"Valencia"`); los números, no.
 Las fechas son números de días, así que:
 
 * `fecha + 30` da la fecha 30 días después;
-* `fecha_fin - fecha_inicio` da los días entre dos fechas (también `DIES(fin;inicio)`);
-* `AVUI()` devuelve la fecha actual y `ARA()`, fecha y hora;
-* `ANY()`, `MES()` y `DIA()` extraen cada parte.
+* `fecha_fin - fecha_inicio` da los días entre dos fechas (también `DIAS(fin;inicio)` [.small]#(val. `DIES`)#);
+* `HOY()` devuelve la fecha actual y `AHORA()`, fecha y hora [.small]#(val. `AVUI()`, `ARA()`)#;
+* `AÑO()`, `MES()` y `DIA()` extraen cada parte [.small]#(val. `ANY()`, `MES()`, `DIA()`)#.
 
 Si una fecha aparece como número (`46295`) o un número como fecha, el valor es correcto: cambia el formato de la celda.
 
@@ -276,18 +284,18 @@ Si una fecha aparece como número (`46295`) o un número como fecha, el valor es
 
 No memorices solo el nombre del error: investiga su *causa* (referencia, tipo de dato, operador, función o rango).
 
-[cols="1,3",options="header"]
+[cols="1,1,3",options="header"]
 |===
-|Error |Causa habitual
-|`+#VALOR!+` |Se opera con un texto que no es un número (`8 uds`).
-|`+#DIV/0!+` |Se divide entre 0 o entre una celda vacía.
-|`+#NOM?+` |Función mal escrita o texto sin comillas.
-|`+#REF!+` |La fórmula apunta a una celda que se ha borrado.
-|`+###+` |El número no cabe: ensancha la columna.
-|`Err:522` |Referencia circular: la fórmula se usa a sí misma.
+|Error |En valenciano |Causa habitual
+|`+#¡VALOR!+` |`+#VALOR!+` |Se opera con un texto que no es un número (`8 uds`).
+|`+#¡DIV/0!+` |`+#DIV/0!+` |Se divide entre 0 o entre una celda vacía.
+|`+#¿NOMBRE?+` |`+#NOM?+` |Función mal escrita o texto sin comillas.
+|`+#¡REF!+` |`+#REF!+` |La fórmula apunta a una celda que se ha borrado.
+|`+###+` |`+###+` |El número no cabe: ensancha la columna.
+|`Err:522` |`Err:522` |Referencia circular: la fórmula se usa a sí misma.
 |===
 
-Herramientas: *Ver > Mostrar fórmula* muestra todas las fórmulas a la vez y *Herramientas > Detective > Rastrear precedentes* dibuja flechas hacia las celdas que usa una fórmula.
+Herramientas: *Ver > Mostrar fórmula* [.small]#(val. _Visualitza > Mostra la fórmula_)# muestra todas las fórmulas a la vez y *Herramientas > Detective > Rastrear precedentes* [.small]#(val. _Eines > Detectiu > Rastreja els anteriors_)# dibuja flechas hacia las celdas que usa una fórmula.
 
 Un resultado sin mensaje de error también puede ser *imposible*: un IVA mayor que la base, un total negativo, más unidades de las que hay… Compara siempre con una estimación o con los datos de control.
 
@@ -305,42 +313,43 @@ Una hoja profesional:
 
 === 4.9 Uso de IA
 
-La IA puede explicarte qué hace una función o ayudarte a entender un error, pero no ve tu hoja ni sabe qué hay en cada celda. A menudo te dará las funciones en inglés (`SUM`, `IF`) o en castellano (`PROMEDIO`, `Y`), y con `,` en vez de `;`. Pídele los nombres de LibreOffice en valenciano. Comprueba siempre el resultado con los datos de control.
+La IA puede explicarte qué hace una función o ayudarte a entender un error, pero no ve tu hoja ni sabe qué hay en cada celda. A menudo te dará las funciones en inglés (`SUM`, `IF`) y con `,` en vez de `;`. Pídele los nombres de LibreOffice en castellano o en valenciano, según tu Calc. Comprueba siempre el resultado con los datos de control.
 
-=== 4.10 Funciones en valenciano y en castellano
+=== 4.10 Funciones en castellano y en valenciano
 
-Calc usa los nombres de las funciones en el idioma de la interfaz. Si abres la hoja en un Calc en castellano, las fórmulas se traducen solas; solo cambia lo que tienes que *escribir*.
+Calc usa los nombres de las funciones en el idioma de la interfaz. Si abres una hoja en un Calc en valenciano, las fórmulas se traducen solas; solo cambia lo que tienes que *escribir*.
 
 [cols="1,1,2",options="header"]
 |===
-|Valenciano |Castellano |Qué hace
+|Castellano |Valenciano |Qué hace
 |`SUMA` |`SUMA` |Suma un rango.
-|`MITJANA` |`PROMEDIO` |Media.
+|`PROMEDIO` |`MITJANA` |Media.
 |`MIN` / `MAX` |`MIN` / `MAX` |Mínimo y máximo.
-|`COMPTA` |`CONTAR` |Cuenta celdas con números.
-|`COMPTAA` |`CONTARA` |Cuenta celdas no vacías.
-|`COMPTASI` |`CONTAR.SI` |Cuenta las celdas que cumplen un criterio.
-|`SUMASI` |`SUMAR.SI` |Suma las celdas que cumplen un criterio.
-|`ARROD` |`REDONDEAR` |Redondea a n decimales.
+|`CONTAR` |`COMPTA` |Cuenta celdas con números.
+|`CONTARA` |`COMPTAA` |Cuenta celdas no vacías.
+|`CONTAR.SI` |`COMPTASI` |Cuenta las celdas que cumplen un criterio.
+|`SUMAR.SI` |`SUMASI` |Suma las celdas que cumplen un criterio.
+|`REDONDEAR` |`ARROD` |Redondea a n decimales.
 |`SI` |`SI` |Condición.
-|`I` |`Y` |Se cumplen todas las condiciones.
+|`Y` |`I` |Se cumplen todas las condiciones.
 |`O` |`O` |Se cumple al menos una condición.
-|`RETALLA` |`ESPACIOS` |Quita los espacios sobrantes.
-|`MAJUSC` / `MINUSC` |`MAYUSC` / `MINUSC` |Mayúsculas / minúsculas.
-|`INICIALMAJUSC` |`NOMPROPIO` |Inicial de cada palabra en mayúscula.
-|`ESQUERRA` / `DRETA` |`IZQUIERDA` / `DERECHA` |Caracteres por la izquierda / derecha.
-|`MIG` |`EXTRAE` |Caracteres desde una posición.
-|`LONG` |`LARGO` |Número de caracteres.
-|`CONCATENA` |`CONCATENAR` |Une textos.
-|`SUBSTITUEIX` |`SUSTITUIR` |Sustituye un texto por otro.
-|`AVUI` / `ARA` |`HOY` / `AHORA` |Fecha actual / fecha y hora.
-|`ANY` / `MES` / `DIA` |`AÑO` / `MES` / `DIA` |Partes de una fecha.
-|`DIES` |`DIAS` |Días entre dos fechas.
-|`+#VALOR!+` / `+#NOM?+` |`+#¡VALOR!+` / `+#¿NOMBRE?+` |Mensajes de error.
-|`CERT` / `FALS` |`VERDADERO` / `FALSO` |Resultado de una comparación.
+|`ESPACIOS` |`RETALLA` |Quita los espacios sobrantes.
+|`MAYUSC` / `MINUSC` |`MAJUSC` / `MINUSC` |Mayúsculas / minúsculas.
+|`NOMPROPIO` |`INICIALMAJUSC` |Inicial de cada palabra en mayúscula.
+|`IZQUIERDA` / `DERECHA` |`ESQUERRA` / `DRETA` |Caracteres por la izquierda / derecha.
+|`EXTRAE` |`MIG` |Caracteres desde una posición.
+|`LARGO` |`LONG` |Número de caracteres.
+|`CONCATENAR` |`CONCATENA` |Une textos.
+|`SUSTITUIR` |`SUBSTITUEIX` |Sustituye un texto por otro.
+|`HOY` / `AHORA` |`AVUI` / `ARA` |Fecha actual / fecha y hora.
+|`AÑO` / `MES` / `DIA` |`ANY` / `MES` / `DIA` |Partes de una fecha.
+|`DIAS` |`DIES` |Días entre dos fechas.
+|`+#¡VALOR!+` / `+#¿NOMBRE?+` |`+#VALOR!+` / `+#NOM?+` |Mensajes de error.
+|`VERDADERO` / `FALSO` |`CERT` / `FALS` |Resultado de una comparación.
 |===
 
 TIP: Con *Insertar > Función…* (*Ctrl + F2*) ves la lista de funciones en el idioma de tu Calc, con la explicación de cada argumento.
+
 
 == 🏋️ 5. Practica
 
@@ -364,7 +373,7 @@ Comprueba cada hoja con `datos_control.txt`. Si no coincide, revisa primero los 
 
 ==== Primero tú; después, revisión con IA
 
-Resuelve la práctica sin IA. Después, si la profesora lo autoriza, puedes consultar una duda concreta. Ejemplo: «En LibreOffice Calc en valenciano, mi fórmula `=SI(C6>=1000;6%;SI(C6>500;3%;0%))` da 0 % para 500 €. ¿Qué debo revisar? Dame una pista, no la solución». Anota la consulta y cómo comprobaste la respuesta.
+Resuelve la práctica sin IA. Después, si la profesora lo autoriza, puedes consultar una duda concreta. Ejemplo: «En LibreOffice Calc en español, mi fórmula `=SI(C6>=1000;6%;SI(C6>500;3%;0%))` da 0 % para 500 €. ¿Qué debo revisar? Dame una pista, no la solución». Anota la consulta y cómo comprobaste la respuesta.
 
 === Ejercicio 2 · Presupuesto con parámetros
 
@@ -372,7 +381,7 @@ Crea en una hoja nueva un presupuesto de 5 productos para un cliente. Pon en cel
 
 === Ejercicio 3 · Caza de errores
 
-En una hoja nueva provoca a propósito `+#VALOR!+`, `+#DIV/0!+`, `+#NOM?+` y `+#REF!+`. Al lado de cada uno escribe la causa y cómo lo has corregido.
+En una hoja nueva provoca a propósito `+#¡VALOR!+`, `+#¡DIV/0!+`, `+#¿NOMBRE?+` y `+#¡REF!+`. Al lado de cada uno escribe la causa y cómo lo has corregido.
 
 == 🔥 6. Nueva incidencia · «El cierre de noviembre no cuadra»
 
@@ -381,7 +390,7 @@ xref:attachment$tema4/02_nueva_incidencia.zip[Descargar la nueva incidencia (ZIP
 *Tiempo orientativo: 50–60 minutos.* Contabilidad ha preparado el cierre de noviembre copiando fórmulas fila a fila. La hoja muestra resultados imposibles: un IVA de miles de euros, IVA a 0, un total negativo, unidades que no cuadran, un error en la media… Detrás hay *cinco causas distintas*.
 
 . Lee `solicitud.txt` y conserva el original.
-. Activa *Ver > Mostrar fórmula* y *Ver > Resaltar valores* para revisar la hoja.
+. Activa *Ver > Mostrar fórmula* y *Ver > Destacar valores* para revisar la hoja.
 . Localiza cada celda incorrecta y piensa *por qué* da ese resultado antes de cambiar nada.
 . Corrige la causa, no el resultado: no se permite escribir números a mano.
 . Comprueba los totales con `datos_control.txt`.
@@ -412,9 +421,9 @@ Se evalúan: datos corregidos, fórmulas, referencias, funciones, lógica, fecha
 * [ ] Detecto números guardados como texto y los corrijo.
 * [ ] Distingo fórmula y función, y respeto la prioridad de operaciones.
 * [ ] Uso referencias relativas, absolutas y mixtas, y sé cuándo hace falta cada una.
-* [ ] Uso `SUMA`, `MITJANA`, `MIN`, `MAX`, `COMPTA`, `COMPTAA` y `ARROD`.
+* [ ] Uso `SUMA`, `PROMEDIO`, `MIN`, `MAX`, `CONTAR`, `CONTARA` y `REDONDEAR`.
 * [ ] Limpio y transformo texto con funciones de texto.
-* [ ] Uso `SI`, `I`, `O` y condiciones con varios tramos.
+* [ ] Uso `SI`, `Y`, `O` y condiciones con varios tramos.
 * [ ] Calculo vencimientos y días restantes con fechas.
 * [ ] Aplico formato condicional a negativos, objetivos, vencimientos y duplicados.
 * [ ] Investigo la causa de un error en lugar de borrarlo.
