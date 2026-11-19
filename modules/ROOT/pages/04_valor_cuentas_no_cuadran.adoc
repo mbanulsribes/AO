@@ -1,0 +1,390 @@
+= Tema 4 · `+#¡VALOR!+`: las cuentas no cuadran
+
+[NOTE]
+====
+*Última actualización:* 19 de noviembre de 2026.
+====
+
+.CAOS, S.L.
+[NOTE]
+====
+Contabilidad trabaja con hojas de cálculo heredadas: fórmulas que cambian al copiarse, números guardados como texto, totales escritos a mano y resultados imposibles. Nadie sabe ya de dónde sale cada cifra.
+
+Trabajaremos en *LliureX 23 con LibreOffice Calc*. Conservaremos los archivos recibidos y guardaremos el trabajo en *ODS*.
+====
+
+== 🚨 1. Incidencia inicial
+
+Dirección ha recibido el resumen de ventas de septiembre con un total de *4.850,00 €*. Al revisarlo, nadie consigue llegar a esa cifra: hay celdas que parecen números pero no suman, un descuento del 1000 %, una línea con «8 uds» y un total tecleado a mano.
+
+*Objetivo:* construir cálculos *fiables, comprensibles y comprobables*: cada resultado debe salir de una fórmula y cualquier persona debe poder seguir de dónde sale.
+
+== 🎯 2. Qué aprenderás
+
+* Distinguir libro, hoja, celda y rango, y reconocer los tipos de datos (número, texto, fecha, porcentaje).
+* Escribir fórmulas con operadores y respetar la prioridad de operaciones.
+* Copiar fórmulas y usar referencias relativas, absolutas y mixtas.
+* Usar funciones básicas: `SUMA`, `PROMEDIO`, `MIN`, `MAX`, `CONTAR`, `CONTARA` y `REDONDEAR`.
+* Limpiar y transformar texto con funciones de texto.
+* Tomar decisiones con `SI`, `Y` y `O`.
+* Calcular con fechas: vencimientos y días restantes.
+* Resaltar información con formato condicional.
+* Interpretar los mensajes de error y encontrar su causa.
+* Diseñar hojas que otra persona pueda revisar.
+
+== 🛠️ 3. Rescate guiado · Ventas de septiembre
+
+xref:attachment$tema4/01_rescate_y_practica.zip[Descargar materiales del rescate y de la práctica (ZIP)]
+
+=== Paso 1. Preparamos el espacio de trabajo
+
+. Extrae el ZIP desde el gestor de archivos de LliureX. Trabaja fuera del archivo comprimido.
+. En `CAOS_SL_Apellido_Nombre/03_Contabilidad` crea `Tema4`, con `00_Originales`, `01_Trabajo`, `04_Salidas` y `05_Evidencias`.
+. Copia todo el material recibido en `00_Originales`. No lo modifiques.
+. Abre `ventas_septiembre.ods` y guárdalo como `T4_ventas_septiembre_Apellido_Nombre.ods` en `01_Trabajo`.
+. Lee `LEEME.txt` y `datos_control.txt`. Las cifras de control sirven para comprobar; no las escribas en la hoja.
+
+=== Paso 2. Libro, hoja, celda… y tipos de datos
+
+Un *libro* (`.ods`) contiene varias *hojas* (pestañas de abajo: *Ventas*, *Tarifas*, *Clientes*, *Cobros*). Cada *celda* se nombra por su columna y su fila (`B8`) y un *rango* es un bloque de celdas (`B8:B19`).
+
+. Activa *Ver > Resaltar valores* (*Ctrl + F8*). Calc colorea el contenido: *azul* = número, *negro* = texto, *verde* = fórmula.
+. Revisa la columna *Cantidad* de la hoja *Ventas*. Tres celdas aparecen en negro: parecen números, pero están guardadas como *texto*. Una de ellas incluso dice `8 uds`.
+. Escribe la prueba `=SUMA(B8:B19)` en una celda libre. El resultado no coincide con las unidades de `datos_control.txt`: *SUMA ignora el texto*. Borra la prueba.
+. Corrige las tres celdas: selecciónalas, borra el contenido y escribe solo el número (`3`, `8`, `25`). Comprueba que ahora salen en azul.
+. Revisa la columna *%Desc.*: el *Tóner negro* tiene un descuento del *1000 %*. Alguien escribió `10` en lugar de `10 %`. Escribe `10%` (o `0,1`) y comprueba que se muestra *10 %*.
+. Mira la celda `I20`: dice 4.850,00 €, pero no es una fórmula (sale en azul). Bórrala: la calcularemos.
+
+TIP: Un número alineado a la izquierda suele ser texto. Por defecto, Calc alinea los números a la derecha.
+
+=== Paso 3. Primeras fórmulas
+
+Toda fórmula empieza por `=`. Escribe en la fila 8 (Monitor 24"):
+
+[cols="1,2,3",options="header"]
+|===
+|Celda |Fórmula |Qué calcula
+|`E8` |`=B8*C8` |Subtotal: cantidad × precio.
+|`F8` |`=E8*D8` |Importe del descuento.
+|`G8` |`=E8-F8` |Base imponible.
+|===
+
+Comprueba el resultado de cada celda con la barra de fórmulas: en la celda ves el *resultado* y arriba, la *fórmula*.
+
+.Prioridad de operaciones
+[IMPORTANT]
+====
+Calc calcula primero lo que está entre paréntesis, luego potencias (`^`), después `*` y `/`, y al final `+` y `-`. `=E8-E8*D8` da la base correcta, pero `=(E8-E8)*D8` da 0. En caso de duda, usa paréntesis.
+====
+
+=== Paso 4. Copiar fórmulas: referencias relativas y absolutas
+
+. Selecciona `E8:G8` y arrastra el *controlador de relleno* (el cuadradito de la esquina inferior derecha) hasta la fila 19. También puedes seleccionar `E8:G19` y usar *Hoja > Rellenar celdas > Rellenar hacia abajo* (*Ctrl + D*).
+. Haz clic en `E12`: la fórmula es `=B12*C12`. Al copiar hacia abajo, las referencias han «bajado» con la fila. Son *referencias relativas*.
+. El IVA está en una celda de parámetros, `M4` (21 %). Escribe en `H8` la fórmula `=G8*M4` y cópiala hacia abajo. Observa el desastre: `H9` da una cifra enorme y el resto, 0. Haz clic en `H9`: la fórmula es `=G9*M5`. La referencia al IVA también ha bajado.
+. Corrige `H8` para que la referencia al IVA no se mueva: `=G8*$M$4`. El `$` fija la columna y la fila. Es una *referencia absoluta*. Puedes ponerla con *Mayús + F4* mientras editas la referencia.
+. Vuelve a copiar `H8` hasta la fila 19 y comprueba que todas las filas usan `$M$4`.
+. En `I8` escribe `=G8+H8` y cópiala hasta `I19`.
+
+.Parámetros en celdas, no dentro de las fórmulas
+[NOTE]
+====
+`=G8*0,21` funciona, pero si el IVA cambia hay que revisar todas las fórmulas. Con `=G8*$M$4` basta con cambiar una celda. Un número escrito dentro de una fórmula se llama *número mágico*: evítalo.
+====
+
+=== Paso 5. Referencias mixtas · Tarifas
+
+Abre la hoja *Tarifas*. En la columna `A` hay precios y en la fila `2`, porcentajes de descuento. Queremos el precio final de cada producto con cada descuento.
+
+. En `B3` escribe `=$A3*(1-B$2)`.
+** `$A3`: fija la *columna* A (los precios siempre están en A), pero deja moverse la fila.
+** `B$2`: fija la *fila* 2 (los descuentos siempre están en la fila 2), pero deja moverse la columna.
+. Copia `B3` a todo el rango `B3:E8` (arrastra hacia la derecha y luego hacia abajo).
+. Comprueba con `datos_control.txt` el precio del Monitor con un 15 % y el del Portátil con un 20 %.
+. Prueba a escribir `=A3*(1-B2)` sin `$` y cópiala: verás por qué hacen falta las referencias mixtas. Deshaz la prueba.
+
+=== Paso 6. Funciones básicas
+
+Una *función* es una operación ya preparada: tiene un nombre y unos *argumentos* entre paréntesis, separados por `;`. Vuelve a la hoja *Ventas*.
+
+. En la fila 20 (*TOTAL*) escribe `=SUMA(B8:B19)` en `B20` y cópiala a `E20:I20`.
+. Prepara un resumen en `L8:M12`:
++
+[cols="1,2",options="header"]
+|===
+|Rótulo (columna L) |Fórmula (columna M)
+|Media Total |`=PROMEDIO(I8:I19)`
+|Mínimo |`=MIN(I8:I19)`
+|Máximo |`=MAX(I8:I19)`
+|Líneas |`=CONTAR(I8:I19)`
+|Productos |`=CONTARA(A8:A19)`
+|===
+. `CONTAR` cuenta celdas con *números*; `CONTARA` cuenta celdas *no vacías* (también texto).
+. Compara tus totales con `datos_control.txt`. Si hay diferencias de céntimos, es por redondeo. Para dejar el IVA con dos decimales reales, puedes usar `=REDONDEAR(G8*$M$4;2)`.
+
+TIP: Escribe `=SUMA(` y selecciona el rango con el ratón: Calc escribe las referencias por ti. Con *Insertar > Función…* (*Ctrl + F2*) tienes el asistente con la explicación de cada argumento.
+
+=== Paso 7. Funciones de texto · Clientes
+
+La hoja *Clientes* tiene nombres escritos de cualquier manera: espacios de más, mayúsculas, minúsculas…
+
+. En `C4` crea el nombre completo normalizado:
++
+[source,text]
+----
+=NOMPROPIO(ESPACIOS(A4)&" "&ESPACIOS(B4))
+----
++
+`ESPACIOS` quita los espacios sobrantes, `&` une textos y `NOMPROPIO` pone en mayúscula la primera letra de cada palabra.
+. En `D4` crea un código con la inicial del nombre y las cuatro primeras letras de los apellidos, en minúsculas:
++
+[source,text]
+----
+=MINUSC(IZQUIERDA(ESPACIOS(A4);1)&IZQUIERDA(ESPACIOS(B4);4))
+----
+. En `E4` calcula la longitud del nombre completo: `=LARGO(C4)`.
+. Copia `C4:E4` hasta la fila 9 y comprueba el primer y el último código con `datos_control.txt`.
+
+Otras funciones útiles: `MAYUSC`, `DERECHA`, `EXTRAE`, `SUSTITUIR` y `CONCATENAR`.
+
+=== Paso 8. Funciones lógicas
+
+`SI` comprueba una condición y devuelve un resultado si se cumple y otro si no:
+
+[source,text]
+----
+SI(condición; valor_si_verdadero; valor_si_falso)
+----
+
+. En la hoja *Ventas*, escribe en `J8`:
++
+[source,text]
+----
+=SI(I8>=$M$5;"Objetivo";"Pendiente")
+----
++
+`M5` contiene el objetivo por línea (1.000 €). Cópiala hasta `J19`.
+. Cuenta las líneas que alcanzan el objetivo: `=CONTAR.SI(J8:J19;"Objetivo")`.
+. Para combinar condiciones se usan `Y` (se cumplen todas) y `O` (se cumple al menos una). Las usarás en el paso 9 y en la práctica.
+
+=== Paso 9. Fechas · Cobros
+
+Abre la hoja *Cobros*. Calc guarda cada fecha como un *número de días*, por eso se puede sumar y restar con fechas.
+
+. En `F6` calcula el vencimiento: `=C6+D6` (emisión + plazo en días). Si sale un número raro, dale formato de fecha con *Formato > Celdas* (*Ctrl + 1*) > *Fecha*.
+. En `G6` calcula los días que faltan respecto a la fecha de revisión: `=F6-$B$3`. Un número negativo significa que ya ha vencido.
+. En `H6`: `=SI(G6<0;"Vencida";"En plazo")`.
+. En `I6`, solo se reclaman por teléfono las vencidas de 500 € o más: `=SI(Y(H6="Vencida";E6>=500);"Sí";"No")`.
+. En `J6` extrae el mes de emisión: `=MES(C6)`. También existen `AÑO` y `DIA`.
+. Copia `F6:J6` hasta la última factura.
+
+.Fecha fija o HOY()
+[NOTE]
+====
+En una hoja real escribirías `=HOY()` en `B3` para que la fecha se actualice sola. Aquí usamos una fecha fija para que todo el grupo obtenga los mismos resultados.
+====
+
+=== Paso 10. Formato condicional
+
+El formato condicional cambia el aspecto de una celda según su valor. Usa *Formato > Formato condicional > Condición…*.
+
+. *Negativos:* selecciona `G8:I19` de *Ventas* y crea la condición _El valor de la celda es · menor que · 0_ con un estilo de fondo rojo. Pruébalo: escribe `10` en el descuento del Tóner, verás su base y su total en rojo, y deshaz el cambio.
+. *Objetivo:* selecciona `J8:J19` y resalta en verde las celdas iguales a `"Objetivo"`.
+. *Vencimientos:* en *Cobros*, selecciona `H6:H15` y resalta en rojo `"Vencida"`.
+. *Duplicados:* selecciona la columna de facturas (`A6:A15`) y elige _El valor de la celda es · duplicado_. Aparece una factura repetida. En tu copia de trabajo, elimina la fila duplicada y anótalo en tu registro.
+. Comprueba los totales de *Cobros* con `datos_control.txt`.
+
+Para revisar o borrar condiciones usa *Formato > Formato condicional > Gestionar…*.
+
+== 📚 4. Lo que necesitas saber
+
+=== 4.1 Fórmula, función y operador
+
+Una *fórmula* es una expresión de cálculo que empieza por `=`: `=B8*C8`. Una *función* es una operación predefinida con argumentos: `=SUMA(B8:B19)`. En Calc en español, los argumentos se separan con `;`.
+
+[cols="1,2",options="header"]
+|===
+|Operadores |Uso
+|`+` `-` `*` `/` `^` |Sumar, restar, multiplicar, dividir, potencia.
+|`=` `>` `<` `>=` `+<=+` `<>` |Comparar (dan VERDADERO o FALSO).
+|`&` |Unir textos.
+|===
+
+=== 4.2 Referencias
+
+[cols="1,1,2",options="header"]
+|===
+|Tipo |Ejemplo |Al copiar la fórmula…
+|Relativa |`A1` |cambian la columna y la fila.
+|Absoluta |`$A$1` |no cambia nada.
+|Mixta |`$A1` |la columna queda fija; la fila cambia.
+|Mixta |`A$1` |la fila queda fija; la columna cambia.
+|===
+
+La diferencia solo se nota *al copiar* la fórmula. *Mayús + F4* cambia el tipo de referencia mientras editas.
+
+=== 4.3 Números como texto
+
+Un valor puede parecer un número y estar guardado como texto (`'25`, `8 uds`, `1.250 €` escrito a mano…). Consecuencias:
+
+* `SUMA` y `PROMEDIO` lo ignoran sin avisar: el total sale más bajo;
+* las ordenaciones salen extrañas;
+* si el texto no es un número limpio, la fórmula da `+#¡VALOR!+`.
+
+Detéctalo con *Ver > Resaltar valores* (*Ctrl + F8*) o por la alineación a la izquierda.
+
+=== 4.4 Funciones de texto
+
+[cols="1,2",options="header"]
+|===
+|Función |Qué hace
+|`ESPACIOS(texto)` |Quita los espacios sobrantes.
+|`MAYUSC`, `MINUSC`, `NOMPROPIO` |Mayúsculas, minúsculas, inicial en mayúscula.
+|`IZQUIERDA(texto;n)`, `DERECHA(texto;n)` |Extrae n caracteres por la izquierda o la derecha.
+|`EXTRAE(texto;inicio;n)` |Extrae n caracteres desde una posición.
+|`LARGO(texto)` |Cuenta los caracteres.
+|`&` o `CONCATENAR` |Une textos.
+|===
+
+=== 4.5 Funciones lógicas
+
+[cols="1,2",options="header"]
+|===
+|Función |Ejemplo
+|`SI` |`=SI(I8>=1000;"Objetivo";"Pendiente")`
+|`Y` |`=SI(Y(C6>=1000;B6="Valencia");"Bonus";"Sin bonus")`: deben cumplirse todas.
+|`O` |`=SI(O(C6<500;C6>2000);"Revisar";"")`: basta con una.
+|SI anidado |`=SI(C6>=1000;6%;SI(C6>=500;3%;0%))`: varios tramos.
+|===
+
+Los textos van entre comillas (`"Valencia"`); los números, no.
+
+=== 4.6 Fechas
+
+Las fechas son números de días, así que:
+
+* `fecha + 30` da la fecha 30 días después;
+* `fecha_fin - fecha_inicio` da los días entre dos fechas (también `DIAS(fin;inicio)`);
+* `HOY()` devuelve la fecha actual y `AHORA()`, fecha y hora;
+* `AÑO()`, `MES()` y `DIA()` extraen cada parte.
+
+Si una fecha aparece como número (`46295`) o un número como fecha, el valor es correcto: cambia el formato de la celda.
+
+=== 4.7 Errores
+
+No memorices solo el nombre del error: investiga su *causa* (referencia, tipo de dato, operador, función o rango).
+
+[cols="1,3",options="header"]
+|===
+|Error |Causa habitual
+|`+#¡VALOR!+` |Se opera con un texto que no es un número (`8 uds`).
+|`+#¡DIV/0!+` |Se divide entre 0 o entre una celda vacía.
+|`+#¿NOMBRE?+` |Función mal escrita o texto sin comillas.
+|`+#¡REF!+` |La fórmula apunta a una celda que se ha borrado.
+|`+###+` |El número no cabe: ensancha la columna.
+|`Err:522` |Referencia circular: la fórmula se usa a sí misma.
+|===
+
+Herramientas: *Ver > Mostrar fórmula* muestra todas las fórmulas a la vez y *Herramientas > Detective > Rastrear precedentes* dibuja flechas hacia las celdas que usa una fórmula.
+
+Un resultado sin mensaje de error también puede ser *imposible*: un IVA mayor que la base, un total negativo, más unidades de las que hay… Compara siempre con una estimación o con los datos de control.
+
+=== 4.8 Buen diseño
+
+Una hoja profesional:
+
+* coloca los parámetros (IVA, objetivos, fechas de referencia) en celdas con rótulo;
+* usa encabezados claros y una fila por registro;
+* mantiene la misma fórmula en toda la columna;
+* no mezcla unidades ni escribe «uds» o «€» a mano dentro de las celdas;
+* evita números mágicos dentro de las fórmulas;
+* no tiene resultados escritos a mano;
+* permite seguir de dónde sale cada resultado.
+
+=== 4.9 Uso de IA
+
+La IA puede explicarte qué hace una función o ayudarte a entender un error, pero no ve tu hoja ni sabe qué hay en cada celda. A menudo te dará las funciones en inglés (`SUM`, `IF`) y con `,` en vez de `;`. Comprueba siempre el resultado con los datos de control.
+
+== 🏋️ 5. Practica
+
+=== Ahora tú · Las cuentas de octubre
+
+*Tiempo orientativo: 90–120 minutos.* Abre `practica_octubre.ods`, guárdalo como `T4_practica_Apellido_Nombre.ods` en `01_Trabajo` y resuélvelo con menos ayuda.
+
+. *Ventas:* corrige los datos (cantidades como texto y un descuento mal escrito), calcula subtotal, descuento, base, IVA con referencia absoluta, total y estado, y la fila de totales. Borra el total escrito a mano.
+. *Comisiones:* aplica las reglas de la hoja:
+** ventas < 500 € → 0 %;
+** de 500 a 999,99 € → 3 %;
+** 1000 € o más → 6 %.
++
+Calcula el importe de la comisión, la columna *Bonus* (1000 € o más *y* provincia Valencia) y la columna *Revisar* (ventas menores de 500 € *o* mayores de 2000 €).
+. *Empleados:* crea el nombre completo normalizado, el identificador (inicial del nombre + cuatro primeras letras de los apellidos, en minúsculas) y la longitud.
+. *Facturas:* calcula vencimiento, días restantes, estado, si hay que reclamar (vencida *y* 500 € o más) y el mes de emisión. Localiza la factura duplicada con formato condicional.
+. Aplica formato condicional para negativos, objetivos y facturas vencidas.
+. Escribe `registro_T4.txt` con cinco decisiones en formato «problema / acción / comprobación».
+
+Comprueba cada hoja con `datos_control.txt`. Si no coincide, revisa primero los datos (texto, porcentajes) y después las referencias.
+
+==== Primero tú; después, revisión con IA
+
+Resuelve la práctica sin IA. Después, si la profesora lo autoriza, puedes consultar una duda concreta. Ejemplo: «En LibreOffice Calc en español, mi fórmula `=SI(C6>=1000;6%;SI(C6>500;3%;0%))` da 0 % para 500 €. ¿Qué debo revisar? Dame una pista, no la solución». Anota la consulta y cómo comprobaste la respuesta.
+
+=== Ejercicio 2 · Presupuesto con parámetros
+
+Crea en una hoja nueva un presupuesto de 5 productos para un cliente. Pon en celdas separadas el IVA, un descuento general y la fecha del presupuesto. Calcula los totales y la fecha de validez (30 días). Comprueba que, al cambiar el IVA o el descuento en su celda, todo se recalcula sin tocar ninguna fórmula.
+
+=== Ejercicio 3 · Caza de errores
+
+En una hoja nueva provoca a propósito `+#¡VALOR!+`, `+#¡DIV/0!+`, `+#¿NOMBRE?+` y `+#¡REF!+`. Al lado de cada uno escribe la causa y cómo lo has corregido.
+
+== 🔥 6. Nueva incidencia · «El cierre de noviembre no cuadra»
+
+xref:attachment$tema4/02_nueva_incidencia.zip[Descargar la nueva incidencia (ZIP)]
+
+*Tiempo orientativo: 50–60 minutos.* Contabilidad ha preparado el cierre de noviembre copiando fórmulas fila a fila. La hoja muestra resultados imposibles: un IVA de miles de euros, IVA a 0, un total negativo, unidades que no cuadran, un error en la media… Detrás hay *cinco causas distintas*.
+
+. Lee `solicitud.txt` y conserva el original.
+. Activa *Ver > Mostrar fórmula* y *Ver > Resaltar valores* para revisar la hoja.
+. Localiza cada celda incorrecta y piensa *por qué* da ese resultado antes de cambiar nada.
+. Corrige la causa, no el resultado: no se permite escribir números a mano.
+. Comprueba los totales con `datos_control.txt`.
+. Redacta un ticket breve: una línea por causa con la celda, la causa, la corrección y cómo lo has comprobado.
+
+Conserva la hoja corregida y el ticket para revisar en clase.
+
+=== Ensayo del vídeo
+
+Ensaya una demostración de 3–5 minutos con la herramienta de grabación de LliureX 23. Muestra cómo detectas un número guardado como texto, una fórmula con referencia absoluta y lo que pasa al copiarla, una función `SI` y la comprobación de un total con los datos de control. No necesitas mostrar la cara ni editar el vídeo.
+
+== 🔒 7. Ticket cerrado · Evaluable
+
+La actividad se realizará y entregará en *Aules*. El enunciado indicará fecha, variante y criterios.
+
+Será *individual y sin IA*, con consulta de apuntes y de la ayuda de LibreOffice. Cada persona recibirá una hoja con datos distintos y errores propios. Deberás entregar un ZIP con:
+
+* la hoja corregida y completada (`.ods`), con todos los resultados calculados mediante fórmulas;
+* un registro breve de errores encontrados, causas, correcciones y comprobaciones.
+
+Además, un vídeo MP4 o WebM separado, de 3–5 minutos, mostrando las fórmulas principales, las referencias y la comprobación de los totales.
+
+Se evalúan: datos corregidos, fórmulas, referencias, funciones, lógica, fechas, formato condicional e interpretación de errores. Se valora el procedimiento y la comprobación; no se puntúa el montaje audiovisual.
+
+== ✅ 8. Comprueba que sabes…
+
+* [ ] Distingo libro, hoja, celda y rango.
+* [ ] Detecto números guardados como texto y los corrijo.
+* [ ] Distingo fórmula y función, y respeto la prioridad de operaciones.
+* [ ] Uso referencias relativas, absolutas y mixtas, y sé cuándo hace falta cada una.
+* [ ] Uso `SUMA`, `PROMEDIO`, `MIN`, `MAX`, `CONTAR`, `CONTARA` y `REDONDEAR`.
+* [ ] Limpio y transformo texto con funciones de texto.
+* [ ] Uso `SI`, `Y`, `O` y condiciones con varios tramos.
+* [ ] Calculo vencimientos y días restantes con fechas.
+* [ ] Aplico formato condicional a negativos, objetivos, vencimientos y duplicados.
+* [ ] Investigo la causa de un error en lugar de borrarlo.
+* [ ] Diseño una hoja con parámetros en celdas y sin números escritos a mano.
+
+.Ayuda de LibreOffice
+* https://help.libreoffice.org/latest/es/text/scalc/guide/relativ_absolut_ref.html[Direcciones relativas y absolutas].
+* https://help.libreoffice.org/latest/es/text/scalc/01/04060100.html[Funciones por categoría].
+* https://help.libreoffice.org/latest/es/text/scalc/01/05120000.html[Formato condicional].
+* https://help.libreoffice.org/latest/es/text/scalc/05/02140000.html[Códigos de error de LibreOffice Calc].
