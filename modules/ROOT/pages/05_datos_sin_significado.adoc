@@ -1,0 +1,473 @@
+= Tema 5 · Tenemos datos, pero nadie sabe qué significan
+
+[NOTE]
+====
+*Última actualización:* 27 de noviembre de 2026.
+====
+
+.CAOS, S.L.
+[NOTE]
+====
+El programa de pedidos exporta cada mes una hoja con cientos de filas. Dirección la tiene, pero no consigue respuestas: las filas están mezcladas, hay datos escritos de cualquier manera y nadie sabe cómo resumirlas.
+
+Trabajaremos en *LliureX 23 con LibreOffice Calc*. Conservaremos los archivos recibidos y guardaremos el trabajo en *ODS*.
+====
+
+.Calc en valenciano
+[TIP]
+====
+Como en el Tema 4, todo aparece en castellano y, al lado, el apunte en valenciano: _(val. ...)_. En el apartado 4.10 tienes la tabla de funciones de este tema.
+====
+
+== 🚨 1. Incidencia inicial
+
+Dirección ha recibido la exportación de pedidos de enero a octubre y quiere saber:
+
+* qué producto vende más;
+* qué comercial funciona mejor;
+* qué clientes han dejado de comprar;
+* qué meses son peores.
+
+Al abrir la hoja nadie se atreve a contestar: hay una fila vacía en medio, un subtotal mezclado con los pedidos, un pedido repetido, provincias escritas de cuatro maneras y códigos de producto sin nombre ni precio.
+
+*Objetivo:* pasar de *datos* a *información*. Cada respuesta debe salir de la tabla con una herramienta que otra persona pueda repetir: ordenación, filtro, búsqueda, tabla dinámica o gráfico.
+
+== 🎯 2. Qué aprenderás
+
+* Reconocer una tabla de datos bien construida y limpiarla.
+* Completar datos a partir de una clave con `BUSCARV` y tratar el error `+#N/D+`.
+* Evitar errores de entrada con la validez de datos.
+* Ordenar por uno o varios criterios.
+* Filtrar con el filtro automático y el filtro estándar, y calcular solo lo visible.
+* Resumir con tablas dinámicas.
+* Elegir el gráfico según la pregunta.
+* Importar un CSV revisando separador, juego de caracteres y tipos de columna.
+* Responder preguntas de Dirección y explicar cómo se ha obtenido cada respuesta.
+
+== 🛠️ 3. Rescate guiado · Análisis comercial
+
+xref:attachment$tema5/01_rescate_y_practica.zip[Descargar materiales del rescate y de la práctica (ZIP)]
+
+=== Paso 1. Preparamos el espacio de trabajo
+
+. Extrae el ZIP desde el gestor de archivos de LliureX. Trabaja fuera del archivo comprimido.
+. En `CAOS_SL_Apellido_Nombre/03_Ventas` crea `Tema5`, con `00_Originales`, `01_Trabajo`, `04_Salidas` y `05_Evidencias`.
+. Copia todo el material recibido en `00_Originales`. No lo modifiques.
+. Abre `ventas_2026.ods` y guárdalo como `T5_ventas_2026_Apellido_Nombre.ods` en `01_Trabajo`.
+. Lee `LEEME.txt` y `datos_control.txt`. No abras todavía el CSV: lo importaremos en el paso 9.
+
+El libro tiene cinco hojas: *Ventas* (los pedidos), *Productos* (el catálogo), *Clientes*, *Listas* (valores permitidos) y *Resumen*.
+
+=== Paso 2. Limpieza: ¿la tabla es una tabla?
+
+Una tabla de datos sirve para analizar si *cada fila es un registro* y *cada columna, un tipo de dato*. Revisa la hoja *Ventas* (encabezados en la fila 4, pedidos desde la 5).
+
+. Selecciona `A5` y activa *Ver > Inmovilizar celdas > Inmovilizar filas y columnas* [.small]#(val. _Visualitza > Congela les cel·les > Congela les files i columnes_)#. Al bajar, los encabezados se quedan a la vista.
+. Busca las filas que *no son pedidos*:
+** una *fila vacía* en medio de la tabla: corta la tabla en dos y las herramientas solo verían la primera parte;
+** una fila *Subtotal marzo*: un resultado mezclado con los datos se sumaría dos veces;
+** un *pedido repetido*: selecciona la columna *Pedido* y resáltalo con *Formato > Condicional > Condición…* y _El valor de la celda · está duplicado_ [.small]#(val. _Format > Condicional > Condició…_ · _és un duplicat_)#, como en el Tema 4.
+. Elimina las tres filas completas: selecciónalas por el número de fila y usa *Hoja > Eliminar filas* [.small]#(val. _Full > Suprimeix files_)#. Anota en tu registro qué has borrado y por qué.
+. Selecciona cualquier celda de la tabla y activa *Datos > Filtro automático* (*Ctrl + Mayús + L*) [.small]#(val. _Dades > Filtre automàtic_)#. Abre la flecha de *Provincia*: la lista muestra todos los valores distintos. Aparecen `valencia`, `VALENCIA`, `Valencia ` (con un espacio al final) y `Alacant`. Para Calc son cuatro provincias más.
+. Corrige esas cuatro celdas para que digan exactamente `Valencia` o `Alicante`. Haz lo mismo en *Comercial*: hay dos celdas `Marta Ribes ` con un espacio al final.
+. Activa *Ver > Destacar valores* (*Ctrl + F8*) [.small]#(val. _Visualitza > Realçament dels valors_)# y revisa *Cantidad*: una celda está en negro (texto). Vuelve a escribir el número.
+. Desactiva el filtro automático (mismo menú) hasta el paso 6.
+
+TIP: Si son pocas celdas, corrígelas a mano. Si fueran cientos, usarías *Editar > Buscar y reemplazar…* (*Ctrl + H*) [.small]#(val. _Edita > Cerca i reemplaça…_)# o la función `ESPACIOS` [.small]#(val. `RETALLA`)# en una columna auxiliar.
+
+=== Paso 3. Búsquedas: completar datos a partir de un código
+
+Cada pedido tiene solo el *código* del producto. El nombre, la categoría y el precio están en la hoja *Productos*. No los copiamos a mano: los *buscamos* por su código.
+
+`BUSCARV` busca un valor en la *primera columna* de una tabla y devuelve el dato de otra columna de la misma fila:
+
+[source,text]
+----
+BUSCARV(valor_buscado; tabla; n.º_columna; 0)
+----
+
+. En `G5` (*Producto*) escribe:
++
+[source,text]
+----
+=BUSCARV($F5;$Productos.$A$4:$D$15;2;0)
+----
++
+_Val.:_ `=CONSULTAV($F5;$Productos.$A$4:$D$15;2;0)`
++
+** `$F5`: el código que buscamos (la columna fija, porque copiaremos la fórmula hacia la derecha).
+** `$Productos.$A$4:$D$15`: el catálogo, con referencia absoluta para que no se mueva al copiar.
+** `2`: devuelve la segunda columna del catálogo (*Producto*).
+** `0`: coincidencia *exacta*. Sin el 0, Calc puede devolver un producto que no es.
+. En `H5` (*Categoría*) usa la misma fórmula con la columna `3`, y en `I5` (*Precio*), con la columna `4`.
+. En `K5` (*Importe*): `=I5*J5`. En `L5` (*Mes*): `=MES(B5)`.
+. Selecciona `G5:L5` y haz doble clic en el controlador de relleno: se copia hasta la última fila.
+. Baja por la columna *Producto*: una fila muestra `+#N/D+` (_no disponible_). Antes de ocultarlo, investiga la causa: compara su código con los del catálogo. ¿Es `PR-10` o `PR-1O`? Corrige el *código*, no la fórmula.
+. Comprueba el primer y el último pedido con `datos_control.txt`.
+
+.Un error que avisa es útil
+[IMPORTANT]
+====
+`+#N/D+` te ha avisado de un código mal escrito. Si lo hubieras ocultado con `SI.ERROR`, ese pedido habría desaparecido de los totales sin que nadie lo notara. Primero se investiga; después, si el dato *de verdad* puede no existir, se decide qué mostrar (apartado 4.5).
+====
+
+=== Paso 4. Validación: que no se cuelen errores
+
+La *validez de datos* define qué valores se aceptan en una celda. Evita errores *antes* de que se produzcan y ayuda a encontrar los que ya están.
+
+. Selecciona la columna *Provincia* desde `D5` hasta la última fila y abre *Datos > Validez…* [.small]#(val. _Dades > Validesa…_)#.
+** Pestaña *Criterios* [.small]#(val. _Criteris_)#: *Permitir* · *Intervalo de celdas* [.small]#(val. _Permet_ · _Interval de cel·les_)#; *Origen*: `$Listas.$A$4:$A$6`. Deja marcado *Mostrar lista de selección* [.small]#(val. _Mostra la llista de selecció_)#.
+** Pestaña *Ayuda de entrada* [.small]#(val. _Ajuda d'entrada_)#: escribe «Elige una provincia de la lista».
+** Pestaña *Aviso de error* [.small]#(val. _Avís d'error_)#: acción *Detener* y el mensaje «Provincia no válida».
+. Haz lo mismo con *Comercial* (origen `$Listas.$E$4:$E$7`).
+. *Cantidad*: *Permitir* · *Números enteros* [.small]#(val. _Nombres enters_)#, *mayor que* `0`.
+. *Fecha*: *Permitir* · *Fecha*, *entre* `01/01/2026` y `31/12/2026`.
+. Prueba la validación: escribe `Murcia` en una provincia o `-2` en una cantidad. Calc no lo acepta. Pulsa *Cancelar*.
+. La validación solo controla lo que se escribe *a partir de ahora*. Para revisar lo que ya había, usa *Herramientas > Detective > Marcar datos no válidos* [.small]#(val. _Eines > Detectiu > Marca les dades no vàlides_)#. Aparecen dos celdas rodeadas en rojo: una cantidad negativa y una fecha de 2062.
+. Consulta `datos_control.txt` para saber los valores correctos y corrígelos. Vuelve a marcar los datos no válidos: ya no debe aparecer ninguno.
+. Comprueba el número de pedidos, las unidades y el importe total con `datos_control.txt`.
+
+=== Paso 5. Ordenación
+
+*Ordenar* cambia el orden de las filas, pero no quita ninguna.
+
+. Selecciona una celda de la tabla y abre *Datos > Ordenar…* [.small]#(val. _Dades > Ordena…_)#. Calc selecciona la tabla entera. En la pestaña *Opciones* comprueba que está marcado *El intervalo contiene etiquetas de columnas* [.small]#(val. _L'interval conté etiquetes de columna_)#.
+. *Clave de ordenamiento 1* [.small]#(val. _Clau d'ordenació 1_)#: *Importe*, *Descendente* [.small]#(val. _Descendent_)#. Arriba quedan los pedidos más grandes. Dos pedidos empatan.
+. Añade la *Clave de ordenamiento 2*: *Fecha*, *Ascendente*. Ahora, en caso de empate, aparece primero el más antiguo.
+. Ordena ahora por *Comercial* (ascendente) y después por *Fecha* (ascendente): tienes la actividad de cada comercial en orden cronológico.
+. Vuelve a ordenar por *Pedido* ascendente para dejar la tabla como estaba.
+
+.Selecciona la tabla, no una columna
+[WARNING]
+====
+Si seleccionas solo la columna *Importe* y la ordenas, Calc preguntará si amplía la selección. Si dices que no, los importes se separan de sus pedidos y la tabla queda destrozada. Ordena siempre la tabla completa.
+====
+
+=== Paso 6. Filtros
+
+*Filtrar* oculta temporalmente las filas que no cumplen una condición. Los datos no se borran.
+
+. Activa *Datos > Filtro automático*. En *Provincia* deja marcada solo *Valencia*. La barra de estado indica cuántos registros se ven.
+. Debajo de la tabla, en `K118`, escribe `=SUBTOTALES(9;K5:K116)` [.small]#(val. `=SUBTOTAL(9;K5:K116)`)#. `SUBTOTALES` con el 9 suma solo las *filas visibles*; `SUMA` sumaría también las ocultas. Compara con `datos_control.txt`.
+. Quita el filtro de *Provincia* (marca *Todo*). En la flecha de *Importe* elige *Filtro estándar…* y crea la condición *Importe* `>` `1000`. ¿De qué provincia son esos pedidos?
+. Restablece el filtro con *Datos > Más filtros > Restablecer el filtro* [.small]#(val. _Dades > Més filtres > Suprimeix el filtre_)#.
+. *Segundo trimestre:* abre *Datos > Más filtros > Filtro estándar…* [.small]#(val. _Dades > Més filtres > Filtre estàndard…_)# con dos condiciones unidas por *Y*: *Fecha* `>=` `01/04/2026` *Y* *Fecha* `+<=+` `30/06/2026`. Anota el número de pedidos y el importe visible.
+. Restablece el filtro antes de seguir.
+
+TIP: Con el filtro estándar puedes combinar condiciones con *Y* (se cumplen todas) u *O* (basta con una), igual que las funciones `Y` y `O` del Tema 4.
+
+=== Paso 7. Tablas dinámicas
+
+Una *tabla dinámica* resume miles de filas en una tabla pequeña sin escribir ninguna fórmula: agrupa por lo que tú elijas y calcula sumas, recuentos o máximos.
+
+. Selecciona la tabla desde `A4` hasta la última fila (`L116`) y abre *Insertar > Tabla dinámica…* [.small]#(val. _Insereix > Taula dinàmica…_)#. Elige *Selección actual* [.small]#(val. _Selecció actual_)#.
+. En la ventana de diseño, arrastra los campos:
+** *Producto* a *Campos de fila* [.small]#(val. _Camps de fila_)#;
+** *Importe* a *Campos de datos* [.small]#(val. _Camps de dades_)#. Aparece como *Suma - Importe*.
+. En *Origen y destino* [.small]#(val. _Font i destinació_)# elige *Nueva hoja* y acepta.
+. Ordena el resultado de mayor a menor (flecha del campo *Producto* o *Datos > Ordenar*). ¿Qué producto vende más *en euros*?
+. Vuelve al diseño (clic derecho sobre la tabla dinámica > *Propiedades…*) y añade *Cantidad* a *Campos de datos*. ¿El producto que más vende *en unidades* es el mismo? La respuesta depende de la pregunta.
+. Crea una segunda tabla dinámica: *Comercial* en *Campos de fila*, *Mes* en *Campos de columna* [.small]#(val. _Camps de columna_)# e *Importe* en *Campos de datos*. Comprueba el importe de Lucía Soler en octubre con `datos_control.txt`.
+. Para cambiar el cálculo, haz doble clic sobre el campo de datos y elige *Recuento* [.small]#(val. _Compta_)#, *Máximo*, *Promedio*…
+
+.Una tabla dinámica no se actualiza sola
+[NOTE]
+====
+Si cambias un dato de la hoja *Ventas*, la tabla dinámica no cambia hasta que haces clic derecho sobre ella y eliges *Actualizar* [.small]#(val. _Refresca_)#. Y si quedara un comercial con un espacio de más, aparecería dos veces: la tabla dinámica muestra los datos tal como son.
+====
+
+=== Paso 8. Gráficos
+
+Regla del tema:
+
+____
+Primero formula la pregunta; después elige el gráfico.
+____
+
+Abre la hoja *Resumen*.
+
+. En `C4` calcula el importe de enero: `=SUMAR.SI($Ventas.$L:$L;A4;$Ventas.$K:$K)` [.small]#(val. `=SUMASI($Ventas.$L:$L;A4;$Ventas.$K:$K)`)#. En `D4`, el número de pedidos: `=CONTAR.SI($Ventas.$L:$L;A4)` [.small]#(val. `=COMPTASI(...)`)#. Copia `C4:D4` hasta octubre.
+. *¿Qué mes vende menos?* Es una *comparación*: selecciona `B3:C13` y usa *Insertar > Gráfico…* [.small]#(val. _Insereix > Diagrama…_)#, tipo *Columna*. Pon el título «Importe por mes · 2026» y quita la leyenda: con una sola serie no aporta nada.
+. *¿Cómo evolucionan las ventas a lo largo del año?* Es una *evolución en el tiempo*: crea con el mismo rango un gráfico de tipo *Línea* [.small]#(val. _Línia_)#, *Puntos y líneas*.
+. *¿Qué parte de las ventas aporta cada categoría?* Es una *proporción* con pocas categorías: crea una tabla dinámica con *Categoría* e *Importe* y, a partir de ella, un gráfico *Círculo* [.small]#(val. _Diagrames de sectors_)#. Solo hay cuatro categorías: con diez o más, el gráfico de sectores sería ilegible.
+. Revisa cada gráfico: título que diga qué se ve, ejes con unidades, sin 3D y sin colores que no signifiquen nada. El eje de los importes debe empezar en 0.
+. Exporta el gráfico de columnas como imagen para el informe: clic derecho sobre el gráfico > *Exportar como imagen…* y guárdalo en `04_Salidas`.
+
+=== Paso 9. Importación CSV
+
+Ventas ha exportado los pedidos de noviembre desde otro programa: `pedidos_noviembre.csv`. Un *CSV* es texto: Calc tiene que adivinar dónde empieza cada columna y qué tipo de dato es. Si aceptas sin mirar, los datos se estropean.
+
+. Con `T5_ventas_2026_Apellido_Nombre.ods` abierto, usa *Hoja > Insertar hoja desde archivo…* [.small]#(val. _Full > Insereix full des del fitxer…_)# y elige `pedidos_noviembre.csv`. Se abre la ventana *Importación de texto* [.small]#(val. _Importació de text_)#.
+. *Conjunto de caracteres* [.small]#(val. _Joc de caràcters_)#: con *Unicode (UTF-8)* las letras con tilde salen rotas (`�ptica Alcoi`, `Gestor�a`). El programa exportó en *Europa occidental (Windows-1252/WinLatin 1)* [.small]#(val. _Europeu occidental (Windows-1252/WinLatin 1)_)#. Elígelo y comprueba en la vista previa que se leen bien `Óptica` y `Gestoría`.
+. *Opciones de separador* [.small]#(val. _Opcions del separador_)#: marca *Punto y coma* y desmarca el resto. Cada dato debe quedar en su columna.
+. Haz clic en la cabecera de la columna *CP* en la vista previa y cambia el *Tipo de columna* [.small]#(val. _Tipus de columna_)# a *Texto*. Si no, `03001` se convierte en el número `3001` y el código postal de Alicante pierde el 0.
+. Acepta y nombra la hoja `Noviembre`.
+. Revisa con *Ver > Destacar valores*: fechas e importes en azul (números), CP en negro (texto). Calcula debajo el número de pedidos, las unidades y el importe total, y compáralos con `datos_control.txt`.
+
+.¿Por qué no abrirlo con doble clic?
+[NOTE]
+====
+Con doble clic también aparece la ventana de importación, pero el resultado se queda en un archivo `.csv`, que no guarda fórmulas, formatos ni varias hojas. Importa siempre dentro de un libro `.ods`.
+====
+
+=== Paso 10. Respuestas para Dirección
+
+Ya podemos contestar. Falta la pregunta de los clientes que han dejado de comprar: la resolvemos en la hoja *Clientes* (fecha de revisión en `B2`).
+
+[cols="1,2,2",options="header"]
+|===
+|Celda |Fórmula |En valenciano
+|`D5` (pedidos) |`=CONTAR.SI($Ventas.$C:$C;A5)` |`=COMPTASI($Ventas.$C:$C;A5)`
+|`E5` (importe) |`=SUMAR.SI($Ventas.$C:$C;A5;$Ventas.$K:$K)` |`=SUMASI($Ventas.$C:$C;A5;$Ventas.$K:$K)`
+|`F5` (última compra) |`=MAX.SI.CONJUNTO($Ventas.$B:$B;$Ventas.$C:$C;A5)` |`=MAXISICONJUNT($Ventas.$B:$B;$Ventas.$C:$C;A5)`
+|`G5` (días sin comprar) |`=$B$2-F5` |igual
+|`H5` (estado) |`=SI(D5=0;"Sin compras";SI(G5>90;"Inactivo";"Activo"))` |igual
+|===
+
+. `MAX.SI.CONJUNTO` devuelve la fecha más alta (la más reciente) de las filas de ese cliente. Si sale un número, dale formato de fecha.
+. `G5` resta dos fechas: Calc puede mostrar el resultado como fecha. Dale formato *Número* sin decimales (*Ctrl + 1*).
+. Copia `D5:H5` hasta la fila 18. Óptica Alzira no tiene ningún pedido: `MAX.SI.CONJUNTO` da 0 y los días salen enormes. Por eso `H5` comprueba primero si hay pedidos. Es un *dato inexistente*, no un error.
+. Resalta con formato condicional los estados `Inactivo` y `Sin compras`.
+. Guarda el libro y escribe `respuestas_T5.txt` en `04_Salidas` con las cuatro preguntas de Dirección. Para cada una: la respuesta, la herramienta que has usado (filtro, tabla dinámica, gráfico, fórmula…) y cómo lo has comprobado.
+
+== 📚 4. Lo que necesitas saber
+
+=== 4.1 Tabla de datos limpia
+
+Las herramientas de análisis (ordenar, filtrar, tablas dinámicas, gráficos) funcionan bien solo si la tabla cumple estas reglas:
+
+* una fila = un registro (un pedido, un cliente, un ticket);
+* una columna = una variable, con un solo tipo de dato;
+* una fila de encabezados con nombres únicos, sin celdas combinadas;
+* sin filas ni columnas vacías dentro de la tabla;
+* sin subtotales ni totales mezclados con los datos: los resúmenes van fuera de la tabla o en otra hoja;
+* el mismo valor escrito siempre igual: para Calc, `Valencia`, `valencia` y `Valencia ` son tres valores distintos.
+
+=== 4.2 Ordenar no es filtrar
+
+[cols="1,2,2",options="header"]
+|===
+| |Ordenar |Filtrar
+|Qué hace |Cambia el orden de las filas. |Oculta las filas que no cumplen la condición.
+|¿Pierde filas? |No. |No: solo las oculta mientras el filtro está activo.
+|Menú |*Datos > Ordenar…* |*Datos > Filtro automático* o *Datos > Más filtros > Filtro estándar…*
+|Sirve para |Ver los mayores, los menores o agrupar visualmente. |Trabajar solo con una parte de los datos.
+|===
+
+Al filtrar, `SUMA` sigue sumando las filas ocultas; `SUBTOTALES(9;…)` suma solo las visibles.
+
+=== 4.3 Validación
+
+*Datos > Validez…* limita lo que se puede escribir en una celda:
+
+* *Lista* o *Intervalo de celdas*: solo valores de una lista cerrada (provincias, categorías, estados);
+* *Números enteros* o *Decimal*: límites mínimo y máximo;
+* *Fecha*: un intervalo de fechas;
+* *Ayuda de entrada*: mensaje que aparece al seleccionar la celda;
+* *Aviso de error*: qué pasa si el valor no es válido (*Detener*, *Advertencia* o *Información*).
+
+La validación no corrige lo que ya estaba escrito. Para encontrarlo: *Herramientas > Detective > Marcar datos no válidos*.
+
+=== 4.4 Búsquedas
+
+Una búsqueda recupera la información asociada a una *clave* (código de producto, NIF, número de pedido…).
+
+[source,text]
+----
+=BUSCARV(clave; tabla; n.º_columna; 0)
+----
+
+* La clave tiene que estar en la *primera columna* de la tabla.
+* El último argumento `0` exige coincidencia exacta. Úsalo siempre que busques códigos.
+* Fija la tabla con referencias absolutas (`$A$4:$D$15`) para poder copiar la fórmula.
+* La clave debe escribirse igual en los dos sitios: `PR-10` no es `PR-1O` ni `PR-10 `.
+
+Si el dato que quieres está a la *izquierda* de la clave, `BUSCARV` no sirve. Se combinan `INDICE` y `COINCIDIR` [.small]#(val. `INDEX` y `COINCIDEIX`)#:
+
+[source,text]
+----
+=INDICE($Productos.$A$4:$A$15;COINCIDIR("Webcam HD";$Productos.$B$4:$B$15;0))
+----
+
+NOTE: En otras aplicaciones y en versiones más recientes de LibreOffice existe `BUSCARX` (`XLOOKUP`). El Calc de LliureX 23 (LibreOffice 7.5) no la tiene. Si una IA te la propone, pídele la alternativa con `BUSCARV` o `INDICE` y `COINCIDIR`.
+
+=== 4.5 Gestión de errores
+
+Una hoja profesional distingue tres situaciones:
+
+[cols="1,2,2",options="header"]
+|===
+|Situación |Ejemplo |Qué hacer
+|Dato mal escrito |`PR-1O` en lugar de `PR-10` da `+#N/D+`. |Corregir el dato.
+|Dato inexistente |Un cliente sin pedidos: no hay última compra. |Mostrarlo con un texto claro (`"Sin compras"`).
+|Entrada no válida |Una cantidad negativa. |Corregirla y evitarla con validación.
+|===
+
+Funciones para tratar errores *una vez investigados*:
+
+* `SI.ERROR(fórmula;valor_si_error)` [.small]#(val. `SIERROR`)# sustituye *cualquier* error. Úsala con cuidado: también oculta errores que deberías ver.
+* `SI.ND(fórmula;valor_si_nd)` [.small]#(val. `SIND`)# sustituye solo `+#N/D+`. Por ejemplo, `=SI.ND(BUSCARV(F5;$Productos.$A$4:$D$15;2;0);"Código desconocido")`.
+
+Ocultar todos los errores sin analizarlos puede esconder problemas reales: un pedido que deja de sumar, un cliente que desaparece del informe…
+
+=== 4.6 Gráficos
+
+Un gráfico debe responder *una* pregunta.
+
+[cols="1,1,2",options="header"]
+|===
+|Pregunta |Gráfico |Ejemplo
+|¿Quién o qué es mayor? |Columnas o barras |Importe por comercial, por mes o por producto.
+|¿Cómo cambia con el tiempo? |Líneas |Evolución mensual de las ventas.
+|¿Qué parte del total es cada uno? |Círculo (sectores) |Reparto por categoría, solo con pocas categorías.
+|===
+
+Evita:
+
+* el 3D: deforma los tamaños y dificulta la lectura;
+* leyendas que repiten el título o con una sola serie;
+* colores que no significan nada;
+* demasiadas categorías (usa barras ordenadas, no sectores);
+* ejes que no empiezan en 0 en columnas o barras: exageran las diferencias.
+
+=== 4.7 CSV
+
+*CSV* (_valores separados por comas_) es un formato de texto para datos en tabla: una línea por registro y un separador entre columnas. Es el formato habitual para pasar datos entre programas, pero no es un estándar cerrado. Puede variar en:
+
+* el *separador*: coma, punto y coma o tabulación;
+* el *juego de caracteres*: UTF-8 o Windows-1252 (si eliges mal, las tildes y la ñ salen rotas);
+* la *representación decimal*: `4,50` o `4.50`;
+* el *formato de fecha*: `31/10/2026`, `2026-10-31`…;
+* los textos que parecen números: códigos postales, teléfonos o códigos con ceros a la izquierda.
+
+Por eso la ventana *Importación de texto* no se acepta sin mirar: revisa la vista previa, el separador, el juego de caracteres y el tipo de las columnas delicadas. Si el archivo usa punto decimal, elige *Idioma: Inglés (EE. UU.)* [.small]#(val. _Llengua: anglés (EUA)_)# en la ventana de importación.
+
+=== 4.8 Tablas dinámicas
+
+Una tabla dinámica resume grandes conjuntos de datos sin escribir una fórmula para cada resultado.
+
+[cols="1,2",options="header"]
+|===
+|Zona |Para qué sirve
+|Campos de fila |Los grupos que aparecen en filas (comerciales, productos…).
+|Campos de columna |Los grupos que aparecen en columnas (meses, provincias…).
+|Campos de datos |Lo que se calcula: suma, recuento, promedio, máximo…
+|Campos de filtro |Un filtro para toda la tabla (por ejemplo, una sola provincia).
+|===
+
+* La tabla de origen tiene que estar limpia (apartado 4.1).
+* Si cambian los datos, hay que *actualizar* la tabla dinámica.
+* No escribas dentro de una tabla dinámica: si necesitas cálculos, hazlos fuera.
+
+=== 4.9 Uso de IA
+
+La IA puede ayudarte a elegir un gráfico o a entender una función, pero no ve tus datos. Cuidado con tres cosas: a menudo propone `BUSCARX` (que este Calc no tiene), escribe las funciones en inglés y con `,` y da respuestas con cifras inventadas. Las respuestas a Dirección tienen que salir de *tu* tabla y poder comprobarse.
+
+=== 4.10 Funciones del tema en castellano y en valenciano
+
+[cols="1,1,2",options="header"]
+|===
+|Castellano |Valenciano |Qué hace
+|`BUSCARV` |`CONSULTAV` |Busca una clave en la primera columna y devuelve otra columna.
+|`INDICE` |`INDEX` |Devuelve el valor de una posición de un rango.
+|`COINCIDIR` |`COINCIDEIX` |Devuelve la posición de un valor en un rango.
+|`SI.ERROR` |`SIERROR` |Sustituye cualquier error por otro valor.
+|`SI.ND` |`SIND` |Sustituye solo el error `+#N/D+`.
+|`CONTAR.SI` |`COMPTASI` |Cuenta las celdas que cumplen un criterio.
+|`SUMAR.SI` |`SUMASI` |Suma las celdas que cumplen un criterio.
+|`CONTAR.SI.CONJUNTO` |`COMPTASICONJUNT` |Cuenta con varios criterios.
+|`SUMAR.SI.CONJUNTO` |`SUMASICONJUNT` |Suma con varios criterios.
+|`MAX.SI.CONJUNTO` |`MAXISICONJUNT` |Máximo de las celdas que cumplen los criterios.
+|`SUBTOTALES` |`SUBTOTAL` |Calcula solo con las filas visibles (con 9: suma).
+|`MES` |`MES` |Mes de una fecha.
+|`ESPACIOS` |`RETALLA` |Quita los espacios sobrantes.
+|`+#N/D+` |`+#N/D+` |Error: dato no disponible (la búsqueda no lo encuentra).
+|===
+
+TIP: Con *Insertar > Función…* (*Ctrl + F2*) [.small]#(val. _Insereix > Funció…_)# ves la lista de funciones en el idioma de tu Calc, con la explicación de cada argumento.
+
+== 🏋️ 5. Practica
+
+=== Ahora tú · Las ventas de 2025
+
+*Tiempo orientativo: 90–120 minutos.* Abre `practica_comercial_2025.ods`, guárdalo como `T5_practica_Apellido_Nombre.ods` en `01_Trabajo` y resuélvelo con menos ayuda.
+
+. *Limpieza:* revisa la hoja *Ventas* y corrige lo que impide analizarla (filas que no son pedidos, valores escritos de forma distinta, cantidades como texto).
+. *Búsquedas:* completa *Producto*, *Categoría* y *Precio* con `BUSCARV`, y calcula *Importe* y *Mes*. Investiga cualquier `+#N/D+` antes de corregirlo.
+. *Validación:* aplica listas a *Provincia* y *Comercial* y comprueba que no queda ningún dato no válido.
+. *Filtro:* muestra los pedidos de Valencia de más de 750 € y calcula su importe con `SUBTOTALES`.
+. *Gráfico:* crea un gráfico mensual de importes. Elige el tipo según la pregunta: «¿qué mes fue peor?».
+. *Tabla dinámica:* importe por *Comercial* (filas) y *Trimestre* (columnas).
+. Contesta en la hoja *Preguntas*: respuesta y cómo la has obtenido.
+. Escribe `registro_T5.txt` con cinco decisiones en formato «problema / acción / comprobación».
+
+Comprueba cada respuesta con `datos_control.txt`. Si no coincide, revisa primero la limpieza: un valor mal escrito cambia los filtros y las tablas dinámicas.
+
+==== Primero tú; después, revisión con IA
+
+Resuelve la práctica sin IA. Después, si la profesora lo autoriza, puedes consultar una duda concreta. Ejemplo: «En LibreOffice Calc 7.5 en español, mi `BUSCARV($F5;$Productos.$A$4:$D$15;2;0)` da `+#N/D+` en una sola fila. ¿Qué debo revisar? Dame una pista, no la solución». Anota la consulta y cómo comprobaste la respuesta.
+
+=== Ejercicio 2 · Formulario que no admite errores
+
+Crea en una hoja nueva un registro de préstamo de equipos con las columnas *Fecha*, *Equipo*, *Departamento*, *Unidades* y *Estado*. Prepara las listas en otra hoja y aplica validación: equipos y departamentos de una lista, unidades entre 1 y 5, fecha dentro del curso y estado *Prestado* o *Devuelto*. Añade una ayuda de entrada en cada columna y un aviso de error claro. Comprueba que no se puede introducir un dato incorrecto.
+
+=== Ejercicio 3 · Tres preguntas, tres gráficos
+
+Con la hoja *Resumen* del rescate, escribe tres preguntas distintas sobre los mismos datos y crea el gráfico adecuado para cada una. Debajo de cada gráfico, explica en una frase por qué has elegido ese tipo y no otro.
+
+== 🔥 6. Nueva incidencia · «¿Qué está pasando en Soporte?»
+
+xref:attachment$tema5/02_nueva_incidencia.zip[Descargar la nueva incidencia (ZIP)]
+
+*Tiempo orientativo: 50–60 minutos.* Soporte técnico ha exportado sus tickets de julio a octubre desde una aplicación web. Dirección formula *cinco preguntas* sobre ese fichero y no indica cómo resolverlas: debes decidir qué herramienta usar para cada una.
+
+. Lee `solicitud.txt` y conserva los originales.
+. Importa `incidencias_soporte.csv` y `tarifas_soporte.csv` en un libro ODS nuevo. Atención: esta vez el separador es la *coma*, el decimal es el *punto* y las fechas van en formato `AAAA-MM-DD`. Elige *Idioma: Inglés (EE. UU.)* en la importación y comprueba con *Ver > Destacar valores* que horas y fechas son números.
+. Antes de calcular nada, decide para cada pregunta la herramienta: filtro, ordenación, búsqueda, fórmula, tabla dinámica o gráfico.
+. Resuelve las cinco preguntas. Para la facturación necesitarás buscar la tarifa de cada tipo.
+. Comprueba las respuestas con `datos_control.txt`.
+. Redacta un ticket breve: una línea por pregunta con la respuesta, la herramienta usada y cómo lo has comprobado.
+
+Conserva el libro y el ticket para revisar en clase.
+
+=== Ensayo del vídeo
+
+Ensaya una demostración de 3–5 minutos con la herramienta de grabación de LliureX 23. Muestra cómo detectas una fila que no es un registro, una búsqueda con `BUSCARV` y la investigación de un `+#N/D+`, un filtro con su total visible y una tabla dinámica que responde a una pregunta. No necesitas mostrar la cara ni editar el vídeo.
+
+== 🔒 7. Ticket cerrado · Evaluable
+
+La actividad se realizará y entregará en *Aules*. El enunciado indicará fecha, variante y criterios.
+
+Será *individual y sin IA*, con consulta de apuntes y de la ayuda de LibreOffice. Cada persona recibirá:
+
+* un conjunto de datos distinto, con errores propios;
+* preguntas distintas de Dirección;
+* condiciones de análisis distintas.
+
+Deberás entregar un ZIP con:
+
+* el libro (`.ods`) con la tabla limpia, las búsquedas, la validación, las tablas dinámicas y los gráficos;
+* un documento breve con cada respuesta, la herramienta usada y cómo la has comprobado.
+
+Además, un vídeo MP4 o WebM separado, de 3–5 minutos, mostrando la limpieza, una búsqueda, un filtro, una tabla dinámica y la comprobación de una respuesta.
+
+Se evalúan: limpieza de la tabla, búsquedas, validación, ordenación y filtros, tablas dinámicas, elección y calidad de los gráficos, importación de datos y justificación de las respuestas. Se valora el procedimiento y la comprobación; no se puntúa el montaje audiovisual.
+
+== ✅ 8. Comprueba que sabes…
+
+* [ ] Reconozco una tabla de datos bien construida y sé limpiarla.
+* [ ] Completo datos a partir de una clave con `BUSCARV` y coincidencia exacta.
+* [ ] Investigo un `+#N/D+` antes de ocultarlo y distingo dato mal escrito, dato inexistente y entrada no válida.
+* [ ] Aplico validación con listas, números y fechas, y marco los datos no válidos.
+* [ ] Distingo ordenar y filtrar, y ordeno por varios criterios.
+* [ ] Filtro con el filtro automático y el estándar, y sumo solo lo visible con `SUBTOTALES`.
+* [ ] Creo y actualizo tablas dinámicas.
+* [ ] Elijo el gráfico según la pregunta y lo dejo legible.
+* [ ] Importo un CSV revisando separador, juego de caracteres y tipos de columna.
+* [ ] Justifico cómo he obtenido cada respuesta.
+
+.Ayuda de LibreOffice
+* https://help.libreoffice.org/latest/es/text/scalc/01/04060109.html[Funciones de hoja de cálculo (incluye BUSCARV)].
+* https://help.libreoffice.org/latest/es/text/scalc/01/12120000.html[Validez de datos].
+* https://help.libreoffice.org/latest/es/text/scalc/guide/datapilot.html[Tablas dinámicas].
+* https://help.libreoffice.org/latest/es/text/scalc/guide/csv_files.html[Importar y exportar archivos CSV].
